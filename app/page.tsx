@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/sections/hero'
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
@@ -148,60 +150,64 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <>
-      <Hero
-        title="Marketing That"
-        subtitle="Moves Mountains"
-        useLogo={false}
-        description="We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results."
-        primaryCta={{
-          text: 'Start Your Journey',
-          href: '/contact',
-        }}
-        secondaryCta={{
-          text: 'See Our Work',
-          href: '/work',
-        }}
-        backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&auto=format&q=75"
-      />
-      
-      <FeaturesGrid
-        title="Why Choose Truly Grit"
-        description="We combine strategic thinking with creative execution to deliver marketing solutions that drive real business results."
-        features={features}
-      />
-      
-      <ProcessTimeline
-        title="Our Process"
-        description="We follow a proven methodology that ensures every project delivers exceptional results from start to finish."
-        steps={processSteps}
-      />
-      
-      <CaseStudiesGrid
-        title="Our Work"
-        description="Explore our portfolio of successful projects and see how we've helped businesses achieve their marketing goals."
-        caseStudies={sampleCaseStudies}
-      />
-      
-      <Testimonials
-        title="What Our Clients Say"
-        description="Hear from the businesses we've helped achieve their marketing goals and drive real growth."
-        testimonials={testimonials}
-      />
-      
-      <CTASection
-        title="Ready to Grow Your Business?"
-        description="Let's discuss how we can help you achieve your marketing goals and drive real business results."
-        primaryCta={{
-          text: 'Get Started',
-          href: '/contact',
-        }}
-        secondaryCta={{
-          text: 'Learn More',
-          href: '/services',
-        }}
-        variant="gradient"
-      />
-    </>
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader />
+      <main id="main-content" className="flex-1" tabIndex={-1}>
+        <Hero
+          title="Marketing That"
+          subtitle="Moves Mountains"
+          useLogo={false}
+          description="We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results."
+          primaryCta={{
+            text: 'Start Your Journey',
+            href: '/contact',
+          }}
+          secondaryCta={{
+            text: 'See Our Work',
+            href: '/work',
+          }}
+          backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&auto=format&q=75"
+        />
+        
+        <FeaturesGrid
+          title="Why Choose Truly Grit"
+          description="We combine strategic thinking with creative execution to deliver marketing solutions that drive real business results."
+          features={features}
+        />
+        
+        <ProcessTimeline
+          title="Our Process"
+          description="We follow a proven methodology that ensures every project delivers exceptional results from start to finish."
+          steps={processSteps}
+        />
+        
+        <CaseStudiesGrid
+          title="Our Work"
+          description="Explore our portfolio of successful projects and see how we've helped businesses achieve their marketing goals."
+          caseStudies={sampleCaseStudies}
+        />
+        
+        <Testimonials
+          title="What Our Clients Say"
+          description="Hear from the businesses we've helped achieve their marketing goals and drive real growth."
+          testimonials={testimonials}
+        />
+        
+        <CTASection
+          title="Ready to Grow Your Business?"
+          description="Let's discuss how we can help you achieve your marketing goals and drive real business results."
+          primaryCta={{
+            text: 'Get Started',
+            href: '/contact',
+          }}
+          secondaryCta={{
+            text: 'Learn More',
+            href: '/services',
+          }}
+          variant="gradient"
+        />
+      </main>
+      <SiteFooter />
+    </div>
   )
 }
