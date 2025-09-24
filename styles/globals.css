@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Blog post styling */
+.prose {
+  color: hsl(var(--foreground));
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose strong {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

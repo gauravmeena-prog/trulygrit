@@ -9,6 +9,8 @@ const footerNavigation = {
     { name: 'About', href: '/about' },
     { name: 'Work', href: '/work' },
     { name: 'Services', href: '/services' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ],
   services: [

@@ -30,6 +30,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Work', href: '/work' },
   { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
