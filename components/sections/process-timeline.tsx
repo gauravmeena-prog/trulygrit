@@ -99,10 +99,6 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
                           <IconComponent className="h-6 w-6 text-white" />
                         </div>
                       </div>
-                      {/* Step number */}
-                      <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-lg">
-                        {index + 1}
-                      </div>
                     </div>
                     
                     {/* Content */}
