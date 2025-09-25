@@ -40,7 +40,6 @@ export function CaseStudyCard({ caseStudy, featured = false }: CaseStudyCardProp
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      whileHover={{ y: -5 }}
       className={`group ${featured ? 'md:col-span-2' : ''}`}
     >
       <Card className="relative h-full overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group rounded-2xl">

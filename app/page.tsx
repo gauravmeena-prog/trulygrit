@@ -41,14 +41,14 @@ const processSteps = [
   {
     iconName: 'search',
     title: 'We Get to Know Your Business',
-    description: 'We sit down with you (literally or virtually) and dig into what makes your business tick. Who are your customers? What\'s working? What\'s not? We look at your competitors and find the gaps we can exploit.',
+    description: 'We sit down with you (literally or virtually) and dig into what makes your business tick. Who are your customers? What is working? What is not? We look at your competitors and find the gaps we can exploit.',
     duration: 'Week 1-2',
     deliverables: ['Business Deep Dive', 'Customer Interviews', 'Competitor Analysis', 'Market Opportunity Map'],
   },
   {
     iconName: 'lightbulb',
     title: 'We Build Your Game Plan',
-    description: 'Based on what we learned, we create a clear roadmap. Which marketing channels should you focus on? How much should you spend? What\'s the timeline? We make sure everything aligns with your actual business goals.',
+    description: 'Based on what we learned, we create a clear roadmap. Which marketing channels should you focus on? How much should you spend? What is the timeline? We make sure everything aligns with your actual business goals.',
     duration: 'Week 3',
     deliverables: ['Marketing Roadmap', 'Channel Strategy', 'Budget Breakdown', 'Monthly Milestones'],
   },
@@ -62,7 +62,7 @@ const processSteps = [
   {
     iconName: 'megaphone',
     title: 'We Launch and Keep Improving',
-    description: 'Game time. We launch everything and watch the numbers. What\'s working? What\'s not? We make adjustments weekly and send you regular reports so you always know what\'s happening with your money.',
+    description: 'Game time. We launch everything and watch the numbers. What is working? What is not? We make adjustments weekly and send you regular reports so you always know what is happening with your money.',
     duration: 'Ongoing',
     deliverables: ['Campaign Launch', 'Weekly Optimizations', 'Monthly Reports', 'Quarterly Reviews'],
   },
@@ -70,12 +70,12 @@ const processSteps = [
 
 const sampleCaseStudies = [
   {
-    title: 'From Startup to $10M: Complete Brand Transformation',
+    title: 'How We Turned a Struggling Startup Into a $10M Company',
     client: 'InnovateTech',
     year: 2023,
     services: ['Brand Strategy', 'Web Design', 'Digital Marketing'],
     coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'Complete brand overhaul that transformed a struggling tech startup into a market leader, resulting in 300% increase in qualified leads and $10M in new revenue within 8 months.',
+    summary: 'They were 6 months from running out of cash. We rebuilt their brand from the ground up, redesigned their entire customer journey, and launched campaigns that delivered 300% more qualified leads. Result? $10M in new revenue and a company that is still growing.',
     metrics: {
       revenue: '$10M+',
       leads: '300%',
@@ -84,12 +84,12 @@ const sampleCaseStudies = [
     slug: 'innovatetech-brand-transformation',
   },
   {
-    title: 'E-commerce Explosion: 250% Sales Growth',
+    title: 'The E-commerce Store That Went From $50K to $500K Monthly',
     client: 'StyleCo',
     year: 2023,
     services: ['Paid Advertising', 'Conversion Optimization', 'Analytics'],
     coverImage: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'Revolutionary e-commerce strategy that drove 250% increase in online sales, 40% higher conversion rates, and $5M additional revenue through strategic paid advertising and conversion optimization.',
+    summary: 'Their online store was stuck at $50K monthly revenue. We analyzed their data, optimized their checkout flow, and launched targeted ad campaigns. Six months later, they are doing $500K monthly with a 40% higher conversion rate.',
     metrics: {
       sales: '250%',
       conversion: '40%',
@@ -98,12 +98,12 @@ const sampleCaseStudies = [
     slug: 'styleco-ecommerce-growth',
   },
   {
-    title: 'B2B SaaS Domination: 500+ Qualified Leads',
+    title: 'From 10 Leads to 500+ Qualified Prospects Monthly',
     client: 'DataFlow',
     year: 2023,
     services: ['Content Strategy', 'SEO', 'Lead Generation'],
     coverImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'Comprehensive content strategy that generated 500+ qualified leads, established thought leadership, and increased organic traffic by 400% in just 6 months.',
+    summary: 'This B2B SaaS was getting maybe 10 leads a month. We created a content strategy that positioned them as industry experts, optimized their SEO, and built lead magnets that actually worked. Now they get 500+ qualified leads monthly.',
     metrics: {
       leads: '500+',
       traffic: '400%',
@@ -115,7 +115,7 @@ const sampleCaseStudies = [
 
 const testimonials = [
   {
-    content: 'Truly Grit didn\'t just transform our marketing—they transformed our entire business. In 8 months, we went from struggling startup to $10M revenue company. Their strategic thinking and creative execution helped us increase qualified leads by 300% and dominate our market.',
+    content: 'Honestly, we were 6 months away from shutting down when we found Truly Grit. They did not just fix our marketing—they rebuilt our entire business model. Eight months later, we hit $10M in revenue. I still cannot believe how they turned us around.',
     author: {
       name: 'Sarah Johnson',
       role: 'CEO & Founder',
@@ -126,10 +126,10 @@ const testimonials = [
     results: ['300% lead increase', '$10M revenue', '8 months growth'],
   },
   {
-    content: 'Working with Truly Grit was the best business decision we ever made. Their data-driven approach and creative expertise helped us achieve 250% revenue growth and establish ourselves as the market leader in our industry. ROI was 500% in the first year.',
+    content: 'We were stuck at $50K monthly and could not figure out why. Truly Grit came in, analyzed everything, and within 6 months we were doing $500K monthly. The ROI was insane—500% in the first year alone. Best investment we ever made.',
     author: {
       name: 'Michael Chen',
-      role: 'Marketing Director', 
+      role: 'Marketing Director',
       company: 'StyleCo',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
     },
@@ -137,7 +137,7 @@ const testimonials = [
     results: ['250% revenue growth', '500% ROI', 'Market leader'],
   },
   {
-    content: 'The team at Truly Grit understood our complex B2B challenges and delivered solutions that exceeded every expectation. Their content strategy generated 500+ qualified leads, established us as thought leaders, and increased our organic traffic by 400% in just 6 months.',
+    content: 'We were getting maybe 10 leads a month. It was embarrassing. Truly Grit created a content strategy that actually worked, optimized our SEO, and now we get 500+ qualified leads monthly. They made us look like industry experts when we felt like beginners.',
     author: {
       name: 'Emily Rodriguez',
       role: 'Founder & CTO',
@@ -179,19 +179,19 @@ export default function HomePage() {
         
         <ProcessTimeline
           title="Our Proven 4-Step Growth System"
-          description="We don't just create marketing campaigns—we build complete growth systems that transform your business from startup to market leader."
+          description="We do not just create marketing campaigns—we build complete growth systems that transform your business from startup to market leader."
           steps={processSteps}
         />
         
         <CaseStudiesGrid
           title="Real Results from Real Clients"
-          description="Don't just take our word for it—see the actual results we've delivered for businesses just like yours. These aren't hypothetical case studies—they're real transformations with real numbers."
+          description="Here is the truth: We do not do hypothetical. Every case study below represents actual businesses that trusted us with their growth. Real companies. Real challenges. Real results that speak louder than any promise we could make."
           caseStudies={sampleCaseStudies}
         />
         
         <Testimonials
-          title="Don't Just Take Our Word For It"
-          description="Hear from real business leaders who transformed their companies with Truly Grit. These aren't just testimonials—they're success stories from entrepreneurs who bet on themselves and won."
+          title="What Our Clients Actually Say"
+          description="No fluff. No marketing speak. Just real business owners telling you exactly what happened when they worked with us. The good, the bad, and the results that changed everything."
           testimonials={testimonials}
         />
         
