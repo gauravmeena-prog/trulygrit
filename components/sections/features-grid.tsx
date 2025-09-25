@@ -43,21 +43,54 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
   }
 
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="relative py-24 sm:py-32 bg-gradient-to-br from-white via-gray-50/30 to-white overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+      </div>
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
-          className="mx-auto max-w-2xl text-center"
+          className="mx-auto max-w-4xl text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            {description}
-          </p>
+          <motion.h2 
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <span className="block text-gray-900/90">
+              Markets forget noise.
+            </span>
+            <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+              They remember results.
+            </span>
+          </motion.h2>
+          
+          <motion.div
+            className="mt-8 mb-4"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+          </motion.div>
+          
+          <motion.p 
+            className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <span className="font-semibold text-gray-900">Founded on 18 June 2025,</span> Truly Grit builds revenue engines the hard way—by shipping fast, measuring everything, and letting proof speak.
+          </motion.p>
         </motion.div>
         
         <motion.div
