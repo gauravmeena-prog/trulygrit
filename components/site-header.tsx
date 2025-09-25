@@ -58,11 +58,11 @@ export function SiteHeader() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
-              src="/logo-black.svg"
+              src="/Logo_white_bg.png"
               alt="Truly Grit"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className="h-8 w-auto filter brightness-0"
               priority
             />
           </Link>
@@ -102,11 +102,11 @@ export function SiteHeader() {
               <SheetTitle>
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/logo-black.svg"
+                    src="/Logo_white_bg.png"
                     alt="Truly Grit"
                     width={120}
                     height={40}
-                    className="h-8 w-auto"
+                    className="h-8 w-auto filter brightness-0"
                   />
                 </Link>
               </SheetTitle>
@@ -135,11 +135,11 @@ export function SiteHeader() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Link href="/" className="flex items-center md:hidden">
               <Image
-                src="/logo-black.svg"
+                src="/Logo_white_bg.png"
                 alt="Truly Grit"
                 width={120}
                 height={40}
-                className="h-8 w-auto"
+                className="h-8 w-auto filter brightness-0"
               />
             </Link>
           </div>

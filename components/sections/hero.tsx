@@ -66,11 +66,11 @@ export function Hero({
                   {title}
                 </span>
                 <Image
-                  src="/logo-black.svg"
+                  src="/Logo_white_bg.png"
                   alt="Truly Grit"
                   width={300}
                   height={100}
-                  className="h-16 w-auto sm:h-20"
+                  className="h-16 w-auto sm:h-20 filter brightness-0"
                   priority
                 />
               </div>
