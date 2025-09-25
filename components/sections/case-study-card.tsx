@@ -199,14 +199,150 @@ export function CaseStudiesGrid({
           </motion.p>
         </motion.div>
         
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-          {displayedCaseStudies.map((caseStudy, index) => (
-            <CaseStudyCard
-              key={caseStudy.slug}
-              caseStudy={caseStudy}
-              featured={index === 0 && !showAll}
-            />
-          ))}
+        {/* Unique storytelling showcase layout */}
+        <div className="mx-auto mt-16 max-w-7xl sm:mt-20">
+          <div className="space-y-24">
+            {displayedCaseStudies.map((caseStudy, index) => {
+              const isEven = index % 2 === 0
+              return (
+                <motion.div
+                  key={caseStudy.slug}
+                  className={`relative flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Image showcase with floating elements */}
+                  <div className="relative flex-1 max-w-lg">
+                    <motion.div 
+                      className="relative group cursor-pointer"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {/* Main image container */}
+                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                        <Image
+                          src={caseStudy.coverImage}
+                          alt={`${caseStudy.title} case study showing project results for ${caseStudy.client}`}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        
+                        {/* Gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        
+                        {/* Floating metrics overlay */}
+                        <div className="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                          <div className="flex gap-3">
+                            {Object.entries(caseStudy.metrics || {}).slice(0, 2).map(([key, value]) => (
+                              <div key={key} className="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg">
+                                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                  {key}
+                                </div>
+                                <div className="text-lg font-bold text-primary">{value}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Floating decorative elements */}
+                      <motion.div 
+                        className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-primary to-orange-500 rounded-full shadow-lg"
+                        animate={{ rotate: [0, 360], scale: [1, 1.1, 1] }}
+                        transition={{ duration: 4, repeat: Infinity, delay: index * 0.5 }}
+                      />
+                      <motion.div 
+                        className="absolute -bottom-6 -left-6 w-6 h-6 bg-orange-400 rounded-full shadow-lg"
+                        animate={{ y: [-5, 5, -5], opacity: [0.7, 1, 0.7] }}
+                        transition={{ duration: 3, repeat: Infinity, delay: index * 0.3 }}
+                      />
+                    </motion.div>
+                  </div>
+                  
+                  {/* Content area */}
+                  <div className={`flex-1 ${isEven ? 'lg:pl-8' : 'lg:pr-8'}`}>
+                    <motion.div 
+                      className="relative"
+                      initial={{ opacity: 0, x: isEven ? 50 : -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      {/* Client badge */}
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-orange-500/10 rounded-full border border-primary/20 mb-6">
+                        <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                        <span className="text-sm font-bold text-primary uppercase tracking-wider">{caseStudy.client}</span>
+                        <span className="text-xs text-gray-500">•</span>
+                        <span className="text-xs text-gray-500">{caseStudy.year}</span>
+                      </div>
+                      
+                      {/* Title */}
+                      <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-6">
+                        {caseStudy.title}
+                      </h3>
+                      
+                      {/* Description */}
+                      <p className="text-lg text-gray-600 leading-relaxed mb-8 font-medium">
+                        {caseStudy.summary}
+                      </p>
+                      
+                      {/* Services tags */}
+                      <div className="flex flex-wrap gap-3 mb-8">
+                        {caseStudy.services.map((service) => (
+                          <span 
+                            key={service}
+                            className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
+                          >
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      {/* Key metrics showcase */}
+                      {caseStudy.metrics && (
+                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                          {Object.entries(caseStudy.metrics).map(([key, value]) => (
+                            <motion.div 
+                              key={key}
+                              className="bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl p-4 border border-primary/10 hover:border-primary/20 transition-all duration-300 hover:shadow-lg"
+                              whileHover={{ scale: 1.05 }}
+                            >
+                              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
+                                {key}
+                              </div>
+                              <div className="text-2xl font-bold text-primary">
+                                {value}
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      )}
+                      
+                      {/* CTA */}
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button asChild variant="outline" className="group/btn border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300">
+                          <Link href={`/work/${caseStudy.slug}`}>
+                            View Full Case Study
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                          </Link>
+                        </Button>
+                      </motion.div>
+                    </motion.div>
+                  </div>
+                  
+                  {/* Connection line for desktop */}
+                  {index < displayedCaseStudies.length - 1 && (
+                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-primary/30 to-transparent hidden lg:block" />
+                  )}
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
         
         {!showAll && caseStudies.length > 3 && (
