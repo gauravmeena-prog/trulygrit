@@ -3,12 +3,14 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { getIcon } from '@/lib/icons'
+import { CheckCircle } from 'lucide-react'
 
 interface ProcessStep {
   iconName: string
   title: string
   description: string
   duration: string
+  deliverables?: string[]
 }
 
 interface ProcessTimelineProps {
@@ -64,13 +66,27 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
                       <h3 className="text-lg font-semibold leading-6 text-foreground">
                         {step.title}
                       </h3>
-                      <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
                         {step.duration}
                       </span>
                     </div>
                     <p className="mt-2 text-base leading-7 text-muted-foreground">
                       {step.description}
                     </p>
+                    
+                    {step.deliverables && (
+                      <div className="mt-4">
+                        <h4 className="text-sm font-medium text-foreground mb-2">Key Deliverables:</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {step.deliverables.map((deliverable, deliverableIndex) => (
+                            <div key={deliverableIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                              <span>{deliverable}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               )

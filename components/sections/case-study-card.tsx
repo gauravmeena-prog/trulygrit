@@ -4,7 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, TrendingUp } from 'lucide-react'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -17,6 +17,15 @@ interface CaseStudy {
   coverImage: string
   summary: string
   slug: string
+  metrics?: {
+    revenue?: string
+    leads?: string
+    growth?: string
+    sales?: string
+    conversion?: string
+    traffic?: string
+    timeline?: string
+  }
 }
 
 interface CaseStudyCardProps {
@@ -80,6 +89,20 @@ export function CaseStudyCard({ caseStudy, featured = false }: CaseStudyCardProp
           <CardDescription className="line-clamp-3 text-base">
             {caseStudy.summary}
           </CardDescription>
+          
+          {caseStudy.metrics && (
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              {Object.entries(caseStudy.metrics).slice(0, 4).map(([key, value]) => (
+                <div key={key} className="text-center p-2 bg-primary/5 rounded-lg">
+                  <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground mb-1">
+                    <TrendingUp className="h-3 w-3" />
+                    <span className="capitalize">{key}</span>
+                  </div>
+                  <div className="font-bold text-sm text-primary">{value}</div>
+                </div>
+              ))}
+            </div>
+          )}
           
           <Button asChild variant="ghost" className="group/btn p-0 h-auto font-medium">
             <Link href={`/work/${caseStudy.slug}`}>

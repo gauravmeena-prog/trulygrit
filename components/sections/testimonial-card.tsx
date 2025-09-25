@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
+import { Star, TrendingUp } from 'lucide-react'
 
 import { Card, CardContent } from '@/components/ui/card'
 
@@ -16,6 +16,7 @@ interface Testimonial {
     image: string
   }
   rating: number
+  results?: string[]
 }
 
 interface TestimonialCardProps {
@@ -50,6 +51,22 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
           <blockquote className="text-lg leading-7 text-foreground mb-6">
             "{testimonial.content}"
           </blockquote>
+          
+          {testimonial.results && (
+            <div className="mb-6 p-4 bg-primary/5 rounded-lg">
+              <div className="flex items-center gap-2 mb-2">
+                <TrendingUp className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Key Results:</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {testimonial.results.map((result, index) => (
+                  <span key={index} className="text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded-full">
+                    {result}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
           
           <div className="flex items-center gap-3">
             <div className="relative h-10 w-10 overflow-hidden rounded-full">

@@ -4,8 +4,7 @@ import * as React from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Loader2, Send, CheckCircle, AlertCircle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { Loader2, Send } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -47,7 +46,6 @@ const budgets = [
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [isSubmitted, setIsSubmitted] = React.useState(false)
-  const [submitError, setSubmitError] = React.useState<string | null>(null)
 
   const {
     register,
@@ -60,7 +58,6 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
-    setSubmitError(null)
     
     try {
       const response = await fetch('/api/contact', {
@@ -71,17 +68,15 @@ export function ContactForm() {
         body: JSON.stringify(data),
       })
 
-      const result = await response.json()
-
-      if (response.ok && result.success) {
+      if (response.ok) {
         setIsSubmitted(true)
         reset()
       } else {
-        throw new Error(result.error || 'Failed to submit form')
+        throw new Error('Failed to submit form')
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      setSubmitError(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
+      // Handle error (show toast, etc.)
     } finally {
       setIsSubmitting(false)
     }
@@ -89,74 +84,35 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <Card className="w-full max-w-lg mx-auto">
-          <CardHeader className="text-center">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="mx-auto mb-4"
-            >
-              <CheckCircle className="h-16 w-16 text-green-600" />
-            </motion.div>
-            <CardTitle className="text-green-600">Thank You!</CardTitle>
-            <CardDescription>
-              We've received your message and will get back to you within 24 hours.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Button
-                onClick={() => setIsSubmitted(false)}
-                variant="outline"
-              >
-                Send Another Message
-              </Button>
-            </motion.div>
-          </CardContent>
-        </Card>
-      </motion.div>
+      <Card className="w-full max-w-lg mx-auto">
+        <CardHeader className="text-center">
+          <CardTitle className="text-green-600">Thank You!</CardTitle>
+          <CardDescription>
+            We've received your message and will get back to you within 24 hours.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="text-center">
+          <Button
+            onClick={() => setIsSubmitted(false)}
+            variant="outline"
+          >
+            Send Another Message
+          </Button>
+        </CardContent>
+      </Card>
     )
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <Card className="w-full max-w-lg mx-auto">
-        <CardHeader>
-          <CardTitle>Get In Touch</CardTitle>
-          <CardDescription>
-            Ready to start your project? Fill out the form below and we'll get back to you soon.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <AnimatePresence>
-            {submitError && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-center gap-2"
-              >
-                <AlertCircle className="h-4 w-4 text-red-600" />
-                <span className="text-sm text-red-700">{submitError}</span>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+    <Card className="w-full max-w-lg mx-auto">
+      <CardHeader>
+        <CardTitle>Get In Touch</CardTitle>
+        <CardDescription>
+          Ready to start your project? Fill out the form below and we'll get back to you soon.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="name">Name *</Label>
@@ -265,27 +221,21 @@ export function ContactForm() {
             )}
           </div>
 
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Button type="submit" className="w-full h-12 text-base" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </motion.div>
-          </form>
-        </CardContent>
-      </Card>
-    </motion.div>
+          <Button type="submit" className="w-full h-12 text-base" disabled={isSubmitting}>
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Send Message
+                <Send className="ml-2 h-4 w-4" />
+              </>
+            )}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   )
 }
