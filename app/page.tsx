@@ -70,82 +70,32 @@ const processSteps = [
 
 const sampleCaseStudies = [
   {
-    title: 'How We Turned a Struggling Startup Into a $10M Company',
-    client: 'InnovateTech',
-    year: 2023,
-    services: ['Brand Strategy', 'Web Design', 'Digital Marketing'],
-    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'They were 6 months from running out of cash. We rebuilt their brand from the ground up, redesigned their entire customer journey, and launched campaigns that delivered 300% more qualified leads. Result? $10M in new revenue and a company that is still growing.',
+    title: 'Dhirubhai Ambani University: Admission Campaign Transformation',
+    client: 'Dhirubhai Ambani University',
+    year: 2024,
+    services: ['Admission Marketing', 'Digital Campaign Strategy', 'Student Recruitment'],
+    coverImage: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop&auto=format&q=75',
+    summary: 'We developed and executed a comprehensive admission marketing campaign for Dhirubhai Ambani University, focusing on attracting quality students through strategic digital marketing, compelling content creation, and targeted outreach programs.',
     metrics: {
-      revenue: '$10M+',
-      leads: '300%',
-      growth: '8 months'
+      campaign: '2024',
+      focus: 'Admissions',
+      approach: 'Strategic'
     },
-    slug: 'innovatetech-brand-transformation',
-  },
-  {
-    title: 'The E-commerce Store That Went From $50K to $500K Monthly',
-    client: 'StyleCo',
-    year: 2023,
-    services: ['Paid Advertising', 'Conversion Optimization', 'Analytics'],
-    coverImage: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'Their online store was stuck at $50K monthly revenue. We analyzed their data, optimized their checkout flow, and launched targeted ad campaigns. Six months later, they are doing $500K monthly with a 40% higher conversion rate.',
-    metrics: {
-      sales: '250%',
-      conversion: '40%',
-      revenue: '$5M+'
-    },
-    slug: 'styleco-ecommerce-growth',
-  },
-  {
-    title: 'From 10 Leads to 500+ Qualified Prospects Monthly',
-    client: 'DataFlow',
-    year: 2023,
-    services: ['Content Strategy', 'SEO', 'Lead Generation'],
-    coverImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'This B2B SaaS was getting maybe 10 leads a month. We created a content strategy that positioned them as industry experts, optimized their SEO, and built lead magnets that actually worked. Now they get 500+ qualified leads monthly.',
-    metrics: {
-      leads: '500+',
-      traffic: '400%',
-      timeline: '6 months'
-    },
-    slug: 'dataflow-content-strategy',
+    slug: 'dhirubhai-ambani-university-admission-campaign',
   },
 ]
 
 const testimonials = [
   {
-    content: 'Honestly, we were 6 months away from shutting down when we found Truly Grit. They did not just fix our marketing—they rebuilt our entire business model. Eight months later, we hit $10M in revenue. I still cannot believe how they turned us around.',
+    content: 'Working with Truly Grit on our admission marketing campaign was a game-changer. Their strategic approach to digital marketing and student recruitment helped us reach our target audience more effectively. They understood the education sector and delivered results that exceeded our expectations.',
     author: {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      company: 'InnovateTech',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
+      name: 'Dhirubhai Ambani University',
+      role: 'Admission Department',
+      company: 'Dhirubhai Ambani University',
+      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=400&fit=crop&auto=format&q=75',
     },
     rating: 5,
-    results: ['300% lead increase', '$10M revenue', '8 months growth'],
-  },
-  {
-    content: 'We were stuck at $50K monthly and could not figure out why. Truly Grit came in, analyzed everything, and within 6 months we were doing $500K monthly. The ROI was insane—500% in the first year alone. Best investment we ever made.',
-    author: {
-      name: 'Michael Chen',
-      role: 'Marketing Director',
-      company: 'StyleCo',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face',
-    },
-    rating: 5,
-    results: ['250% revenue growth', '500% ROI', 'Market leader'],
-  },
-  {
-    content: 'We were getting maybe 10 leads a month. It was embarrassing. Truly Grit created a content strategy that actually worked, optimized our SEO, and now we get 500+ qualified leads monthly. They made us look like industry experts when we felt like beginners.',
-    author: {
-      name: 'Emily Rodriguez',
-      role: 'Founder & CTO',
-      company: 'DataFlow',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
-    },
-    rating: 5,
-    results: ['500+ qualified leads', '400% traffic growth', '6 months timeline'],
+    results: ['Strategic Campaign', 'Quality Students', '2024 Success'],
   },
 ]
 
@@ -185,13 +135,13 @@ export default function HomePage() {
         
         <CaseStudiesGrid
           title="Real Results from Real Clients"
-          description="Here is the truth: We do not do hypothetical. Every case study below represents actual businesses that trusted us with their growth. Real companies. Real challenges. Real results that speak louder than any promise we could make."
+          description="We believe in authenticity over quantity. Our first client partnership with Dhirubhai Ambani University demonstrates our commitment to delivering strategic marketing solutions that drive real results in the education sector."
           caseStudies={sampleCaseStudies}
         />
         
         <Testimonials
           title="What Our Clients Actually Say"
-          description="No fluff. No marketing speak. Just real business owners telling you exactly what happened when they worked with us. The good, the bad, and the results that changed everything."
+          description="Hear directly from our client about their experience working with Truly Grit. Real feedback from a real partnership that delivered real results."
           testimonials={testimonials}
         />
         
