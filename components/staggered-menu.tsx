@@ -1,372 +1,424 @@
 'use client'
 
-import * as React from 'react'
+import React, { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Home, 
-  Briefcase, 
-  Settings, 
-  Users, 
-  MessageCircle, 
-  DollarSign,
-  FileText,
-  HelpCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Target,
-  Menu,
-  X,
-  ChevronDown
-} from 'lucide-react'
+import Image from 'next/image'
+import './StaggeredMenu.css'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+export const StaggeredMenu = ({
+  position = 'right',
+  colors = ['#FF6B35', '#F7931E'], // Truly Grit brand colors
+  items = [
+    { label: 'Home', link: '/', ariaLabel: 'Go to Home page' },
+    { label: 'Our Work', link: '/work', ariaLabel: 'View our portfolio' },
+    { label: 'Services', link: '/services', ariaLabel: 'Explore our services' },
+    { label: 'About', link: '/about', ariaLabel: 'Learn about our team' },
+    { label: 'Pricing', link: '/pricing', ariaLabel: 'View pricing plans' },
+    { label: 'Contact', link: '/contact', ariaLabel: 'Get in touch with us' },
+  ],
+  socialItems = [
+    { label: 'Twitter', link: 'https://twitter.com/trulygrithq' },
+    { label: 'LinkedIn', link: 'https://linkedin.com/company/trulygrit' },
+    { label: 'Instagram', link: 'https://instagram.com/trulygrithq' },
+  ],
+  displaySocials = true,
+  displayItemNumbering = true,
+  className,
+  logoUrl = '/Logo_white_bg.png',
+  menuButtonColor = '#fff',
+  openMenuButtonColor = '#fff',
+  accentColor = '#FF6B35', // Truly Grit primary color
+  changeMenuColorOnOpen = true,
+  onMenuOpen,
+  onMenuClose
+}) => {
+  const [open, setOpen] = useState(false)
+  const openRef = useRef(false)
+  const panelRef = useRef(null)
+  const preLayersRef = useRef(null)
+  const preLayerElsRef = useRef([])
+  const plusHRef = useRef(null)
+  const plusVRef = useRef(null)
+  const iconRef = useRef(null)
+  const textInnerRef = useRef(null)
+  const textWrapRef = useRef(null)
+  const [textLines, setTextLines] = useState(['Menu', 'Close'])
 
-const menuItems = [
-  {
-    title: 'Home',
-    description: 'Discover our marketing solutions',
-    href: '/',
-    icon: Home,
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50',
-    textColor: 'text-blue-700',
-    featured: true,
-  },
-  {
-    title: 'Our Work',
-    description: 'Explore our portfolio',
-    href: '/work',
-    icon: Briefcase,
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-purple-50',
-    textColor: 'text-purple-700',
-    featured: false,
-  },
-  {
-    title: 'Services',
-    description: 'Comprehensive marketing services',
-    href: '/services',
-    icon: Settings,
-    color: 'from-green-500 to-green-600',
-    bgColor: 'bg-green-50',
-    textColor: 'text-green-700',
-    featured: false,
-  },
-  {
-    title: 'About',
-    description: 'Meet our expert team',
-    href: '/about',
-    icon: Users,
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-orange-50',
-    textColor: 'text-orange-700',
-    featured: false,
-  },
-  {
-    title: 'Pricing',
-    description: 'Transparent pricing plans',
-    href: '/pricing',
-    icon: DollarSign,
-    color: 'from-emerald-500 to-emerald-600',
-    bgColor: 'bg-emerald-50',
-    textColor: 'text-emerald-700',
-    featured: false,
-  },
-  {
-    title: 'Contact',
-    description: 'Get in touch with us',
-    href: '/contact',
-    icon: MessageCircle,
-    color: 'from-red-500 to-red-600',
-    bgColor: 'bg-red-50',
-    textColor: 'text-red-700',
-    featured: true,
-  },
-]
+  const openTlRef = useRef(null)
+  const closeTweenRef = useRef(null)
+  const spinTweenRef = useRef(null)
+  const textCycleAnimRef = useRef(null)
+  const colorTweenRef = useRef(null)
+  const toggleBtnRef = useRef(null)
+  const busyRef = useRef(false)
+  const itemEntranceTweenRef = useRef(null)
 
-const additionalItems = [
-  {
-    title: 'Blog',
-    description: 'Marketing insights and tips',
-    href: '/blog',
-    icon: FileText,
-    color: 'from-indigo-500 to-indigo-600',
-    bgColor: 'bg-indigo-50',
-    textColor: 'text-indigo-700',
-  },
-  {
-    title: 'FAQ',
-    description: 'Common questions answered',
-    href: '/faq',
-    icon: HelpCircle,
-    color: 'from-pink-500 to-pink-600',
-    bgColor: 'bg-pink-50',
-    textColor: 'text-pink-700',
-  },
-  {
-    title: 'Navigation',
-    description: 'Explore all sections',
-    href: '/navigation',
-    icon: Target,
-    color: 'from-cyan-500 to-cyan-600',
-    bgColor: 'bg-cyan-50',
-    textColor: 'text-cyan-700',
-  },
-]
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const panel = panelRef.current
+      const preContainer = preLayersRef.current
+      const plusH = plusHRef.current
+      const plusV = plusVRef.current
+      const icon = iconRef.current
+      const textInner = textInnerRef.current
+      if (!panel || !plusH || !plusV || !icon || !textInner) return
 
-interface MenuItemProps {
-  item: typeof menuItems[0]
-  index: number
-  isOpen: boolean
-}
+      let preLayers = []
+      if (preContainer) {
+        preLayers = Array.from(preContainer.querySelectorAll('.sm-prelayer'))
+      }
+      preLayerElsRef.current = preLayers
 
-function MenuItem({ item, index, isOpen }: MenuItemProps) {
-  const IconComponent = item.icon
-  
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.9 }}
-      animate={{ 
-        opacity: isOpen ? 1 : 0, 
-        y: isOpen ? 0 : 20, 
-        scale: isOpen ? 1 : 0.9 
-      }}
-      transition={{ 
-        duration: 0.3, 
-        delay: index * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94]
-      }}
-      whileHover={{ 
-        y: -5, 
-        scale: 1.02,
-        transition: { duration: 0.2 }
-      }}
-      className="group"
-    >
-      <Card className="h-full transition-all duration-300 hover:shadow-lg border-0 shadow-md group-hover:shadow-xl overflow-hidden">
-        <Link href={item.href} className="block h-full">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <div className={`p-3 rounded-lg ${item.bgColor} group-hover:scale-110 transition-transform duration-300`}>
-                <IconComponent className={`h-6 w-6 ${item.textColor}`} />
-              </div>
-              {item.featured && (
-                <div className="flex items-center gap-1 text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
-                  <Star className="h-3 w-3" />
-                  Featured
-                </div>
-              )}
-            </div>
-            <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
-              {item.title}
-            </CardTitle>
-            <CardDescription className="text-sm leading-relaxed">
-              {item.description}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-                <TrendingUp className="h-4 w-4" />
-                <span>Learn more</span>
-              </div>
-              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all duration-200" />
-            </div>
-          </CardContent>
-        </Link>
-      </Card>
-    </motion.div>
-  )
-}
+      const offscreen = position === 'left' ? -100 : 100
+      gsap.set([panel, ...preLayers], { xPercent: offscreen })
+      gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 })
+      gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 })
+      gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' })
+      gsap.set(textInner, { yPercent: 0 })
+      if (toggleBtnRef.current) gsap.set(toggleBtnRef.current, { color: menuButtonColor })
+    })
+    return () => ctx.revert()
+  }, [menuButtonColor, position])
 
-interface StaggeredMenuProps {
-  className?: string
-}
+  const buildOpenTimeline = useCallback(() => {
+    const panel = panelRef.current
+    const layers = preLayerElsRef.current
+    if (!panel) return null
 
-export function StaggeredMenu({ className = '' }: StaggeredMenuProps) {
-  const [isOpen, setIsOpen] = React.useState(false)
-  const [showAdditional, setShowAdditional] = React.useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-    if (!isOpen) {
-      setShowAdditional(false)
+    openTlRef.current?.kill()
+    if (closeTweenRef.current) {
+      closeTweenRef.current.kill()
+      closeTweenRef.current = null
     }
-  }
+    itemEntranceTweenRef.current?.kill()
 
-  const toggleAdditional = () => {
-    setShowAdditional(!showAdditional)
-  }
+    const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'))
+    const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'))
+    const socialTitle = panel.querySelector('.sm-socials-title')
+    const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'))
+
+    const layerStates = layers.map(el => ({ el, start: Number(gsap.getProperty(el, 'xPercent')) }))
+    const panelStart = Number(gsap.getProperty(panel, 'xPercent'))
+
+    if (itemEls.length) {
+      gsap.set(itemEls, { yPercent: 140, rotate: 10 })
+    }
+    if (numberEls.length) {
+      gsap.set(numberEls, { '--sm-num-opacity': 0 })
+    }
+    if (socialTitle) {
+      gsap.set(socialTitle, { opacity: 0 })
+    }
+    if (socialLinks.length) {
+      gsap.set(socialLinks, { y: 25, opacity: 0 })
+    }
+
+    const tl = gsap.timeline({ paused: true })
+
+    layerStates.forEach((ls, i) => {
+      tl.fromTo(ls.el, { xPercent: ls.start }, { xPercent: 0, duration: 0.5, ease: 'power4.out' }, i * 0.07)
+    })
+    const lastTime = layerStates.length ? (layerStates.length - 1) * 0.07 : 0
+    const panelInsertTime = lastTime + (layerStates.length ? 0.08 : 0)
+    const panelDuration = 0.65
+    tl.fromTo(
+      panel,
+      { xPercent: panelStart },
+      { xPercent: 0, duration: panelDuration, ease: 'power4.out' },
+      panelInsertTime
+    )
+
+    if (itemEls.length) {
+      const itemsStartRatio = 0.15
+      const itemsStart = panelInsertTime + panelDuration * itemsStartRatio
+      tl.to(
+        itemEls,
+        {
+          yPercent: 0,
+          rotate: 0,
+          duration: 1,
+          ease: 'power4.out',
+          stagger: { each: 0.1, from: 'start' }
+        },
+        itemsStart
+      )
+      if (numberEls.length) {
+        tl.to(
+          numberEls,
+          {
+            duration: 0.6,
+            ease: 'power2.out',
+            '--sm-num-opacity': 1,
+            stagger: { each: 0.08, from: 'start' }
+          },
+          itemsStart + 0.1
+        )
+      }
+    }
+
+    if (socialTitle || socialLinks.length) {
+      const socialsStart = panelInsertTime + panelDuration * 0.4
+      if (socialTitle) {
+        tl.to(
+          socialTitle,
+          {
+            opacity: 1,
+            duration: 0.5,
+            ease: 'power2.out'
+          },
+          socialsStart
+        )
+      }
+      if (socialLinks.length) {
+        tl.to(
+          socialLinks,
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.55,
+            ease: 'power3.out',
+            stagger: { each: 0.08, from: 'start' },
+            onComplete: () => {
+              gsap.set(socialLinks, { clearProps: 'opacity' })
+            }
+          },
+          socialsStart + 0.04
+        )
+      }
+    }
+
+    openTlRef.current = tl
+    return tl
+  }, [])
+
+  const playOpen = useCallback(() => {
+    if (busyRef.current) return
+    busyRef.current = true
+    const tl = buildOpenTimeline()
+    if (tl) {
+      tl.eventCallback('onComplete', () => {
+        busyRef.current = false
+      })
+      tl.play(0)
+    } else {
+      busyRef.current = false
+    }
+  }, [buildOpenTimeline])
+
+  const playClose = useCallback(() => {
+    openTlRef.current?.kill()
+    openTlRef.current = null
+    itemEntranceTweenRef.current?.kill()
+
+    const panel = panelRef.current
+    const layers = preLayerElsRef.current
+    if (!panel) return
+
+    const all = [...layers, panel]
+    closeTweenRef.current?.kill()
+    const offscreen = position === 'left' ? -100 : 100
+    closeTweenRef.current = gsap.to(all, {
+      xPercent: offscreen,
+      duration: 0.32,
+      ease: 'power3.in',
+      overwrite: 'auto',
+      onComplete: () => {
+        const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'))
+        if (itemEls.length) {
+          gsap.set(itemEls, { yPercent: 140, rotate: 10 })
+        }
+        const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'))
+        if (numberEls.length) {
+          gsap.set(numberEls, { '--sm-num-opacity': 0 })
+        }
+        const socialTitle = panel.querySelector('.sm-socials-title')
+        const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'))
+        if (socialTitle) gsap.set(socialTitle, { opacity: 0 })
+        if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 })
+        busyRef.current = false
+      }
+    })
+  }, [position])
+
+  const animateIcon = useCallback(opening => {
+    const icon = iconRef.current
+    if (!icon) return
+    spinTweenRef.current?.kill()
+    if (opening) {
+      spinTweenRef.current = gsap.to(icon, { rotate: 225, duration: 0.8, ease: 'power4.out', overwrite: 'auto' })
+    } else {
+      spinTweenRef.current = gsap.to(icon, { rotate: 0, duration: 0.35, ease: 'power3.inOut', overwrite: 'auto' })
+    }
+  }, [])
+
+  const animateColor = useCallback(
+    opening => {
+      const btn = toggleBtnRef.current
+      if (!btn) return
+      colorTweenRef.current?.kill()
+      if (changeMenuColorOnOpen) {
+        const targetColor = opening ? openMenuButtonColor : menuButtonColor
+        colorTweenRef.current = gsap.to(btn, {
+          color: targetColor,
+          delay: 0.18,
+          duration: 0.3,
+          ease: 'power2.out'
+        })
+      } else {
+        gsap.set(btn, { color: menuButtonColor })
+      }
+    },
+    [openMenuButtonColor, menuButtonColor, changeMenuColorOnOpen]
+  )
+
+  React.useEffect(() => {
+    if (toggleBtnRef.current) {
+      if (changeMenuColorOnOpen) {
+        const targetColor = openRef.current ? openMenuButtonColor : menuButtonColor
+        gsap.set(toggleBtnRef.current, { color: targetColor })
+      } else {
+        gsap.set(toggleBtnRef.current, { color: menuButtonColor })
+      }
+    }
+  }, [changeMenuColorOnOpen, menuButtonColor, openMenuButtonColor])
+
+  const animateText = useCallback(opening => {
+    const inner = textInnerRef.current
+    if (!inner) return
+    textCycleAnimRef.current?.kill()
+
+    const currentLabel = opening ? 'Menu' : 'Close'
+    const targetLabel = opening ? 'Close' : 'Menu'
+    const cycles = 3
+    const seq = [currentLabel]
+    let last = currentLabel
+    for (let i = 0; i < cycles; i++) {
+      last = last === 'Menu' ? 'Close' : 'Menu'
+      seq.push(last)
+    }
+    if (last !== targetLabel) seq.push(targetLabel)
+    seq.push(targetLabel)
+    setTextLines(seq)
+
+    gsap.set(inner, { yPercent: 0 })
+    const lineCount = seq.length
+    const finalShift = ((lineCount - 1) / lineCount) * 100
+    textCycleAnimRef.current = gsap.to(inner, {
+      yPercent: -finalShift,
+      duration: 0.5 + lineCount * 0.07,
+      ease: 'power4.out'
+    })
+  }, [])
+
+  const toggleMenu = useCallback(() => {
+    const target = !openRef.current
+    openRef.current = target
+    setOpen(target)
+    if (target) {
+      onMenuOpen?.()
+      playOpen()
+    } else {
+      onMenuClose?.()
+      playClose()
+    }
+    animateIcon(target)
+    animateColor(target)
+    animateText(target)
+  }, [playOpen, playClose, animateIcon, animateColor, animateText, onMenuOpen, onMenuClose])
 
   return (
-    <div className={`relative ${className}`}>
-      {/* Menu Toggle Button */}
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="fixed top-6 right-6 z-50"
-      >
-        <Button
-          onClick={toggleMenu}
-          size="lg"
-          className="rounded-full shadow-lg bg-gradient-to-r from-primary to-orange-500 hover:from-primary/90 hover:to-orange-500/90 text-white border-0"
-        >
-          {isOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </Button>
-      </motion.div>
-
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={toggleMenu}
+    <div
+      className={(className ? className + ' ' : '') + 'staggered-menu-wrapper'}
+      style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
+      data-position={position}
+      data-open={open || undefined}
+    >
+      <div ref={preLayersRef} className="sm-prelayers" aria-hidden="true">
+        {(() => {
+          const raw = colors && colors.length ? colors.slice(0, 4) : ['#1e1e22', '#35353c']
+          let arr = [...raw]
+          if (arr.length >= 3) {
+            const mid = Math.floor(arr.length / 2)
+            arr.splice(mid, 1)
+          }
+          return arr.map((c, i) => <div key={i} className="sm-prelayer" style={{ background: c }} />)
+        })()}
+      </div>
+      <header className="staggered-menu-header" aria-label="Main navigation header">
+        <div className="sm-logo" aria-label="Logo">
+          <Image
+            src={logoUrl}
+            alt="Truly Grit Logo"
+            className="sm-logo-img filter brightness-0"
+            draggable={false}
+            width={110}
+            height={32}
+            priority
           />
-        )}
-      </AnimatePresence>
+        </div>
+        <button
+          ref={toggleBtnRef}
+          className="sm-toggle"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="staggered-menu-panel"
+          onClick={toggleMenu}
+          type="button"
+        >
+          <span ref={textWrapRef} className="sm-toggle-textWrap" aria-hidden="true">
+            <span ref={textInnerRef} className="sm-toggle-textInner">
+              {textLines.map((l, i) => (
+                <span className="sm-toggle-line" key={i}>
+                  {l}
+                </span>
+              ))}
+            </span>
+          </span>
+          <span ref={iconRef} className="sm-icon" aria-hidden="true">
+            <span ref={plusHRef} className="sm-icon-line" />
+            <span ref={plusVRef} className="sm-icon-line sm-icon-line-v" />
+          </span>
+        </button>
+      </header>
 
-      {/* Menu Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: 300, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 300, scale: 0.9 }}
-            transition={{ 
-              duration: 0.4, 
-              ease: [0.25, 0.46, 0.45, 0.94] 
-            }}
-            className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 overflow-y-auto"
-          >
-            <div className="p-6">
-              {/* Header */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="mb-8"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-foreground">Explore</h2>
-                  <Button
-                    onClick={toggleMenu}
-                    variant="ghost"
-                    size="sm"
-                    className="rounded-full"
-                  >
-                    <X className="h-4 w-4" />
-                  </Button>
-                </div>
-                <p className="text-muted-foreground">
-                  Navigate through our services and resources
-                </p>
-              </motion.div>
-
-              {/* Main Menu Items */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="space-y-4 mb-8"
-              >
-                <h3 className="text-lg font-semibold text-foreground mb-4">Main Sections</h3>
-                <div className="grid grid-cols-1 gap-4">
-                  {menuItems.map((item, index) => (
-                    <MenuItem key={item.href} item={item} index={index} isOpen={isOpen} />
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Additional Resources Toggle */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-                className="mb-6"
-              >
-                <Button
-                  onClick={toggleAdditional}
-                  variant="outline"
-                  className="w-full justify-between"
-                >
-                  <span>Additional Resources</span>
-                  <motion.div
-                    animate={{ rotate: showAdditional ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <ChevronDown className="h-4 w-4" />
-                  </motion.div>
-                </Button>
-              </motion.div>
-
-              {/* Additional Resources */}
-              <AnimatePresence>
-                {showAdditional && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-4 mb-8"
-                  >
-                    <h3 className="text-lg font-semibold text-foreground mb-4">More Resources</h3>
-                    <div className="grid grid-cols-1 gap-4">
-                      {additionalItems.map((item, index) => (
-                        <MenuItem 
-                          key={item.href} 
-                          item={item} 
-                          index={index + 6} 
-                          isOpen={showAdditional} 
-                        />
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {/* Call to Action */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 }}
-                className="bg-gradient-to-r from-primary to-orange-500 rounded-2xl p-6 text-white"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <Target className="h-5 w-5" />
-                  <h3 className="text-lg font-bold">Ready to Get Started?</h3>
-                </div>
-                <p className="text-sm opacity-90 mb-4">
-                  Choose your path and let's transform your business together.
-                </p>
-                <div className="flex flex-col gap-2">
-                  <Button asChild size="sm" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                    <Link href="/contact">
-                      Get Free Consultation
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                    <Link href="/work">
-                      View Our Work
-                    </Link>
-                  </Button>
-                </div>
-              </motion.div>
+      <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
+        <div className="sm-panel-inner">
+          <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
+            {items && items.length ? (
+              items.map((it, idx) => (
+                <li className="sm-panel-itemWrap" key={it.label + idx}>
+                  <Link className="sm-panel-item" href={it.link} aria-label={it.ariaLabel} data-index={idx + 1}>
+                    <span className="sm-panel-itemLabel">{it.label}</span>
+                  </Link>
+                </li>
+              ))
+            ) : (
+              <li className="sm-panel-itemWrap" aria-hidden="true">
+                <span className="sm-panel-item">
+                  <span className="sm-panel-itemLabel">No items</span>
+                </span>
+              </li>
+            )}
+          </ul>
+          {displaySocials && socialItems && socialItems.length > 0 && (
+            <div className="sm-socials" aria-label="Social links">
+              <h3 className="sm-socials-title">Connect With Us</h3>
+              <ul className="sm-socials-list" role="list">
+                {socialItems.map((s, i) => (
+                  <li key={s.label + i} className="sm-socials-item">
+                    <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link">
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </div>
+      </aside>
     </div>
   )
 }
+
+export default StaggeredMenu

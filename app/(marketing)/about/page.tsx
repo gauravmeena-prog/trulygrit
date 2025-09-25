@@ -95,7 +95,7 @@ export default function AboutPage() {
               alt="Truly Grit"
               width={200}
               height={67}
-              className="h-12 w-auto filter brightness-0"
+              className="h-12 w-auto dark:filter-none filter brightness-0"
             />
           </div>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">

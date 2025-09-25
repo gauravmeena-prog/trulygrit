@@ -24,13 +24,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Work', href: '/work' },
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
-  { name: 'Navigation', href: '/navigation' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -61,7 +61,7 @@ export function SiteHeader() {
               alt="Truly Grit"
               width={120}
               height={40}
-              className="h-8 w-auto filter brightness-0"
+              className="h-8 w-auto dark:filter-none filter brightness-0"
               priority
             />
           </Link>
@@ -105,7 +105,7 @@ export function SiteHeader() {
                     alt="Truly Grit"
                     width={120}
                     height={40}
-                    className="h-8 w-auto filter brightness-0"
+                    className="h-8 w-auto dark:filter-none filter brightness-0"
                   />
                 </Link>
               </SheetTitle>
@@ -138,10 +138,13 @@ export function SiteHeader() {
                 alt="Truly Grit"
                 width={120}
                 height={40}
-                className="h-8 w-auto filter brightness-0"
+                className="h-8 w-auto"
               />
             </Link>
           </div>
+          <nav className="flex items-center">
+            <ThemeToggle />
+          </nav>
         </div>
       </div>
     </header>

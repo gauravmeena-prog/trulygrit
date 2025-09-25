@@ -9,7 +9,6 @@ const footerNavigation = {
     { name: 'About', href: '/about' },
     { name: 'Work', href: '/work' },
     { name: 'Services', href: '/services' },
-    { name: 'Navigation', href: '/navigation' },
     { name: 'Contact', href: '/contact' },
   ],
   services: [
@@ -153,7 +152,7 @@ export function SiteFooter() {
               alt="Truly Grit"
               width={80}
               height={27}
-              className="h-4 w-auto filter brightness-0"
+              className="h-4 w-auto dark:filter-none filter brightness-0"
             />
             <p className="text-xs leading-5 text-muted-foreground">
               All rights reserved.
