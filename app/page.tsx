@@ -40,31 +40,31 @@ const features = [
 const processSteps = [
   {
     iconName: 'search',
-    title: 'Strategic Discovery',
-    description: 'We conduct comprehensive market research and competitor analysis to uncover opportunities and create a solid foundation for your growth strategy.',
+    title: 'We Get to Know Your Business',
+    description: 'We sit down with you (literally or virtually) and dig into what makes your business tick. Who are your customers? What\'s working? What\'s not? We look at your competitors and find the gaps we can exploit.',
     duration: 'Week 1-2',
-    deliverables: ['Market Analysis Report', 'Competitor Assessment', 'Customer Research', 'Opportunity Analysis'],
+    deliverables: ['Business Deep Dive', 'Customer Interviews', 'Competitor Analysis', 'Market Opportunity Map'],
   },
   {
     iconName: 'lightbulb',
-    title: 'Strategy Development',
-    description: 'Our experts craft data-driven marketing strategies aligned with your business goals, using proven methodologies and industry best practices.',
+    title: 'We Build Your Game Plan',
+    description: 'Based on what we learned, we create a clear roadmap. Which marketing channels should you focus on? How much should you spend? What\'s the timeline? We make sure everything aligns with your actual business goals.',
     duration: 'Week 3',
-    deliverables: ['Marketing Strategy', 'Channel Strategy', 'Budget Planning', 'Implementation Timeline'],
+    deliverables: ['Marketing Roadmap', 'Channel Strategy', 'Budget Breakdown', 'Monthly Milestones'],
   },
   {
     iconName: 'code',
-    title: 'Creative Execution',
-    description: 'We bring your strategy to life with compelling visuals, persuasive copy, and technical implementation designed to convert visitors into customers.',
+    title: 'We Create What Actually Works',
+    description: 'Now we build the stuff that matters. Your website, ads, emails, social content—everything designed to turn visitors into customers. We test different approaches and focus on what drives real results.',
     duration: 'Week 4-7',
-    deliverables: ['Brand Assets', 'Campaign Creatives', 'Landing Pages', 'Technical Setup'],
+    deliverables: ['Website & Landing Pages', 'Ad Campaigns', 'Email Sequences', 'Content Library'],
   },
   {
     iconName: 'megaphone',
-    title: 'Launch & Optimize',
-    description: 'We launch your campaigns and continuously monitor, test, and optimize every element to maximize performance and drive sustainable growth.',
+    title: 'We Launch and Keep Improving',
+    description: 'Game time. We launch everything and watch the numbers. What\'s working? What\'s not? We make adjustments weekly and send you regular reports so you always know what\'s happening with your money.',
     duration: 'Ongoing',
-    deliverables: ['Campaign Launch', 'Performance Monitoring', 'A/B Testing', 'Performance Reports'],
+    deliverables: ['Campaign Launch', 'Weekly Optimizations', 'Monthly Reports', 'Quarterly Reviews'],
   },
 ]
 

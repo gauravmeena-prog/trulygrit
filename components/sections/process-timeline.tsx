@@ -47,10 +47,10 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
             viewport={{ once: true }}
           >
             <span className="block text-gray-900/90">
-              Our Proven 4-Step
+              How We Actually
             </span>
             <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
-              Growth System
+              Build Your Business
             </span>
           </motion.h2>
           
@@ -71,7 +71,7 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            We don't just create marketing campaigns—we build complete growth systems that transform your business from startup to market leader.
+            No fancy jargon. No fluff. Just the real process we use to help businesses grow—step by step, with actual results.
           </motion.p>
         </motion.div>
         
