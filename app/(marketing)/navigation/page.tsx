@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import { Breadcrumb } from '@/components/breadcrumb'
 import { CardNavigation } from '@/components/card-navigation'
+import { StaggeredMenu } from '@/components/staggered-menu'
 
 export const metadata: Metadata = {
   title: 'Navigation | Truly Grit - Explore Our Services',
@@ -33,6 +34,9 @@ export default function NavigationPage() {
 
       {/* Card Navigation */}
       <CardNavigation />
+      
+      {/* Staggered Menu */}
+      <StaggeredMenu />
     </>
   )
 }
