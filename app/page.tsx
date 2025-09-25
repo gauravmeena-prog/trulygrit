@@ -182,21 +182,7 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main id="main-content" className="flex-1" tabIndex={-1}>
-        <Hero
-          title="Transform Your Business"
-          subtitle="With Marketing That Actually Works"
-          useLogo={false}
-          description="Stop wasting money on marketing that doesn't convert. We help ambitious businesses achieve 300%+ growth through data-driven strategies that build real connections and drive measurable results."
-          primaryCta={{
-            text: 'Get Your Free Strategy Call',
-            href: '/contact',
-          }}
-          secondaryCta={{
-            text: 'See Success Stories',
-            href: '/work',
-          }}
-          backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&auto=format&q=75"
-        />
+        <Hero />
         
         <StorytellingSection />
         
