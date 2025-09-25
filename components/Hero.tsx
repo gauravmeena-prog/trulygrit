@@ -21,7 +21,7 @@ export default function Hero() {
             Tells a Story
           </span>
           <span className="block text-gray-900/80">
-            — and That Story Ends in Results.
+            and That Story Ends in Results.
           </span>
         </motion.h1>
         

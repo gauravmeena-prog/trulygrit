@@ -12,40 +12,28 @@ import { CTASection } from '@/components/sections/cta-section'
 
 const features = [
   {
-    iconName: 'lightbulb',
-    title: 'Strategic Vision',
-    description: 'We don\'t just create campaigns—we build comprehensive marketing ecosystems that align with your business goals and drive long-term growth.',
-    benefit: '300% avg revenue increase',
+    iconName: 'user',
+    title: 'Founder-Led, Hands-On',
+    description: 'Every brief touches the founder\'s desk. Small team, senior attention, zero fluff.',
+    benefit: 'Direct access to leadership',
   },
   {
     iconName: 'target',
-    title: 'Precision Targeting',
-    description: 'Our AI-powered audience analysis ensures your message reaches the right people at the right time, maximizing ROI and minimizing waste.',
-    benefit: '5x higher conversion rates',
-  },
-  {
-    iconName: 'rocket',
-    title: 'Growth Acceleration',
-    description: 'We implement battle-tested strategies that transform your business from struggling startup to market leader in record time.',
-    benefit: '6-month average growth cycle',
-  },
-  {
-    iconName: 'users',
-    title: 'Expert Team',
-    description: 'Our certified marketing professionals bring 10+ years of experience and proven expertise to every project we undertake.',
-    benefit: 'Google & Meta certified',
-  },
-  {
-    iconName: 'trending-up',
-    title: 'Proven Results',
-    description: 'We don\'t just promise results—we deliver them. Our clients see measurable outcomes within 90 days or we refund your investment.',
-    benefit: '90-day guarantee',
+    title: 'Conversion Before Aesthetics',
+    description: 'Pretty is nice. Profitable is non-negotiable. We design for action first.',
+    benefit: 'Revenue-driven design',
   },
   {
     iconName: 'zap',
-    title: 'Agile Execution',
-    description: 'We move at the speed of business, launching campaigns in days, not months, while maintaining the highest quality standards.',
-    benefit: '48-hour launch time',
+    title: 'Fast Loops, Real Learning',
+    description: 'Plan → launch → measure → iterate. Tight cycles beat long guesses.',
+    benefit: 'Data-driven decisions',
+  },
+  {
+    iconName: 'eye',
+    title: 'Radical Transparency',
+    description: 'Clear goals, live dashboards, straight talk. You\'ll always know what\'s working.',
+    benefit: 'Complete visibility',
   },
 ]
 
@@ -184,8 +172,8 @@ export default function HomePage() {
         <Hero />
         
         <FeaturesGrid
-          title="Why Top Businesses Choose Truly Grit"
-          description="We don't just create marketing campaigns—we build growth engines that transform businesses and drive measurable results."
+          title="Markets forget noise. They remember results."
+          description="Founded on 18 June 2025, Truly Grit builds revenue engines the hard way—by shipping fast, measuring everything, and letting proof speak."
           features={features}
         />
         

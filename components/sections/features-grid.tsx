@@ -67,7 +67,7 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {features.map((feature, index) => {
               const IconComponent = getIcon(feature.iconName)
               return (
