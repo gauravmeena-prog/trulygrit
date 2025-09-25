@@ -100,7 +100,7 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <dl className="grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
             {features.map((feature, index) => {
               const IconComponent = getIcon(feature.iconName)
               return (
@@ -109,26 +109,40 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
                   variants={itemVariants}
                   className="flex flex-col"
                 >
-                  <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group border-2 hover:border-primary/20">
-                    <CardHeader>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-orange-500 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="h-6 w-6 text-white" aria-hidden="true" />
-                      </div>
-                      <CardTitle className="text-lg font-bold leading-7 text-foreground group-hover:text-primary transition-colors">
-                        {feature.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-1 flex-col space-y-4">
-                      <CardDescription className="flex-1 text-base leading-7 text-muted-foreground">
-                        {feature.description}
-                      </CardDescription>
-                      {feature.benefit && (
-                        <div className="flex items-center gap-2 text-sm font-medium text-green-600 bg-green-50 px-3 py-2 rounded-lg">
-                          <CheckCircle className="h-4 w-4" />
-                          <span>{feature.benefit}</span>
+                  <Card className="relative h-full overflow-hidden bg-white/90 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group rounded-2xl">
+                    {/* Floating background elements */}
+                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-tr from-orange-500/10 to-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200"></div>
+                    
+                    {/* Gradient background overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Subtle border gradient */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-orange-500/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px]">
+                      <div className="w-full h-full bg-white rounded-2xl"></div>
+                    </div>
+                    
+                    <div className="relative z-10 p-8">
+                      <CardHeader className="p-0 mb-6">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-orange-500 to-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
+                          <IconComponent className="h-8 w-8 text-white" aria-hidden="true" />
                         </div>
-                      )}
-                    </CardContent>
+                        <CardTitle className="text-xl font-bold leading-tight text-gray-900 group-hover:text-primary transition-colors duration-300 mt-4">
+                          {feature.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0 flex flex-1 flex-col space-y-6">
+                        <CardDescription className="flex-1 text-lg leading-relaxed text-gray-600 font-medium">
+                          {feature.description}
+                        </CardDescription>
+                        {feature.benefit && (
+                          <div className="inline-flex items-center gap-3 text-sm font-semibold text-primary bg-gradient-to-r from-primary/10 to-orange-500/10 px-4 py-3 rounded-xl border border-primary/20">
+                            <div className="h-2 w-2 bg-primary rounded-full animate-pulse"></div>
+                            <span>{feature.benefit}</span>
+                          </div>
+                        )}
+                      </CardContent>
+                    </div>
                   </Card>
                 </motion.div>
               )

@@ -12,27 +12,27 @@ import { CTASection } from '@/components/sections/cta-section'
 
 const features = [
   {
-    iconName: 'user',
-    title: 'Founder-Led, Hands-On',
-    description: 'Every brief touches the founder\'s desk. Small team, senior attention, zero fluff.',
+    iconName: 'crown',
+    title: 'The King\'s Touch',
+    description: 'Every brief touches the founder\'s desk. Small team, senior attention, zero fluff. When the king leads, the kingdom follows.',
     benefit: 'Direct access to leadership',
   },
   {
-    iconName: 'target',
-    title: 'Conversion Before Aesthetics',
-    description: 'Pretty is nice. Profitable is non-negotiable. We design for action first.',
+    iconName: 'trending-up',
+    title: 'Profit Over Pretty',
+    description: 'Beautiful designs don\'t pay bills. Profitable ones do. We craft for conversion, not compliments.',
     benefit: 'Revenue-driven design',
   },
   {
     iconName: 'zap',
-    title: 'Fast Loops, Real Learning',
-    description: 'Plan → launch → measure → iterate. Tight cycles beat long guesses.',
+    title: 'Speed Kills Competition',
+    description: 'Plan → launch → measure → iterate. Fast loops beat slow perfection every single time.',
     benefit: 'Data-driven decisions',
   },
   {
-    iconName: 'eye',
-    title: 'Radical Transparency',
-    description: 'Clear goals, live dashboards, straight talk. You\'ll always know what\'s working.',
+    iconName: 'shield',
+    title: 'Truth Over Comfort',
+    description: 'Clear goals, live dashboards, straight talk. No sugar-coating, no surprises—just raw results.',
     benefit: 'Complete visibility',
   },
 ]
