@@ -30,6 +30,7 @@ const navigation = [
   { name: 'Work', href: '/work' },
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Navigation', href: '/navigation' },
   { name: 'Contact', href: '/contact' },
 ]
 

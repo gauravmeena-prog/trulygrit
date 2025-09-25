@@ -8,6 +8,7 @@ import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { CaseStudiesGrid } from '@/components/sections/case-study-card'
 import { Testimonials } from '@/components/sections/testimonial-card'
 import { CTASection } from '@/components/sections/cta-section'
+import { CardNavigation } from '@/components/card-navigation'
 
 
 const features = [
@@ -220,6 +221,8 @@ export default function HomePage() {
           description="Hear from real business leaders who transformed their companies with Truly Grit. These aren't just testimonials—they're success stories from entrepreneurs who bet on themselves and won."
           testimonials={testimonials}
         />
+        
+        <CardNavigation />
         
         <CTASection
           title="Ready to Transform Your Business Like These Success Stories?"
