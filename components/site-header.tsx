@@ -60,7 +60,7 @@ export function SiteHeader() {
               alt="Truly Grit"
               width={120}
               height={40}
-              className="h-8 w-auto"
+              className="h-8 w-auto filter brightness-0"
               priority
             />
           </Link>
@@ -104,7 +104,7 @@ export function SiteHeader() {
                     alt="Truly Grit"
                     width={120}
                     height={40}
-                    className="h-8 w-auto"
+                    className="h-8 w-auto filter brightness-0"
                   />
                 </Link>
               </SheetTitle>
@@ -137,7 +137,7 @@ export function SiteHeader() {
                 alt="Truly Grit"
                 width={120}
                 height={40}
-                className="h-8 w-auto"
+                className="h-8 w-auto filter brightness-0"
               />
             </Link>
           </div>
