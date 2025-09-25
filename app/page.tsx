@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
-import { Hero } from '@/components/sections/hero'
+import Hero from '@/components/Hero'
 import { StorytellingSection } from '@/components/sections/storytelling-section'
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'

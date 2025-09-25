@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
 import { siteConfig } from '@/lib/site-config'
 import { StructuredData } from '@/components/structured-data'
+import { inter, sora } from './fonts'
 import '@/styles/globals.css'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
-})
 
 export const metadata: Metadata = {
   title: {
@@ -87,8 +80,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="light">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+      <body className="font-body leading-normal antialiased">
         <StructuredData />
         {children}
       </body>
