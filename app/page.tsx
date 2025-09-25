@@ -8,7 +8,6 @@ import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { CaseStudiesGrid } from '@/components/sections/case-study-card'
 import { Testimonials } from '@/components/sections/testimonial-card'
 import { CTASection } from '@/components/sections/cta-section'
-import { StaggeredMenu } from '@/components/staggered-menu'
 
 
 const features = [
@@ -237,7 +236,6 @@ export default function HomePage() {
         />
       </main>
       <SiteFooter />
-      <StaggeredMenu />
     </div>
   )
 }
