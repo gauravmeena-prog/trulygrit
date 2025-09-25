@@ -43,11 +43,15 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
   }
 
   return (
-    <section className="relative py-24 sm:py-32 bg-gray-50/50">
-      {/* Professional background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <section className="relative py-24 sm:py-32 bg-gradient-to-br from-white via-gray-50/30 to-white overflow-hidden">
+      {/* Modern background elements */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
       </div>
+      
+      {/* Subtle floating orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-orange-500/5 to-primary/5 rounded-full blur-3xl"></div>
       
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -100,7 +104,7 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <dl className="grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
+          <dl className="grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2">
             {features.map((feature, index) => {
               const IconComponent = getIcon(feature.iconName)
               return (
@@ -109,31 +113,35 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
                   variants={itemVariants}
                   className="flex flex-col"
                 >
-                  <Card className="relative h-full bg-white border border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group rounded-xl overflow-hidden">
-                    {/* Professional subtle accent line */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <Card className="relative h-full bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group rounded-2xl overflow-hidden">
+                    {/* Modern gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-orange-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
-                    {/* Subtle background pattern */}
-                    <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity duration-300">
-                      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_35%,rgba(255,255,255,.5)_50%,transparent_65%)]"></div>
+                    {/* Floating background elements */}
+                    <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary/8 to-orange-500/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                    <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-orange-500/8 to-primary/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200"></div>
+                    
+                    {/* Modern border gradient */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-orange-500/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px]">
+                      <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl"></div>
                     </div>
                     
                     <div className="relative z-10 p-8">
-                      <CardHeader className="p-0 mb-6">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gray-50 group-hover:bg-primary/10 transition-all duration-300 border border-gray-100">
-                          <IconComponent className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors duration-300" aria-hidden="true" />
+                      <CardHeader className="p-0 mb-8">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-orange-500 to-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
+                          <IconComponent className="h-7 w-7 text-white" aria-hidden="true" />
                         </div>
-                        <CardTitle className="text-lg font-semibold leading-tight text-gray-900 mt-4">
+                        <CardTitle className="text-xl font-bold leading-tight text-gray-900 mt-6 group-hover:text-primary transition-colors duration-300">
                           {feature.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="p-0 flex flex-1 flex-col space-y-4">
-                        <CardDescription className="flex-1 text-base leading-relaxed text-gray-600">
+                      <CardContent className="p-0 flex flex-1 flex-col space-y-6">
+                        <CardDescription className="flex-1 text-lg leading-relaxed text-gray-600 font-medium">
                           {feature.description}
                         </CardDescription>
                         {feature.benefit && (
-                          <div className="inline-flex items-center gap-2 text-sm font-medium text-primary bg-primary/5 px-3 py-2 rounded-lg border border-primary/10">
-                            <div className="h-1.5 w-1.5 bg-primary rounded-full"></div>
+                          <div className="inline-flex items-center gap-3 text-sm font-semibold text-primary bg-gradient-to-r from-primary/10 to-orange-500/10 px-4 py-3 rounded-xl border border-primary/20 backdrop-blur-sm">
+                            <div className="h-2 w-2 bg-primary rounded-full animate-pulse"></div>
                             <span>{feature.benefit}</span>
                           </div>
                         )}
