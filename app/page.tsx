@@ -12,28 +12,28 @@ import { CTASection } from '@/components/sections/cta-section'
 
 const features = [
   {
-    iconName: 'crown',
-    title: 'The King\'s Touch',
-    description: 'Every brief touches the founder\'s desk. Small team, senior attention, zero fluff. When the king leads, the kingdom follows.',
-    benefit: 'Direct access to leadership',
+    iconName: 'user-check',
+    title: 'Executive-Level Strategy',
+    description: 'Every project receives direct oversight from our founder. Senior-level expertise ensures strategic alignment and exceptional execution quality.',
+    benefit: 'C-suite attention',
   },
   {
     iconName: 'trending-up',
-    title: 'Profit Over Pretty',
-    description: 'Beautiful designs don\'t pay bills. Profitable ones do. We craft for conversion, not compliments.',
-    benefit: 'Revenue-driven design',
+    title: 'ROI-First Approach',
+    description: 'We prioritize measurable business outcomes over aesthetic preferences. Every design decision is validated against conversion metrics and revenue impact.',
+    benefit: 'Performance-driven results',
   },
   {
     iconName: 'zap',
-    title: 'Speed Kills Competition',
-    description: 'Plan → launch → measure → iterate. Fast loops beat slow perfection every single time.',
-    benefit: 'Data-driven decisions',
+    title: 'Agile Methodology',
+    description: 'Rapid iteration cycles enable quick learning and optimization. We launch, measure, and refine faster than traditional agencies.',
+    benefit: 'Faster time-to-market',
   },
   {
-    iconName: 'shield',
-    title: 'Truth Over Comfort',
-    description: 'Clear goals, live dashboards, straight talk. No sugar-coating, no surprises—just raw results.',
-    benefit: 'Complete visibility',
+    iconName: 'bar-chart',
+    title: 'Transparent Reporting',
+    description: 'Real-time dashboards and comprehensive analytics provide complete visibility into campaign performance and business impact.',
+    benefit: 'Full accountability',
   },
 ]
 
