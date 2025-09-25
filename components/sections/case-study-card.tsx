@@ -4,7 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Building2, Calendar, Sparkles, TrendingUp, Award, GraduationCap, Users } from 'lucide-react'
+import { ArrowRight, Calendar, TrendingUp, GraduationCap, Users } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
@@ -40,42 +40,6 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
         {/* Animated background with floating elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50/30 rounded-none"></div>
         
-        {/* Floating transformation elements */}
-        <motion.div 
-          className="absolute top-8 left-8 w-20 h-20 bg-gradient-to-r from-primary to-orange-500 rounded-full flex items-center justify-center shadow-2xl z-20"
-          animate={{ 
-            rotate: [0, 360], 
-            scale: [1, 1.1, 1],
-            y: [-5, 5, -5]
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        >
-          <Building2 className="h-10 w-10 text-white" />
-        </motion.div>
-        
-        <motion.div 
-          className="absolute top-16 right-16 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center shadow-2xl z-20"
-          animate={{ 
-            y: [-8, 8, -8], 
-            rotate: [0, 180, 360],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-        >
-          <Sparkles className="h-8 w-8 text-white" />
-        </motion.div>
-        
-        <motion.div 
-          className="absolute bottom-20 right-20 w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-2xl z-20"
-          animate={{ 
-            scale: [1, 1.3, 1], 
-            opacity: [0.7, 1, 0.7],
-            rotate: [0, -180, -360]
-          }}
-          transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-        >
-          <Award className="h-7 w-7 text-white" />
-        </motion.div>
         
         {/* Main content area */}
         <div className="relative z-10 py-16 px-8 lg:px-16">
@@ -209,38 +173,6 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
                     </motion.div>
                   </motion.div>
                   
-                  {/* Animated transformation arrow */}
-                  <motion.div 
-                    className="absolute -right-8 top-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-primary to-orange-500 rounded-full flex items-center justify-center shadow-2xl"
-                    animate={{ 
-                      x: [-5, 5, -5], 
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    <ArrowRight className="h-10 w-10 text-white" />
-                  </motion.div>
-                  
-                  {/* Floating particles around image */}
-                  <motion.div 
-                    className="absolute -top-4 -left-4 w-6 h-6 bg-orange-400 rounded-full opacity-60"
-                    animate={{ 
-                      y: [-10, 10, -10], 
-                      opacity: [0.6, 1, 0.6],
-                      scale: [1, 1.2, 1]
-                    }}
-                    transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                  />
-                  <motion.div 
-                    className="absolute -bottom-4 -right-4 w-4 h-4 bg-primary rounded-full opacity-40"
-                    animate={{ 
-                      y: [10, -10, 10], 
-                      opacity: [0.4, 0.8, 0.4],
-                      scale: [1, 1.3, 1]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                  />
                 </div>
               </motion.div>
               
@@ -411,32 +343,6 @@ export function CaseStudiesGrid({
           ))}
         </div>
         
-        {/* Floating sparkles */}
-        <div className="absolute top-1/3 right-1/3">
-          <motion.div
-            animate={{ 
-              y: [-15, 15, -15],
-              rotate: [0, 180, 360],
-              opacity: [0.3, 0.8, 0.3]
-            }}
-            transition={{ duration: 8, repeat: Infinity }}
-          >
-            <Sparkles className="h-8 w-8 text-primary/40" />
-          </motion.div>
-        </div>
-        
-        <div className="absolute bottom-1/3 left-1/3">
-          <motion.div
-            animate={{ 
-              y: [15, -15, 15],
-              rotate: [360, 180, 0],
-              opacity: [0.4, 0.7, 0.4]
-            }}
-            transition={{ duration: 10, repeat: Infinity }}
-          >
-            <Sparkles className="h-6 w-6 text-orange-500/40" />
-          </motion.div>
-        </div>
       </div>
     </section>
   )
