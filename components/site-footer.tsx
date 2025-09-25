@@ -9,6 +9,9 @@ const footerNavigation = {
     { name: 'About', href: '/about' },
     { name: 'Work', href: '/work' },
     { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ],
   services: [
@@ -20,7 +23,6 @@ const footerNavigation = {
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
   ],
   social: [
     {
