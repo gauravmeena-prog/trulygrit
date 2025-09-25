@@ -43,7 +43,20 @@ export function CaseStudyCard({ caseStudy, featured = false }: CaseStudyCardProp
       whileHover={{ y: -5 }}
       className={`group ${featured ? 'md:col-span-2' : ''}`}
     >
-      <Card className="h-full overflow-hidden border-0 shadow-lg transition-all duration-300 group-hover:shadow-xl">
+      <Card className="relative h-full overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group rounded-2xl">
+        {/* Modern gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-orange-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Floating background elements */}
+        <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary/8 to-orange-500/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+        <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-orange-500/8 to-primary/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200"></div>
+        
+        {/* Modern border gradient */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-orange-500/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px]">
+          <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl"></div>
+        </div>
+        
+        <div className="relative z-10">
         <div className="relative aspect-video overflow-hidden">
           <Image
             src={caseStudy.coverImage}
@@ -111,6 +124,7 @@ export function CaseStudyCard({ caseStudy, featured = false }: CaseStudyCardProp
             </Link>
           </Button>
         </CardContent>
+        </div>
       </Card>
     </motion.div>
   )
@@ -132,21 +146,58 @@ export function CaseStudiesGrid({
   const displayedCaseStudies = showAll ? caseStudies : caseStudies.slice(0, 3)
   
   return (
-    <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="relative py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50/50 overflow-hidden">
+      {/* Modern background elements */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+      </div>
+      
+      {/* Floating background orbs */}
+      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-primary/8 to-orange-500/8 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gradient-to-tl from-orange-500/8 to-primary/8 rounded-full blur-3xl"></div>
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
-          className="mx-auto max-w-2xl text-center"
+          className="mx-auto max-w-4xl text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            {description}
-          </p>
+          <motion.h2 
+            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <span className="block text-gray-900/90">
+              Real Results from
+            </span>
+            <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+              Real Clients
+            </span>
+          </motion.h2>
+          
+          <motion.div
+            className="mt-8 mb-4"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+          </motion.div>
+          
+          <motion.p 
+            className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Don't just take our word for it—see the actual results we've delivered for businesses just like yours. These aren't hypothetical case studies—they're real transformations with real numbers.
+          </motion.p>
         </motion.div>
         
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
