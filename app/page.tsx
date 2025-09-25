@@ -70,18 +70,18 @@ const processSteps = [
 
 const sampleCaseStudies = [
   {
-    title: 'Dhirubhai Ambani University: Admission Campaign Transformation',
-    client: 'Dhirubhai Ambani University',
+    title: 'DA-IICT: Strategic Admission Marketing Campaign',
+    client: 'Dhirubhai Ambani Institute of Information and Communication Technology',
     year: 2024,
     services: ['Admission Marketing', 'Digital Campaign Strategy', 'Student Recruitment'],
     coverImage: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'We developed and executed a comprehensive admission marketing campaign for Dhirubhai Ambani University, focusing on attracting quality students through strategic digital marketing, compelling content creation, and targeted outreach programs.',
+    summary: 'We developed and executed a comprehensive admission marketing campaign for DA-IICT, a prestigious private university established by the Government of Gujarat. Our strategic approach focused on attracting quality students to their B.Tech, M.Tech, M.Sc, and Ph.D. programs through targeted digital marketing and compelling content creation.',
     metrics: {
-      campaign: '2024',
-      focus: 'Admissions',
-      approach: 'Strategic'
+      university: 'DA-IICT',
+      established: '1999',
+      programs: '10+'
     },
-    slug: 'dhirubhai-ambani-university-admission-campaign',
+    slug: 'daiict-admission-marketing-campaign',
   },
 ]
 
@@ -89,9 +89,9 @@ const testimonials = [
   {
     content: 'Working with Truly Grit on our admission marketing campaign was a game-changer. Their strategic approach to digital marketing and student recruitment helped us reach our target audience more effectively. They understood the education sector and delivered results that exceeded our expectations.',
     author: {
-      name: 'Dhirubhai Ambani University',
+      name: 'DA-IICT',
       role: 'Admission Department',
-      company: 'Dhirubhai Ambani University',
+      company: 'Dhirubhai Ambani Institute of Information and Communication Technology',
       image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=400&fit=crop&auto=format&q=75',
     },
     rating: 5,
@@ -135,7 +135,7 @@ export default function HomePage() {
         
         <CaseStudiesGrid
           title="Real Results from Real Clients"
-          description="We believe in authenticity over quantity. Our first client partnership with Dhirubhai Ambani University demonstrates our commitment to delivering strategic marketing solutions that drive real results in the education sector."
+          description="We believe in authenticity over quantity. Our first client partnership with Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT) demonstrates our commitment to delivering strategic marketing solutions that drive real results in the education sector."
           caseStudies={sampleCaseStudies}
         />
         
