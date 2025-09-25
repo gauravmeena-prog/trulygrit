@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { siteConfig } from '@/lib/site-config'
-import { ThemeProvider } from '@/components/theme-provider'
 import { StructuredData } from '@/components/structured-data'
 import '@/styles/globals.css'
 
@@ -88,17 +87,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="light">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StructuredData />
-          {children}
-        </ThemeProvider>
+        <StructuredData />
+        {children}
       </body>
     </html>
   )
