@@ -75,11 +75,12 @@ const sampleCaseStudies = [
     year: 2024,
     services: ['Brand Transformation', 'Digital Strategy', 'University Rebranding'],
     coverImage: '/dau_gate.jpg',
-    summary: 'We led the complete brand transformation for DA-IICT as they transitioned to Dhirubhai Ambani University (DAU). Our strategic approach included comprehensive rebranding, digital presence overhaul, and positioning the institution for its next chapter of growth. We helped them celebrate 25 years of academic excellence while establishing a fresh, modern identity that reflects their evolution from an institute to a full-fledged university.',
+    summary: 'We led the complete brand transformation for DA-IICT as they transitioned to Dhirubhai Ambani University (DAU). Our strategic approach included comprehensive rebranding, digital presence overhaul, and positioning the institution for its next chapter of growth. We helped them celebrate their 24th year of academic excellence and successfully managed admissions 2025 for all courses while establishing a fresh, modern identity that reflects their evolution from an institute to a full-fledged university.',
     metrics: {
       transformation: 'DA-IICT → DAU',
       established: '1999',
-      anniversary: '25 Years'
+      anniversary: '24 Years',
+      admissions: '2025 Managed'
     },
     slug: 'daiict-to-dau-brand-transformation',
   },
@@ -87,7 +88,7 @@ const sampleCaseStudies = [
 
 const testimonials = [
   {
-    content: 'Truly Grit transformed our entire brand identity as we transitioned from DA-IICT to Dhirubhai Ambani University. Their strategic approach to rebranding and digital transformation helped us establish a fresh, modern identity that reflects our evolution and celebrates our 25 years of academic excellence. They understood the complexity of university rebranding and delivered exceptional results.',
+    content: 'Truly Grit transformed our entire brand identity as we transitioned from DA-IICT to Dhirubhai Ambani University. Their strategic approach to rebranding and digital transformation helped us establish a fresh, modern identity that reflects our evolution and celebrates our 24th year of academic excellence. They successfully managed our admissions 2025 for all courses and understood the complexity of university rebranding, delivering exceptional results.',
     author: {
       name: 'DAU Leadership',
       role: 'Brand Transformation Team',
@@ -95,7 +96,7 @@ const testimonials = [
       image: '/dau_gate.jpg',
     },
     rating: 5,
-    results: ['Complete Rebrand', 'Digital Transformation', '25th Anniversary'],
+    results: ['Complete Rebrand', 'Admissions 2025', '24th Anniversary'],
   },
 ]
 
