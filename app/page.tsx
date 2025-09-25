@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/sections/hero'
+import { StorytellingSection } from '@/components/sections/storytelling-section'
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { CaseStudiesGrid } from '@/components/sections/case-study-card'
@@ -196,6 +197,8 @@ export default function HomePage() {
           }}
           backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&auto=format&q=75"
         />
+        
+        <StorytellingSection />
         
         <FeaturesGrid
           title="Why Top Businesses Choose Truly Grit"
