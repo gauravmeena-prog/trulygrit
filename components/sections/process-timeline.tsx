@@ -75,79 +75,84 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
           </motion.p>
         </motion.div>
         
-        <div className="mx-auto mt-20 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {steps.map((step, index) => {
-              const IconComponent = getIcon(step.iconName)
-              return (
-                <motion.div
-                  key={index}
-                  className="relative group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl overflow-hidden p-8">
-                    {/* Modern gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-orange-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    {/* Floating background elements */}
-                    <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-primary/8 to-orange-500/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-                    <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-orange-500/8 to-primary/8 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200"></div>
-                    
-                    {/* Modern border gradient */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-orange-500/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-[1px]">
-                      <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-2xl"></div>
-                    </div>
-                    
-                    <div className="relative z-10">
-                      {/* Step number and icon */}
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-orange-500 to-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
-                          <span className="text-white font-bold text-lg">{index + 1}</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-xl font-bold leading-tight text-gray-900 group-hover:text-primary transition-colors duration-300">
-                              {step.title}
-                            </h3>
-                            <span className="text-sm font-semibold text-primary bg-gradient-to-r from-primary/10 to-orange-500/10 px-3 py-1.5 rounded-lg border border-primary/20">
-                              {step.duration}
-                            </span>
-                          </div>
+        <div className="mx-auto mt-20 max-w-5xl">
+          <div className="relative">
+            {/* Connection line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-orange-500 to-primary opacity-20 hidden lg:block"></div>
+            
+            <div className="space-y-16">
+              {steps.map((step, index) => {
+                const IconComponent = getIcon(step.iconName)
+                return (
+                  <motion.div
+                    key={index}
+                    className="relative flex items-start gap-8"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: index * 0.15 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Step indicator */}
+                    <div className="relative flex-shrink-0">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white border-4 border-gray-200 shadow-lg relative z-10">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-500">
+                          <IconComponent className="h-6 w-6 text-white" />
                         </div>
                       </div>
-                      
-                      <p className="text-lg leading-relaxed text-gray-600 font-medium mb-6">
-                        {step.description}
-                      </p>
-                      
-                      {step.deliverables && (
-                        <div className="space-y-3">
-                          <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Key Deliverables</h4>
-                          <div className="grid grid-cols-1 gap-2">
-                            {step.deliverables.map((deliverable, deliverableIndex) => (
-                              <motion.div 
-                                key={deliverableIndex} 
-                                className="flex items-center gap-3 text-sm font-medium text-gray-700 bg-gray-50/80 px-3 py-2 rounded-lg"
-                                initial={{ opacity: 0, x: -10 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.3, delay: deliverableIndex * 0.05 }}
-                                viewport={{ once: true }}
-                              >
-                                <div className="h-2 w-2 bg-primary rounded-full flex-shrink-0"></div>
-                                <span>{deliverable}</span>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                      {/* Step number */}
+                      <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-lg">
+                        {index + 1}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              )
-            })}
+                    
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <motion.div
+                        className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-primary/20"
+                        whileHover={{ y: -5 }}
+                      >
+                        <div className="flex items-start justify-between mb-4">
+                          <h3 className="text-2xl font-bold text-gray-900 leading-tight">
+                            {step.title}
+                          </h3>
+                          <span className="flex-shrink-0 ml-4 px-4 py-2 bg-gradient-to-r from-primary to-orange-500 text-white text-sm font-semibold rounded-full shadow-md">
+                            {step.duration}
+                          </span>
+                        </div>
+                        
+                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                          {step.description}
+                        </p>
+                        
+                        {step.deliverables && (
+                          <div className="border-t border-gray-100 pt-6">
+                            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4 flex items-center">
+                              <div className="h-1 w-8 bg-gradient-to-r from-primary to-orange-500 mr-3"></div>
+                              Key Deliverables
+                            </h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              {step.deliverables.map((deliverable, deliverableIndex) => (
+                                <motion.div 
+                                  key={deliverableIndex}
+                                  className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200"
+                                  initial={{ opacity: 0, scale: 0.95 }}
+                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  transition={{ duration: 0.4, delay: deliverableIndex * 0.1 }}
+                                  viewport={{ once: true }}
+                                >
+                                  <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full"></div>
+                                  <span className="text-sm font-medium text-gray-700">{deliverable}</span>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>
