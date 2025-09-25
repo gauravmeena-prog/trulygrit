@@ -66,7 +66,7 @@ export function Hero({
                   {title}
                 </span>
                 <Image
-                  src="/Logo_white_bg.png"
+                  src="/logo-black.svg"
                   alt="Truly Grit"
                   width={300}
                   height={100}

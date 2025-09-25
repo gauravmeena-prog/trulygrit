@@ -58,7 +58,7 @@ export function SiteHeader() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
-              src="/Logo_white_bg.png"
+              src="/logo-black.svg"
               alt="Truly Grit"
               width={120}
               height={40}
@@ -102,7 +102,7 @@ export function SiteHeader() {
               <SheetTitle>
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/Logo_white_bg.png"
+                    src="/logo-black.svg"
                     alt="Truly Grit"
                     width={120}
                     height={40}
@@ -135,7 +135,7 @@ export function SiteHeader() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Link href="/" className="flex items-center md:hidden">
               <Image
-                src="/Logo_white_bg.png"
+                src="/logo-black.svg"
                 alt="Truly Grit"
                 width={120}
                 height={40}
