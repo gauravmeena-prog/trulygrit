@@ -93,7 +93,7 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="font-semibold text-gray-900">Founded June 2025.</span> We build revenue engines that work. Ship fast. Measure everything. Let results speak.
+            <span className="font-semibold text-gray-900">Founded June 2025.</span> We build revenue engines that deliver results through speed, measurement, and proven strategies.
           </motion.p>
         </motion.div>
         
