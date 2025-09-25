@@ -70,32 +70,32 @@ const processSteps = [
 
 const sampleCaseStudies = [
   {
-    title: 'DA-IICT: Strategic Admission Marketing Campaign',
+    title: 'DA-IICT to DAU: Complete Brand Transformation',
     client: 'Dhirubhai Ambani Institute of Information and Communication Technology',
     year: 2024,
-    services: ['Admission Marketing', 'Digital Campaign Strategy', 'Student Recruitment'],
+    services: ['Brand Transformation', 'Digital Strategy', 'University Rebranding'],
     coverImage: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop&auto=format&q=75',
-    summary: 'We developed and executed a comprehensive admission marketing campaign for DA-IICT, a prestigious private university established by the Government of Gujarat. Our strategic approach focused on attracting quality students to their B.Tech, M.Tech, M.Sc, and Ph.D. programs through targeted digital marketing and compelling content creation.',
+    summary: 'We led the complete brand transformation for DA-IICT as they transitioned to Dhirubhai Ambani University (DAU). Our strategic approach included comprehensive rebranding, digital presence overhaul, and positioning the institution for its next chapter of growth. We helped them celebrate 25 years of academic excellence while establishing a fresh, modern identity that reflects their evolution from an institute to a full-fledged university.',
     metrics: {
-      university: 'DA-IICT',
+      transformation: 'DA-IICT → DAU',
       established: '1999',
-      programs: '10+'
+      anniversary: '25 Years'
     },
-    slug: 'daiict-admission-marketing-campaign',
+    slug: 'daiict-to-dau-brand-transformation',
   },
 ]
 
 const testimonials = [
   {
-    content: 'Working with Truly Grit on our admission marketing campaign was a game-changer. Their strategic approach to digital marketing and student recruitment helped us reach our target audience more effectively. They understood the education sector and delivered results that exceeded our expectations.',
+    content: 'Truly Grit transformed our entire brand identity as we transitioned from DA-IICT to Dhirubhai Ambani University. Their strategic approach to rebranding and digital transformation helped us establish a fresh, modern identity that reflects our evolution and celebrates our 25 years of academic excellence. They understood the complexity of university rebranding and delivered exceptional results.',
     author: {
-      name: 'DA-IICT',
-      role: 'Admission Department',
-      company: 'Dhirubhai Ambani Institute of Information and Communication Technology',
+      name: 'DAU Leadership',
+      role: 'Brand Transformation Team',
+      company: 'Dhirubhai Ambani University',
       image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=400&fit=crop&auto=format&q=75',
     },
     rating: 5,
-    results: ['Strategic Campaign', 'Quality Students', '2024 Success'],
+    results: ['Complete Rebrand', 'Digital Transformation', '25th Anniversary'],
   },
 ]
 
@@ -133,17 +133,17 @@ export default function HomePage() {
           steps={processSteps}
         />
         
-        <CaseStudiesGrid
-          title="Real Results from Real Clients"
-          description="We believe in authenticity over quantity. Our first client partnership with Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT) demonstrates our commitment to delivering strategic marketing solutions that drive real results in the education sector."
-          caseStudies={sampleCaseStudies}
-        />
-        
-        <Testimonials
-          title="What Our Clients Actually Say"
-          description="Hear directly from our client about their experience working with Truly Grit. Real feedback from a real partnership that delivered real results."
-          testimonials={testimonials}
-        />
+               <CaseStudiesGrid
+                 title="Real Results from Real Clients"
+                 description="We believe in authenticity over quantity. Our partnership with Dhirubhai Ambani University (formerly DA-IICT) demonstrates our expertise in complete brand transformations. From strategic rebranding to digital presence overhaul, we helped them transition from an institute to a full-fledged university while celebrating their 25 years of academic excellence."
+                 caseStudies={sampleCaseStudies}
+               />
+
+               <Testimonials
+                 title="What Our Clients Actually Say"
+                 description="Hear directly from our client about their experience with our brand transformation services. Real feedback from a real partnership that delivered complete organizational change."
+                 testimonials={testimonials}
+               />
         
         <CTASection
           title="Ready to Transform Your Business Like These Success Stories?"
