@@ -25,13 +25,10 @@ export function StorytellingSection() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <span className="block text-foreground/90">
-              Every Campaign We Launch
+              Truly Grit isn't just a name.
             </span>
             <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold">
-              Tells a Story
-            </span>
-            <span className="block text-foreground/80">
-              — and That Story Ends in Results.
+              It's a mission to create brands with courage.
             </span>
           </motion.h2>
           
@@ -44,16 +41,6 @@ export function StorytellingSection() {
             viewport={{ once: true, margin: "-100px" }}
           />
           
-          {/* Subtle emphasis text */}
-          <motion.p
-            className="mt-8 text-lg text-muted-foreground font-medium max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            We don't just create marketing campaigns. We craft narratives that connect, inspire, and drive your business forward with measurable impact.
-          </motion.p>
         </div>
       </div>
       
