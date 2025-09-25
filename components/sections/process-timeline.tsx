@@ -122,22 +122,25 @@ export function ProcessTimeline({ title, description, steps }: ProcessTimelinePr
                         
                         {step.deliverables && (
                           <div className="border-t border-gray-100 pt-6">
-                            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4 flex items-center">
-                              <div className="h-1 w-8 bg-gradient-to-r from-primary to-orange-500 mr-3"></div>
-                              Key Deliverables
+                            <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-6 flex items-center">
+                              <div className="h-1 w-8 bg-gradient-to-r from-primary to-orange-500 mr-3 rounded-full"></div>
+                              What You Get
                             </h4>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                               {step.deliverables.map((deliverable, deliverableIndex) => (
                                 <motion.div 
                                   key={deliverableIndex}
-                                  className="flex items-center gap-3 p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200"
-                                  initial={{ opacity: 0, scale: 0.95 }}
-                                  whileInView={{ opacity: 1, scale: 1 }}
+                                  className="group relative overflow-hidden bg-white rounded-xl border border-gray-200/60 hover:border-primary/30 transition-all duration-300 hover:shadow-md"
+                                  initial={{ opacity: 0, y: 20 }}
+                                  whileInView={{ opacity: 1, y: 0 }}
                                   transition={{ duration: 0.4, delay: deliverableIndex * 0.1 }}
                                   viewport={{ once: true }}
                                 >
-                                  <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full"></div>
-                                  <span className="text-sm font-medium text-gray-700">{deliverable}</span>
+                                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                  <div className="relative p-4 flex items-center gap-3">
+                                    <div className="flex-shrink-0 w-3 h-3 bg-gradient-to-r from-primary to-orange-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                                    <span className="text-sm font-semibold text-gray-800 group-hover:text-primary transition-colors duration-300">{deliverable}</span>
+                                  </div>
                                 </motion.div>
                               ))}
                             </div>
