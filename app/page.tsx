@@ -74,7 +74,7 @@ const sampleCaseStudies = [
     client: 'Dhirubhai Ambani Institute of Information and Communication Technology',
     year: 2024,
     services: ['Brand Transformation', 'Digital Strategy', 'University Rebranding'],
-    coverImage: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop&auto=format&q=75',
+    coverImage: '/dau_gate.jpg',
     summary: 'We led the complete brand transformation for DA-IICT as they transitioned to Dhirubhai Ambani University (DAU). Our strategic approach included comprehensive rebranding, digital presence overhaul, and positioning the institution for its next chapter of growth. We helped them celebrate 25 years of academic excellence while establishing a fresh, modern identity that reflects their evolution from an institute to a full-fledged university.',
     metrics: {
       transformation: 'DA-IICT → DAU',
@@ -92,7 +92,7 @@ const testimonials = [
       name: 'DAU Leadership',
       role: 'Brand Transformation Team',
       company: 'Dhirubhai Ambani University',
-      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=400&fit=crop&auto=format&q=75',
+      image: '/dau_gate.jpg',
     },
     rating: 5,
     results: ['Complete Rebrand', 'Digital Transformation', '25th Anniversary'],
