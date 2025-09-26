@@ -633,47 +633,139 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Why It Worked - Unique Layout */}
-          <div className="mb-20">
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-3xl p-8 lg:p-12">
-              <div className="text-center mb-12">
-                <h3 className="text-4xl font-bold mb-4">Why It Worked</h3>
-                <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-                  A holistic, data-driven approach that delivered results
+          {/* Why It Worked - SPECTACULAR DESIGN */}
+          <div className="relative py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+            </div>
+            
+            {/* Grid Pattern Overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}></div>
+            </div>
+
+            <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+              
+              {/* SPECTACULAR HEADER */}
+              <div className="text-center mb-24">
+                <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary/20 to-orange-500/20 rounded-full border border-primary/30 mb-12 backdrop-blur-sm">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
+                  <span className="text-sm font-bold text-primary uppercase tracking-wider">Success Formula</span>
+                </div>
+                
+                <h2 className="text-6xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl leading-tight mb-12">
+                  <span className="block text-white/90">
+                    Why
+                  </span>
+                  <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-4">
+                    It Worked
+                  </span>
+                </h2>
+                
+                <div className="mt-12 mb-8">
+                  <div className="mx-auto h-2 w-40 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+                </div>
+                
+                <p className="text-2xl leading-relaxed text-gray-300 max-w-4xl mx-auto font-medium">
+                  A holistic, data-driven approach that delivered exceptional results through strategic execution and continuous optimization.
                 </p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target className="h-10 w-10 text-white" />
-                  </div>
-                  <h4 className="text-2xl font-bold mb-4">Holistic Approach</h4>
-                  <p className="text-gray-300 leading-relaxed">Balanced performance marketing, branding, content, outreach & tech</p>
-                </div>
+
+              {/* SPECTACULAR GRID - 4 COLUMNS */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-10 w-10 text-white" />
+                {/* Holistic Approach - SPECTACULAR */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-primary via-orange-500 to-primary rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50">
+                    <div className="text-center">
+                      <div className="relative mb-8">
+                        <div className="w-24 h-24 bg-gradient-to-br from-primary to-orange-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <span className="text-4xl">🎯</span>
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full animate-ping"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4">Holistic Approach</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Balanced performance marketing, branding, content, outreach & tech integration for maximum impact.
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="text-2xl font-bold mb-4">Trust Building</h4>
-                  <p className="text-gray-300 leading-relaxed">Showcased DAU's culture, placements, and faculty via extensive content</p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="h-10 w-10 text-white" />
+
+                {/* Data-Driven - SPECTACULAR */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50">
+                    <div className="text-center">
+                      <div className="relative mb-8">
+                        <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <span className="text-4xl">📊</span>
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full animate-ping"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4">Data-Driven</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Iterated campaigns, pages & messaging in real time based on comprehensive user-behavior data analysis.
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="text-2xl font-bold mb-4">Data-Driven</h4>
-                  <p className="text-gray-300 leading-relaxed">Iterated campaigns, pages & messaging in real time based on data</p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <ArrowRight className="h-10 w-10 text-white" />
+
+                {/* Trust Building - SPECTACULAR */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50">
+                    <div className="text-center">
+                      <div className="relative mb-8">
+                        <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <span className="text-4xl">🤝</span>
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full animate-ping"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4">Trust Building</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Showcased DAU's culture, placements, and faculty through extensive, authentic content creation.
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="text-2xl font-bold mb-4">Conversion Focus</h4>
-                  <p className="text-gray-300 leading-relaxed">Nurturing of leads ensured students complete the applications</p>
+                </div>
+
+                {/* Conversion Focus - SPECTACULAR */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50">
+                    <div className="text-center">
+                      <div className="relative mb-8">
+                        <div className="w-24 h-24 bg-gradient-to-br from-pink-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                          <span className="text-4xl">🔄</span>
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-pink-500 rounded-full animate-ping"></div>
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4">Conversion Focus</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        Strategic nurturing of leads throughout the funnel ensured students complete their applications successfully.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* BOTTOM ACCENT */}
+              <div className="text-center mt-20">
+                <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-primary/10 to-orange-500/10 rounded-full border border-primary/20 backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-primary font-bold text-lg">Proven Results • Measurable Impact</span>
+                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
                 </div>
               </div>
             </div>
