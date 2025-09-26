@@ -5,58 +5,19 @@ import { CTASection } from '@/components/sections/cta-section'
 
 const allCaseStudies = [
   {
-    title: 'Brand Transformation for Tech Startup',
-    client: 'InnovateTech',
-    year: 2023,
-    services: ['Brand Strategy', 'Web Design', 'Digital Marketing'],
-    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    summary: 'Complete brand overhaul that resulted in 300% increase in qualified leads and $2M in new revenue.',
-    slug: 'innovatetech-brand-transformation',
-  },
-  {
-    title: 'E-commerce Growth Campaign',
-    client: 'StyleCo',
-    year: 2023,
-    services: ['Paid Advertising', 'Conversion Optimization', 'Analytics'],
-    coverImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    summary: 'Drove 250% increase in online sales through strategic paid advertising and conversion optimization.',
-    slug: 'styleco-ecommerce-growth',
-  },
-  {
-    title: 'Content Strategy for B2B SaaS',
-    client: 'DataFlow',
-    year: 2023,
-    services: ['Content Strategy', 'SEO', 'Lead Generation'],
-    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    summary: 'Comprehensive content strategy that generated 500+ qualified leads and established thought leadership.',
-    slug: 'dataflow-content-strategy',
-  },
-  {
-    title: 'Restaurant Chain Digital Transformation',
-    client: 'FreshBites',
-    year: 2023,
-    services: ['Digital Strategy', 'Mobile App', 'Social Media'],
-    coverImage: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
-    summary: 'Digital transformation that increased online orders by 400% and customer retention by 60%.',
-    slug: 'freshbites-digital-transformation',
-  },
-  {
-    title: 'Healthcare Platform Launch',
-    client: 'MedConnect',
-    year: 2022,
-    services: ['Product Launch', 'Content Marketing', 'PR'],
-    coverImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
-    summary: 'Successful platform launch campaign that acquired 10K+ users in the first month.',
-    slug: 'medconnect-platform-launch',
-  },
-  {
-    title: 'Financial Services Rebrand',
-    client: 'SecureInvest',
-    year: 2022,
-    services: ['Brand Identity', 'Website Redesign', 'Marketing Automation'],
-    coverImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
-    summary: 'Complete rebrand that modernized their image and increased client acquisition by 180%.',
-    slug: 'secureinvest-rebrand',
+    title: 'DA-IICT to DAU: Complete Brand Transformation',
+    client: 'Dhirubhai Ambani Institute of Information and Communication Technology',
+    year: 2024,
+    services: ['Brand Transformation', 'Digital Strategy', 'University Rebranding'],
+    coverImage: '/dau_gate.jpg',
+    summary: 'Led comprehensive brand transformation for DA-IICT\'s transition to Dhirubhai Ambani University. Delivered strategic rebranding, digital presence overhaul, and admission campaign management for 2025. Successfully positioned the institution for its next growth phase while celebrating their 24th year of academic excellence.',
+    metrics: {
+      transformation: 'DA-IICT → DAU',
+      established: '1999',
+      anniversary: '24 Years',
+      admissions: '2025 Managed'
+    },
+    slug: 'daiict-to-dau-brand-transformation',
   },
 ]
 
@@ -78,38 +39,46 @@ export const metadata = {
 export default function WorkPage() {
   return (
     <>
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Our Work
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight">
+              <span className="block text-gray-900/90">
+                Our Work
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+                Real Results
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Explore our portfolio of successful marketing campaigns and brand transformations 
-              that have driven real business results for our clients.
+            <div className="mt-8 mb-6">
+              <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+            </div>
+            <p className="text-xl leading-relaxed text-gray-600 font-medium">
+              Founded June 2025. We build revenue engines that deliver results through speed, measurement, and proven strategies. See how we transform businesses through strategic marketing and brand development.
             </p>
           </div>
         </div>
       </section>
 
       <CaseStudiesGrid
-        title="Case Studies"
-        description="Each project tells a story of strategic thinking, creative execution, and measurable results."
+        title="Real Results from Real Client"
+        description="Our partnership with Dhirubhai Ambani University demonstrates our expertise in comprehensive brand transformations and institutional positioning."
         caseStudies={allCaseStudies}
         showAll={true}
       />
 
       <CTASection
-        title="Ready to Create Your Success Story?"
-        description="Let's discuss how we can help you achieve similar results for your business."
+        title="Ready to Transform Your Business?"
+        description="Join successful organizations who have achieved extraordinary growth through our strategic approach. Let's discuss how we can help transform your business."
         primaryCta={{
-          text: 'Start Your Project',
+          text: 'Get Your Free Strategy Call',
           href: '/contact',
         }}
         secondaryCta={{
-          text: 'Learn About Our Process',
-          href: '/services',
+          text: 'See Our Pricing',
+          href: '/pricing',
         }}
+        variant="gradient"
       />
     </>
   )
