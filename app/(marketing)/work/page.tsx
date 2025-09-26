@@ -268,10 +268,10 @@ export default function WorkPage() {
               </div>
             </div>
 
-            {/* Media Spend Breakdown */}
+            {/* Campaign Channels */}
             <div className="mb-16">
-              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Media Spend Analysis</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Multi-Channel Campaign</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 
                 {/* Performance Marketing */}
                 <div className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border border-blue-200">
@@ -282,19 +282,19 @@ export default function WorkPage() {
                     <h5 className="text-xl font-bold text-gray-900">Performance Marketing</h5>
                     <p className="text-gray-600">Google, Meta, LinkedIn Ads</p>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Total Spent:</span>
-                      <span className="font-bold text-gray-900">₹3.18 Cr</span>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-gray-700">Strategic ad campaigns</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Budget Allocated:</span>
-                      <span className="font-bold text-gray-900">₹4.23 Cr</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-gray-700">Lead generation optimization</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full" style={{width: '75%'}}></div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-gray-700">Conversion tracking</span>
                     </div>
-                    <p className="text-sm text-blue-600 font-semibold">75% budget utilization</p>
                   </div>
                 </div>
 
@@ -305,21 +305,21 @@ export default function WorkPage() {
                       <span className="text-white font-bold text-xl">💬</span>
                     </div>
                     <h5 className="text-xl font-bold text-gray-900">WhatsApp Marketing</h5>
-                    <p className="text-gray-600">Lead Conversion & CTR</p>
+                    <p className="text-gray-600">Lead Conversion & Engagement</p>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Total Spent:</span>
-                      <span className="font-bold text-gray-900">₹1.25 L</span>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-gray-700">Automated messaging</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Budget Allocated:</span>
-                      <span className="font-bold text-gray-900">₹1.5 L</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-gray-700">Lead nurturing sequences</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full" style={{width: '83%'}}></div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-gray-700">Response time optimization</span>
                     </div>
-                    <p className="text-sm text-green-600 font-semibold">83% budget utilization</p>
                   </div>
                 </div>
 
@@ -330,58 +330,78 @@ export default function WorkPage() {
                       <span className="text-white font-bold text-xl">📧</span>
                     </div>
                     <h5 className="text-xl font-bold text-gray-900">Email Marketing</h5>
-                    <p className="text-gray-600">Lead Conversion & CTR</p>
+                    <p className="text-gray-600">Lead Conversion & Nurturing</p>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Total Spent:</span>
-                      <span className="font-bold text-gray-900">₹20K</span>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span className="text-gray-700">Automated email sequences</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-700">Budget Allocated:</span>
-                      <span className="font-bold text-gray-900">₹1 L</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span className="text-gray-700">Personalized content</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full" style={{width: '20%'}}></div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span className="text-gray-700">Performance tracking</span>
                     </div>
-                    <p className="text-sm text-purple-600 font-semibold">20% budget utilization</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Agency Charges */}
+            {/* Services Delivered */}
             <div className="mb-16">
-              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Agency Investment</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Services Delivered</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 
-                {/* Agency Charges */}
+                {/* Strategic Planning */}
                 <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white font-bold text-xl">🏢</span>
+                      <span className="text-white font-bold text-xl">🎯</span>
                     </div>
-                    <h5 className="text-xl font-bold text-gray-900">Agency Charges</h5>
-                    <p className="text-gray-600">Strategic planning & execution</p>
+                    <h5 className="text-xl font-bold text-gray-900">Strategic Planning</h5>
+                    <p className="text-gray-600">Campaign strategy & execution</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-gray-900 mb-2">₹12 L</div>
-                    <p className="text-gray-600">4 months investment</p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                      <span className="text-gray-700">Campaign coordination</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                      <span className="text-gray-700">Performance monitoring</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                      <span className="text-gray-700">Strategy optimization</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Photography Charges */}
+                {/* Creative Production */}
                 <div className="p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl border border-pink-200">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-white font-bold text-xl">📷</span>
                     </div>
-                    <h5 className="text-xl font-bold text-gray-900">Photography</h5>
-                    <p className="text-gray-600">Creative asset production</p>
+                    <h5 className="text-xl font-bold text-gray-900">Creative Production</h5>
+                    <p className="text-gray-600">Visual content creation</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-gray-900 mb-2">₹2 L</div>
-                    <p className="text-gray-600">4 months investment</p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <span className="text-gray-700">Professional photoshoots</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <span className="text-gray-700">Video production</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <span className="text-gray-700">Creative asset development</span>
+                    </div>
                   </div>
                 </div>
 
@@ -392,11 +412,21 @@ export default function WorkPage() {
                       <span className="text-white font-bold text-xl">🎨</span>
                     </div>
                     <h5 className="text-xl font-bold text-gray-900">Content Creation</h5>
-                    <p className="text-gray-600">Banners, videos, static posts</p>
+                    <p className="text-gray-600">Multi-format content</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-gray-900 mb-2">₹4 L</div>
-                    <p className="text-gray-600">4 months investment</p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      <span className="text-gray-700">Social media content</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      <span className="text-gray-700">Video content</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      <span className="text-gray-700">Static designs</span>
+                    </div>
                   </div>
                 </div>
               </div>
