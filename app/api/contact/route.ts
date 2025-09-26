@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { saveToGoogleSheetsSimple } from '@/lib/simple-sheets'
+import { saveToGoogleSheetsSimple } from '@/lib/sheets-simple'
 
 const contactSchema = z.object({
   name: z.string().min(2),
