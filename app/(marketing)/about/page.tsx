@@ -69,10 +69,10 @@ export default function AboutPage() {
     <>
       {/* Clean Hero Section */}
       <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <Breadcrumb items={[{ label: 'About' }]} />
           
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto mt-16">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-8">
               About Me
             </h1>
@@ -85,7 +85,7 @@ export default function AboutPage() {
               className="h-16 w-auto filter brightness-0 mx-auto mb-8"
             />
             
-            <p className="text-xl leading-relaxed text-gray-600">
+            <p className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto">
               I'm a strategic marketing professional dedicated to helping ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence. As a solo founder, I bring personal attention and expertise to every project.
             </p>
           </div>
@@ -94,21 +94,28 @@ export default function AboutPage() {
 
       {/* Clean Story Section */}
       <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               My Approach to Marketing
             </h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900">My Mission</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              I believe great marketing should build genuine connections and drive meaningful results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">My Mission</h3>
                 <p className="text-lg leading-relaxed text-gray-600">
                   I build revenue engines that deliver results through speed, measurement, and proven strategies. My approach combines data-driven insights with creative excellence to help businesses achieve extraordinary growth.
                 </p>
-                
-                <h3 className="text-2xl font-bold text-gray-900">What Sets Me Apart</h3>
-                <ul className="space-y-3">
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">What Sets Me Apart</h3>
+                <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <span className="text-gray-600">Focus on measurable results, not vanity metrics</span>
@@ -127,19 +134,19 @@ export default function AboutPage() {
                   </li>
                 </ul>
               </div>
-              
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format&q=75"
-                    alt="Marketing strategy and campaign development"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                  />
-                </div>
+            </div>
+            
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format&q=75"
+                  alt="Marketing strategy and campaign development"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                />
               </div>
             </div>
           </div>
@@ -148,17 +155,17 @@ export default function AboutPage() {
 
       {/* Clean Stats Section */}
       <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               My Track Record
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Key metrics that reflect my commitment to client success.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl font-bold text-gray-900 mb-2">
@@ -175,17 +182,17 @@ export default function AboutPage() {
 
       {/* Clean Values Section */}
       <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               My Core Values
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               The principles that guide everything I do and how I work with clients.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => {
               const IconComponent = getIcon(value.iconName)
               return (
@@ -208,19 +215,19 @@ export default function AboutPage() {
 
       {/* Clean Founder Section */}
       <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Meet Gaurav Meena
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Strategic marketing professional bringing personal attention and expertise to every project.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative">
                   <div className="aspect-square rounded-xl overflow-hidden">
                     <Image
