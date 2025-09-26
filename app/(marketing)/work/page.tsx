@@ -129,29 +129,6 @@ export default function WorkPage() {
                   ></iframe>
                 </div>
                 
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-red-600 text-sm">👁</span>
-                      </div>
-                      <span className="text-gray-600 font-medium">259 views</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-red-600 text-sm">👍</span>
-                      </div>
-                      <span className="text-gray-600 font-medium">259 likes</span>
-                    </div>
-                  </div>
-                  <Link 
-                    href="https://youtu.be/MnoudliA_oY"
-                    target="_blank"
-                    className="px-6 py-3 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 transition-colors"
-                  >
-                    Watch on YouTube
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -196,29 +173,6 @@ export default function WorkPage() {
                   </div>
                 </div>
                 
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                        <span className="text-purple-600 text-sm">👁</span>
-                      </div>
-                      <span className="text-gray-600 font-medium">1.2K views</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                        <span className="text-purple-600 text-sm">❤️</span>
-                      </div>
-                      <span className="text-gray-600 font-medium">1.2K likes</span>
-                    </div>
-                  </div>
-                  <Link 
-                    href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
-                    target="_blank"
-                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all"
-                  >
-                    Watch on Instagram
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
