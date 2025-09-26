@@ -169,28 +169,31 @@ export default function WorkPage() {
                 </div>
                 
                 <div className="flex-shrink-0 w-full max-w-md mx-auto">
-                  <iframe 
-                    className="instagram-media instagram-media-rendered w-full" 
-                    id="instagram-embed-9" 
-                    src="https://www.instagram.com/reel/DIqxJpMhKki/embed/?cr=1&v=14&wp=448&rd=https%3A%2F%2Fwww.trulygrit.com&rp=%2Fcase-study%2Fdhirubhai-ambani-university#%7B%22ci%22%3A9%2C%22os%22%3A7172438%2C%22ls%22%3A2062517%2C%22le%22%3A2063487.700000003%7D" 
-                    allowTransparency="true" 
-                    allowFullScreen="true" 
-                    frameBorder="0" 
-                    height="446" 
-                    data-instgrm-payload-id="instagram-media-payload-9" 
-                    scrolling="no" 
-                    style={{
-                      backgroundColor: 'white',
-                      borderRadius: '3px',
-                      border: '1px solid rgb(219, 219, 219)',
-                      boxShadow: 'none',
-                      display: 'block',
-                      margin: '0px 0px 12px',
-                      padding: '0px',
-                      minWidth: '0px !important',
-                      maxWidth: '100% !important'
-                    }}
-                  ></iframe>
+                  <div className="relative aspect-[9/16] bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
+                          <Play className="h-8 w-8 text-primary ml-1" />
+                        </div>
+                        <h4 className="text-xl font-bold text-white mb-2">Instagram Reel</h4>
+                        <p className="text-white/80 text-sm">Campus life at DAU</p>
+                      </div>
+                    </div>
+                    
+                    {/* Instagram Branding */}
+                    <div className="absolute top-4 left-4">
+                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded text-sm font-bold">
+                        Instagram
+                      </div>
+                    </div>
+                    
+                    {/* Click to view */}
+                    <Link 
+                      href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
+                      target="_blank"
+                      className="absolute inset-0 rounded-2xl"
+                    />
+                  </div>
                 </div>
                 
                 <div className="mt-6 flex items-center justify-between">
