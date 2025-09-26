@@ -125,33 +125,21 @@ export default function WorkPage() {
                       <p className="text-xs text-gray-500">Campus Tour Video</p>
                     </div>
                   </div>
-                  <Link 
-                    href="https://youtu.be/MnoudliA_oY"
-                    target="_blank"
-                    className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    Watch Video
-                  </Link>
+                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
+                    Embedded Video
+                  </div>
                 </div>
                 
-                {/* Video Thumbnail */}
-                <div className="relative aspect-video bg-gray-900">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
-                        <Play className="h-8 w-8 text-primary ml-1" />
-                      </div>
-                      <h4 className="text-xl font-bold text-white mb-2">Campus Tour Video</h4>
-                      <p className="text-white/80 text-sm">Professional video showcasing DAU campus facilities</p>
-                    </div>
-                  </div>
-                  
-                  {/* YouTube Branding */}
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-red-600 text-white px-3 py-1 rounded text-sm font-bold">
-                      YouTube
-                    </div>
-                  </div>
+                {/* Embedded YouTube Video */}
+                <div className="relative aspect-video">
+                  <iframe 
+                    className="w-full aspect-video rounded-xl shadow-lg" 
+                    src="https://www.youtube.com/embed/MnoudliA_oY?si=iTniRKkgEm0PaCoy" 
+                    title="YouTube video" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 
                 {/* Footer */}
