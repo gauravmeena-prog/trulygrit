@@ -39,7 +39,7 @@ const team = [
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=75',
     bio: 'I founded this agency with a vision to help businesses achieve remarkable growth through strategic marketing. As a solo founder, I handle everything from strategy to execution, ensuring every client receives my personal attention and expertise.',
     linkedin: 'https://linkedin.com/in/gauravmeena',
-    instagram: 'https://instagram.com/gauravmeena',
+    instagram: 'https://www.instagram.com/gaurav.meena___/',
   },
 ]
 
