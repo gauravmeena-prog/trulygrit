@@ -96,7 +96,7 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Instagram-Style Video Showcase */}
+          {/* Video Showcase - Clean Design */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Work in Action</h3>
@@ -107,9 +107,9 @@ export default function WorkPage() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
-              {/* YouTube Campus Tour - Instagram Style */}
+              {/* YouTube Campus Tour */}
               <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-                {/* Instagram Header */}
+                {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
@@ -122,7 +122,7 @@ export default function WorkPage() {
                           <span className="text-white text-xs">✓</span>
                         </div>
                       </div>
-                      <p className="text-xs text-gray-500">Original audio</p>
+                      <p className="text-xs text-gray-500">Campus Tour Video</p>
                     </div>
                   </div>
                   <Link 
@@ -130,11 +130,11 @@ export default function WorkPage() {
                     target="_blank"
                     className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg hover:bg-blue-600 transition-colors"
                   >
-                    View profile
+                    Watch Video
                   </Link>
                 </div>
                 
-                {/* Video Content */}
+                {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-gray-900">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
                     <div className="text-center">
@@ -154,45 +154,31 @@ export default function WorkPage() {
                   </div>
                 </div>
                 
-                {/* Instagram Footer */}
+                {/* Footer */}
                 <div className="p-4">
-                  <div className="text-blue-500 text-sm mb-3">View more on YouTube</div>
-                  <div className="border-t border-gray-200 pt-3">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-4">
-                        <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
-                        <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
-                        <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
-                      </div>
-                      <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-4">
+                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
+                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
+                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
                     </div>
-                    
-                    <div className="text-sm font-semibold text-gray-900 mb-2">259 likes</div>
-                    
-                    <div className="text-sm text-gray-600">
-                      <span className="font-semibold text-gray-900">daiictofficial</span> UG Admissions Open for 2025! 
-                      Explore our world-class campus and facilities. Apply now for undergraduate programs.
-                    </div>
-                    
-                    <div className="text-xs text-gray-500 mt-2">View all 15 comments</div>
-                    
-                    <div className="flex items-center gap-2 mt-3">
-                      <input 
-                        type="text" 
-                        placeholder="Add a comment..." 
-                        className="flex-1 text-sm text-gray-600 border-0 outline-none"
-                      />
-                      <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-                        <span className="text-xs">📷</span>
-                      </div>
-                    </div>
+                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
                   </div>
+                  
+                  <div className="text-sm font-semibold text-gray-900 mb-2">259 likes</div>
+                  
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-gray-900">daiictofficial</span> UG Admissions Open for 2025! 
+                    Explore our world-class campus and facilities. Apply now for undergraduate programs.
+                  </div>
+                  
+                  <div className="text-xs text-gray-500 mt-2">View all 15 comments</div>
                 </div>
               </div>
 
-              {/* Instagram Reel - Instagram Style */}
+              {/* Instagram Reel */}
               <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-                {/* Instagram Header */}
+                {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
@@ -211,13 +197,13 @@ export default function WorkPage() {
                   <Link 
                     href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
                     target="_blank"
-                    className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg hover:bg-blue-600 transition-colors"
+                    className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
                   >
-                    View profile
+                    Watch Reel
                   </Link>
                 </div>
                 
-                {/* Reel Content */}
+                {/* Reel Thumbnail */}
                 <div className="relative aspect-[9/16] bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30 flex items-center justify-center">
                     <div className="text-center">
@@ -237,39 +223,25 @@ export default function WorkPage() {
                   </div>
                 </div>
                 
-                {/* Instagram Footer */}
+                {/* Footer */}
                 <div className="p-4">
-                  <div className="text-blue-500 text-sm mb-3">View more on Instagram</div>
-                  <div className="border-t border-gray-200 pt-3">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-4">
-                        <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
-                        <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
-                        <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
-                      </div>
-                      <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-4">
+                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
+                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
+                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
                     </div>
-                    
-                    <div className="text-sm font-semibold text-gray-900 mb-2">1.2K likes</div>
-                    
-                    <div className="text-sm text-gray-600">
-                      <span className="font-semibold text-gray-900">daiictofficial</span> Campus life at DAU! 
-                      From coding competitions to cultural events, experience the vibrant student community.
-                    </div>
-                    
-                    <div className="text-xs text-gray-500 mt-2">View all 23 comments</div>
-                    
-                    <div className="flex items-center gap-2 mt-3">
-                      <input 
-                        type="text" 
-                        placeholder="Add a comment..." 
-                        className="flex-1 text-sm text-gray-600 border-0 outline-none"
-                      />
-                      <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
-                        <span className="text-xs">📷</span>
-                      </div>
-                    </div>
+                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
                   </div>
+                  
+                  <div className="text-sm font-semibold text-gray-900 mb-2">1.2K likes</div>
+                  
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-gray-900">daiictofficial</span> Campus life at DAU! 
+                    From coding competitions to cultural events, experience the vibrant student community.
+                  </div>
+                  
+                  <div className="text-xs text-gray-500 mt-2">View all 23 comments</div>
                 </div>
               </div>
             </div>
