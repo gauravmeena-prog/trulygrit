@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
+import { saveToGoogleSheetsSimple } from '@/lib/simple-sheets'
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -18,17 +19,10 @@ export async function POST(request: NextRequest) {
     // Validate the request body
     const validatedData = contactSchema.parse(body)
     
-    // TODO: Implement your preferred email service here
-    // Examples:
-    // - Send email via SendGrid, Mailgun, or similar service
-    // - Save to database
-    // - Send to CRM system
-    // - Send Slack notification
+    // Save to Google Sheets via webhook
+    await saveToGoogleSheetsSimple(validatedData)
     
-    console.log('Contact form submission:', validatedData)
-    
-    // For now, we'll just log the data and return success
-    // Replace this with your actual email/notification logic
+    console.log('Contact form submission saved to Google Sheets:', validatedData)
     
     return NextResponse.json(
       { message: 'Contact form submitted successfully' },
