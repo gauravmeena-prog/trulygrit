@@ -6,7 +6,6 @@ import Hero from '@/components/Hero'
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { CaseStudiesGrid } from '@/components/sections/case-study-card'
-import { Testimonials } from '@/components/sections/testimonial-card'
 import { CTASection } from '@/components/sections/cta-section'
 
 
@@ -86,19 +85,6 @@ const sampleCaseStudies = [
   },
 ]
 
-const testimonials = [
-  {
-    content: 'Truly Grit transformed our entire brand identity as we transitioned from DA-IICT to Dhirubhai Ambani University. Their strategic approach to rebranding and digital transformation helped us establish a fresh, modern identity that reflects our evolution and celebrates our 24th year of academic excellence. They successfully managed our admissions 2025 for all courses and understood the complexity of university rebranding, delivering exceptional results.',
-    author: {
-      name: 'DAU Leadership',
-      role: 'Brand Transformation Team',
-      company: 'Dhirubhai Ambani University',
-      image: '/dau_gate.jpg',
-    },
-    rating: 5,
-    results: ['Complete Rebrand', 'Admissions 2025', '24th Anniversary'],
-  },
-]
 
 export const metadata = {
   title: 'Truly Grit | Strategic Marketing Agency',
@@ -140,11 +126,6 @@ export default function HomePage() {
                  caseStudies={sampleCaseStudies}
                />
 
-               <Testimonials
-                 title="Client Testimonials"
-                 description="Hear directly from our client about their experience with our brand transformation services and the results achieved through our partnership."
-                 testimonials={testimonials}
-               />
         
         <CTASection
           title="Ready to Transform Your Business?"
