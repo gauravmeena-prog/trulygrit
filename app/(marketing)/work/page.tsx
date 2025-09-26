@@ -47,7 +47,7 @@ export default function WorkPage() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight">
               <span className="block text-gray-900/90">
-                Our Work
+              Our Work
               </span>
               <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
                 Real Results
@@ -216,14 +216,224 @@ export default function WorkPage() {
               </div>
             </div>
             
-            {/* Impact Section */}
+            {/* Key Highlights */}
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 lg:p-12 mb-16">
-              <h4 className="text-3xl font-bold text-gray-900 mb-6 text-center">Project Impact</h4>
-              <p className="text-xl text-gray-600 leading-relaxed text-center max-w-4xl mx-auto">
-                The successful transformation positioned Dhirubhai Ambani University for its next phase of growth while celebrating their 24th year of academic excellence. The comprehensive rebranding established a fresh, modern identity that reflects the institution's evolution and commitment to innovation in education.
-              </p>
+              <h4 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Highlights</h4>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">42%</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">Increase</div>
+                  <div className="text-gray-600">Agency-based applications grew significantly</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">25%</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">Lower Cost</div>
+                  <div className="text-gray-600">Reduced cost in ads spent via optimized ads</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">2x</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">More Leads</div>
+                  <div className="text-gray-600">Generated double the leads vs. previous year</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">20-25%</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">Growth</div>
+                  <div className="text-gray-600">Instagram followers increased during campaign</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">High</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">Awareness</div>
+                  <div className="text-gray-600">Crores of impressions across campaigns</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">Increased</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">Brand Trust</div>
+                  <div className="text-gray-600">Trust in new DAU identity and branding</div>
+                </div>
+              </div>
             </div>
             
+            {/* Challenges Section */}
+            <div className="mb-16">
+              <h4 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Challenges</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h5 className="text-xl font-bold text-gray-900 mb-3">Unoptimized Social Media</h5>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Channels lacked consistent & engaging content</li>
+                    <li>• USPs like placements, alumni, and campus life to be highlighted</li>
+                    <li>• Content to be optimized for parents, students, or alumni</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h5 className="text-xl font-bold text-gray-900 mb-3">Unpopular New Branding</h5>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• New DAU logo launched, having low awareness</li>
+                    <li>• Content to be created using new design to create visibility</li>
+                    <li>• Platforms to be revamped with the new branding</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h5 className="text-xl font-bold text-gray-900 mb-3">Institute's Name Change</h5>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Transition from DA-IICT to DAU caused confusion</li>
+                    <li>• Many prospects still connected with the old name</li>
+                    <li>• Needed clear communication to rebuild trust</li>
+                  </ul>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-xl p-6">
+                  <h5 className="text-xl font-bold text-gray-900 mb-3">Very Short Deadline</h5>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>• Less than 3 months to roll out branding & campaigns</li>
+                    <li>• Build awareness nationwide in peak admission season</li>
+                    <li>• Run full campaign in compressed timeline</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Solutions Section */}
+            <div className="mb-16">
+              <h4 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Solutions</h4>
+              
+              {/* Content Marketing */}
+              <div className="bg-gradient-to-r from-primary/5 to-orange-500/5 rounded-xl p-8 mb-8">
+                <h5 className="text-2xl font-bold text-gray-900 mb-4">Content Marketing</h5>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Approach</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Created engaging content aligned with new branding & design</li>
+                      <li>• Drone shoot & photoshoot of University</li>
+                      <li>• Highlighted USPs: Alumni, Placements, Coding Culture, Faculty, Events, Clubs, Facilities</li>
+                      <li>• Content tailored for students & parents</li>
+                      <li>• Social profiles revamped to new identity</li>
+                      <li>• Captions aligned to storytelling & engagement</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Results</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 20–25% growth in Instagram followers</li>
+                      <li>• Significant rise in engagement across posts & reels</li>
+                      <li>• Higher awareness of new DAU identity</li>
+                      <li>• Trust built through consistent content</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Performance Marketing */}
+              <div className="bg-gradient-to-r from-primary/5 to-orange-500/5 rounded-xl p-8 mb-8">
+                <h5 className="text-2xl font-bold text-gray-900 mb-4">Performance Marketing</h5>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Approach</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Targeted paid campaigns across Instagram & YouTube</li>
+                      <li>• Optimized for admissions & lead generation</li>
+                      <li>• Split campaigns by audience: students, parents, alumni</li>
+                      <li>• Retargeting & lookalike audiences used to improve CPL</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Results</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• 42% increase in agency-sourced applications</li>
+                      <li>• 25% lower cost per application</li>
+                      <li>• Double the leads compared to previous year</li>
+                      <li>• Wider reach & awareness in target demographics</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Web Development & SEO */}
+              <div className="bg-gradient-to-r from-primary/5 to-orange-500/5 rounded-xl p-8 mb-8">
+                <h5 className="text-2xl font-bold text-gray-900 mb-4">Web Development & SEO</h5>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Approach</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Revamped DAU website for modern look & responsive design</li>
+                      <li>• Optimized content for SEO to improve discoverability</li>
+                      <li>• Streamlined admission forms & lead capture flows</li>
+                      <li>• Analytics setup to monitor performance & user behavior</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Results</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Higher engagement & lower bounce rate</li>
+                      <li>• Improved organic search traffic</li>
+                      <li>• Faster form submission process</li>
+                      <li>• Better conversion tracking & insights</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lead Nurturing */}
+              <div className="bg-gradient-to-r from-primary/5 to-orange-500/5 rounded-xl p-8">
+                <h5 className="text-2xl font-bold text-gray-900 mb-4">Lead Nurturing</h5>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Approach</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Automated email & SMS sequences for applicants</li>
+                      <li>• Personalized follow-ups for different applicant segments</li>
+                      <li>• Lead scoring to prioritize high-intent prospects</li>
+                      <li>• Integrated CRM for smooth tracking & communication</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="text-lg font-semibold text-gray-900 mb-3">Results</h6>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Higher lead conversion rates</li>
+                      <li>• Faster response to prospective students</li>
+                      <li>• Better engagement with applicants throughout the process</li>
+                      <li>• Improved admission pipeline efficiency</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Why It Worked */}
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 lg:p-12 mb-16">
+              <h4 className="text-3xl font-bold mb-8 text-center">Why It Worked</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h5 className="text-xl font-bold mb-2">Holistic Approach</h5>
+                  <p className="text-gray-300">Balanced performance marketing, branding, content, outreach & tech</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h5 className="text-xl font-bold mb-2">Data-Driven Iterations</h5>
+                  <p className="text-gray-300">Iterated campaigns, pages & messaging in real time based on user-behavior data</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🤝</span>
+                  </div>
+                  <h5 className="text-xl font-bold mb-2">Trust Building</h5>
+                  <p className="text-gray-300">Showcased DAU's culture, placements, and faculty via extensive amount of content</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🔄</span>
+                  </div>
+                  <h5 className="text-xl font-bold mb-2">Conversion Focus</h5>
+                  <p className="text-gray-300">Nurturing of leads at funnel ensured students complete the applications</p>
+                </div>
+              </div>
+            </div>
+
             {/* Call to Action */}
             <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
