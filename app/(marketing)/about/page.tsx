@@ -31,12 +31,6 @@ const values = [
   },
 ]
 
-const stats = [
-  { label: 'Founded', value: 'June 2025' },
-  { label: 'Client Satisfaction', value: '100%' },
-  { label: 'Campaigns Launched', value: '10+' },
-  { label: 'Years Experience', value: '5+' },
-]
 
 const team = [
   {
@@ -190,45 +184,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Interactive Stats Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 to-orange-50 relative">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMS41Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50"></div>
-        
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-100 rounded-full border border-orange-200 mb-8">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-orange-600 uppercase tracking-wider">Our Impact</span>
-            </div>
-            
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Proven Results
-              <span className="block text-orange-600 mt-2">Real Impact</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key metrics that reflect our commitment to client success and measurable growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center border border-gray-100 group-hover:border-orange-200">
-                  <div className="text-4xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider group-hover:text-gray-900 transition-colors">
-                    {stat.label}
-                  </div>
-                  <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-orange-400 to-orange-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-100"></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Interactive Values Section */}
       <section className="py-24 sm:py-32 bg-white relative">
