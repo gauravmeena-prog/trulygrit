@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Github, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Twitter, Linkedin, Instagram } from 'lucide-react'
 
 import { siteConfig } from '@/lib/site-config'
 
@@ -28,11 +28,6 @@ const footerNavigation = {
       name: 'Twitter',
       href: siteConfig.links.twitter,
       icon: Twitter,
-    },
-    {
-      name: 'GitHub',
-      href: siteConfig.links.github,
-      icon: Github,
     },
     {
       name: 'LinkedIn',

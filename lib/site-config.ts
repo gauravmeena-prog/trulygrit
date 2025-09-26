@@ -4,10 +4,9 @@ export const siteConfig = {
   url: 'https://truly-grit.com',
   ogImage: 'https://truly-grit.com/og.jpg',
   links: {
-    twitter: 'https://twitter.com/truly_grit',
-    github: 'https://github.com/trulygrithq',
-    linkedin: 'https://linkedin.com/company/truly-grit',
-    instagram: 'https://instagram.com/trulygrithq',
+    twitter: 'https://x.com/truly_grit',
+    linkedin: 'https://www.linkedin.com/company/trulygrit/posts/?feedView=all',
+    instagram: 'https://www.instagram.com/truly_grit/',
   },
   contact: {
     email: 'hello@trulygrit.com',
