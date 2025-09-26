@@ -111,10 +111,6 @@ export default function ServicesPage() {
           <Breadcrumb items={[{ label: 'Services' }]} />
           
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">Our Services</span>
-            </div>
             
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight mb-8">
               <span className="block text-gray-900/90">
@@ -136,10 +132,6 @@ export default function ServicesPage() {
       <section className="py-24 sm:py-32 bg-white relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="mx-auto max-w-3xl text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">Service Details</span>
-            </div>
             
             <h2 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-tight mb-8">
               <span className="block text-gray-900/90">

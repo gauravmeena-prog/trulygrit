@@ -49,12 +49,6 @@ export default function WorkPage() {
           
           {/* Project Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gray-100 rounded-full mb-8">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span className="text-sm font-bold text-gray-700 uppercase tracking-wider">Dhirubhai Ambani University</span>
-              <Calendar className="h-4 w-4 text-primary" />
-              <span className="text-sm font-bold text-gray-700">2024</span>
-            </div>
             
             <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight mb-6">
               <span className="block text-gray-900">DA-IICT to DAU</span>
@@ -183,10 +177,6 @@ export default function WorkPage() {
               
               {/* Section Header */}
               <div className="text-center mb-20">
-                <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  <span className="text-sm font-bold text-primary uppercase tracking-wider">Comprehensive Work</span>
-                </div>
                 
                 <h2 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight mb-8">
                   <span className="block text-gray-900/90">

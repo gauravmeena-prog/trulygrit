@@ -69,10 +69,6 @@ export default function AboutPage() {
           <Breadcrumb items={[{ label: 'About' }]} />
           
           <div className="text-center max-w-5xl mx-auto mt-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 rounded-full border border-orange-500/30 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-orange-400 uppercase tracking-wider">About Company</span>
-            </div>
             
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-8 leading-tight">
               <span className="block text-white/90">
@@ -108,10 +104,6 @@ export default function AboutPage() {
         
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-100 rounded-full border border-orange-200 mb-8">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-orange-600 uppercase tracking-wider">Our Story</span>
-            </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Building Revenue Engines
@@ -191,10 +183,6 @@ export default function AboutPage() {
         
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-100 rounded-full border border-orange-200 mb-8">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-orange-600 uppercase tracking-wider">Our Values</span>
-            </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               The Principles
@@ -240,10 +228,6 @@ export default function AboutPage() {
         
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 rounded-full border border-orange-500/30 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-orange-400 uppercase tracking-wider">Our Team</span>
-            </div>
             
             <h2 className="text-4xl font-bold text-white mb-6">
               Meet The

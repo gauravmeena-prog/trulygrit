@@ -138,10 +138,6 @@ export default function PricingPage() {
           <Breadcrumb items={[{ label: 'Pricing' }]} />
           
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">Pricing Plans</span>
-            </div>
             
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight mb-8">
               <span className="block text-gray-900/90">
@@ -261,10 +257,6 @@ export default function PricingPage() {
       <section className="py-24 sm:py-32 bg-gray-50 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">Add-on Services</span>
-            </div>
             
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl leading-tight mb-6">
               <span className="block text-gray-900/90">
@@ -328,10 +320,6 @@ export default function PricingPage() {
       <section className="py-24 sm:py-32 bg-white relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">FAQ</span>
-            </div>
             
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl leading-tight mb-6">
               <span className="block text-gray-900/90">
