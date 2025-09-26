@@ -61,55 +61,49 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Interactive Hero Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
-        
+      {/* Clean Hero Section */}
+      <section className="py-24 sm:py-32 bg-white relative">
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <Breadcrumb items={[{ label: 'About' }]} />
           
           <div className="text-center max-w-5xl mx-auto mt-20">
-            
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-8 leading-tight">
-              <span className="block text-white/90">
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl mb-8 leading-tight">
+              <span className="block text-gray-900">
                 About
               </span>
-              <span className="block bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent font-extrabold mt-2">
+              <span className="block text-orange-600 font-extrabold mt-2">
                 Truly Grit
               </span>
             </h1>
             
-            <p className="text-xl leading-relaxed text-gray-300 max-w-4xl mx-auto mb-12">
+            <p className="text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto mb-12">
               We are a strategic marketing agency dedicated to helping ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence. Founded in 2025, we bring personal attention and expertise to every project.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-medium">Founded 2025</span>
+              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
+                <span className="text-gray-800 font-medium">Founded 2025</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-medium">Strategic Marketing</span>
+              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
+                <span className="text-gray-800 font-medium">Strategic Marketing</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-medium">Data-Driven Results</span>
+              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
+                <span className="text-gray-800 font-medium">Data-Driven Results</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Interactive Company Story Section */}
-      <section className="py-24 sm:py-32 bg-white relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-50/50 to-transparent"></div>
-        
+      {/* Company Story Section */}
+      <section className="py-24 sm:py-32 bg-gray-50 relative">
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Building Revenue Engines
               <span className="block text-orange-600 mt-2">The Hard Way</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               We believe great marketing should build genuine connections and drive meaningful results. Founded in 2025, we've built our reputation on delivering measurable outcomes.
             </p>
           </div>
@@ -177,18 +171,15 @@ export default function AboutPage() {
       </section>
 
 
-      {/* Interactive Values Section */}
+      {/* Values Section */}
       <section className="py-24 sm:py-32 bg-white relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent"></div>
-        
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               The Principles
               <span className="block text-orange-600 mt-2">That Guide Us</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               The core values that shape everything we do and how we work with our clients.
             </p>
           </div>
@@ -222,26 +213,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Interactive Team Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
-        
+      {/* Team Section */}
+      <section className="py-24 sm:py-32 bg-gray-50 relative">
         <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Meet The
-              <span className="block bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent font-extrabold mt-2">
+              <span className="block text-orange-600 font-extrabold mt-2">
                 Truly Grit Team
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Strategic marketing professionals bringing personal attention and expertise to every project.
             </p>
           </div>
           
           <div className="max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+            <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative group">
                   <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300">
@@ -255,26 +243,26 @@ export default function AboutPage() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -bottom-4 -right-4 bg-orange-600 text-white p-4 rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <div className="text-lg font-bold">Founder</div>
                   </div>
                 </div>
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">
+                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
                       {team[0].name}
                     </h3>
-                    <p className="text-xl font-semibold text-orange-400 mb-6">
+                    <p className="text-xl font-semibold text-orange-600 mb-6">
                       {team[0].role}
                     </p>
-                    <p className="text-gray-300 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-lg">
                       {team[0].bio}
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect With Us</h4>
                     <div className="flex gap-4">
                       <a
                         href={team[0].linkedin}
