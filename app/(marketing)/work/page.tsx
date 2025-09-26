@@ -96,18 +96,18 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Instagram-Style Video Showcase */}
+          {/* Embedded Video Showcase */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Work in Action</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                See the transformation we delivered through our content creation and campaign execution
+                Watch our videos directly on the website - no need to leave this page
               </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
-              {/* YouTube Campus Tour - Instagram Style */}
+              {/* YouTube Campus Tour - Embedded */}
               <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
                 {/* Instagram Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -122,36 +122,23 @@ export default function WorkPage() {
                           <span className="text-white text-xs">✓</span>
                         </div>
                       </div>
-                      <p className="text-xs text-gray-500">Original audio</p>
+                      <p className="text-xs text-gray-500">Campus Tour Video</p>
                     </div>
                   </div>
-                  <Link 
-                    href="https://youtu.be/MnoudliA_oY"
-                    target="_blank"
-                    className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    View Video
-                  </Link>
+                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
+                    Embedded Video
+                  </div>
                 </div>
                 
-                {/* Video Content */}
-                <div className="relative aspect-video bg-gray-900">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
-                        <Play className="h-8 w-8 text-primary ml-1" />
-                      </div>
-                      <h4 className="text-xl font-bold text-white mb-2">Campus Tour Video</h4>
-                      <p className="text-white/80 text-sm">Professional video showcasing DAU campus facilities</p>
-                    </div>
-                  </div>
-                  
-                  {/* YouTube Branding */}
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-red-600 text-white px-3 py-1 rounded text-sm font-bold">
-                      YouTube
-                    </div>
-                  </div>
+                {/* Embedded YouTube Video */}
+                <div className="relative aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/MnoudliA_oY?autoplay=0&rel=0&modestbranding=1"
+                    title="Dhirubhai Ambani University Campus Tour"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded-none"
+                  ></iframe>
                 </div>
                 
                 {/* Instagram Footer */}
@@ -176,7 +163,7 @@ export default function WorkPage() {
                 </div>
               </div>
 
-              {/* Instagram Reel - Instagram Style */}
+              {/* Instagram Reel - Embedded */}
               <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
                 {/* Instagram Header */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -194,33 +181,20 @@ export default function WorkPage() {
                       <p className="text-xs text-gray-500">1,061 posts · 10K followers</p>
                     </div>
                   </div>
-                  <Link 
-                    href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
-                    target="_blank"
-                    className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
-                  >
-                    View Reel
-                  </Link>
+                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
+                    Embedded Reel
+                  </div>
                 </div>
                 
-                {/* Reel Content */}
-                <div className="relative aspect-[9/16] bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
-                        <Play className="h-6 w-6 text-primary ml-1" />
-                      </div>
-                      <h4 className="text-lg font-bold text-white mb-2">Instagram Reel</h4>
-                      <p className="text-white/80 text-sm">Engaging social content for admissions</p>
-                    </div>
-                  </div>
-                  
-                  {/* Instagram Branding */}
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded text-sm font-bold">
-                      Instagram
-                    </div>
-                  </div>
+                {/* Embedded Instagram Reel */}
+                <div className="relative aspect-[9/16] bg-gray-900">
+                  <iframe
+                    src="https://www.instagram.com/reel/DJQNHBkIQFQ/embed/"
+                    title="Dhirubhai Ambani University Instagram Reel"
+                    className="w-full h-full rounded-none"
+                    scrolling="no"
+                    allowTransparency
+                  ></iframe>
                 </div>
                 
                 {/* Instagram Footer */}
