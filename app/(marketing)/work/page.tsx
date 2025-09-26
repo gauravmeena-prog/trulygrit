@@ -177,108 +177,228 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Content Creation Showcase */}
+          {/* Scope of Work - Comprehensive Data */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Content Creation Portfolio</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Scope of Work</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Beyond these samples, we've created extensive content across multiple platforms
+                Detailed breakdown of content creation, media spend, and campaign execution
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              
-              {/* YouTube Content */}
-              <div className="p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl border border-red-200">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">YT</span>
+            {/* Content Creation Metrics */}
+            <div className="mb-16">
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Content Creation Performance</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                {/* Static/Carousel Posts */}
+                <div className="p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border border-green-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">📸</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Static/Carousel Posts</h5>
+                    <p className="text-gray-600">March - June 2024</p>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900">YouTube Channel</h4>
-                    <p className="text-gray-600">Multiple video series</p>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Planned:</span>
+                      <span className="font-bold text-gray-900">72 posts</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Completed:</span>
+                      <span className="font-bold text-green-600">120 posts</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-green-600 h-2 rounded-full" style={{width: '167%'}}></div>
+                    </div>
+                    <p className="text-sm text-green-600 font-semibold">167% completion rate</p>
                   </div>
                 </div>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span>Campus tour videos</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span>Student life documentaries</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span>Academic program showcases</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span>Event coverage videos</span>
-                  </li>
-                </ul>
-              </div>
 
-              {/* Instagram Content */}
-              <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl border border-purple-200">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">IG</span>
+                {/* Reels/Videos */}
+                <div className="p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border border-purple-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">🎬</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Reels/Videos</h5>
+                    <p className="text-gray-600">March - June 2024</p>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900">Instagram Content</h4>
-                    <p className="text-gray-600">1,061 posts created</p>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Planned:</span>
+                      <span className="font-bold text-gray-900">72 videos</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Completed:</span>
+                      <span className="font-bold text-purple-600">108 videos</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-purple-600 h-2 rounded-full" style={{width: '150%'}}></div>
+                    </div>
+                    <p className="text-sm text-purple-600 font-semibold">150% completion rate</p>
                   </div>
                 </div>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Daily campus stories</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Student achievement posts</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Event highlights reels</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Behind-the-scenes content</span>
-                  </li>
-                </ul>
-              </div>
 
-              {/* Additional Content */}
-              <div className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border border-blue-200">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">+</span>
+                {/* Stories */}
+                <div className="p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border border-orange-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">📱</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Stories</h5>
+                    <p className="text-gray-600">March - June 2024</p>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900">Additional Content</h4>
-                    <p className="text-gray-600">Multi-platform strategy</p>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Planned:</span>
+                      <span className="font-bold text-gray-900">95 stories</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Completed:</span>
+                      <span className="font-bold text-orange-600">76 + PM Stories</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-orange-600 h-2 rounded-full" style={{width: '80%'}}></div>
+                    </div>
+                    <p className="text-sm text-orange-600 font-semibold">80% completion rate</p>
                   </div>
                 </div>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>LinkedIn professional content</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Facebook community posts</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Website content updates</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Email marketing campaigns</span>
-                  </li>
-                </ul>
+              </div>
+            </div>
+
+            {/* Media Spend Breakdown */}
+            <div className="mb-16">
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Media Spend Analysis</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                {/* Performance Marketing */}
+                <div className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border border-blue-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">📊</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Performance Marketing</h5>
+                    <p className="text-gray-600">Google, Meta, LinkedIn Ads</p>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Total Spent:</span>
+                      <span className="font-bold text-gray-900">₹3.18 Cr</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Budget Allocated:</span>
+                      <span className="font-bold text-gray-900">₹4.23 Cr</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-blue-600 h-2 rounded-full" style={{width: '75%'}}></div>
+                    </div>
+                    <p className="text-sm text-blue-600 font-semibold">75% budget utilization</p>
+                  </div>
+                </div>
+
+                {/* WhatsApp Marketing */}
+                <div className="p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border border-green-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">💬</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">WhatsApp Marketing</h5>
+                    <p className="text-gray-600">Lead Conversion & CTR</p>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Total Spent:</span>
+                      <span className="font-bold text-gray-900">₹1.25 L</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Budget Allocated:</span>
+                      <span className="font-bold text-gray-900">₹1.5 L</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-green-600 h-2 rounded-full" style={{width: '83%'}}></div>
+                    </div>
+                    <p className="text-sm text-green-600 font-semibold">83% budget utilization</p>
+                  </div>
+                </div>
+
+                {/* Email Marketing */}
+                <div className="p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border border-purple-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">📧</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Email Marketing</h5>
+                    <p className="text-gray-600">Lead Conversion & CTR</p>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Total Spent:</span>
+                      <span className="font-bold text-gray-900">₹20K</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Budget Allocated:</span>
+                      <span className="font-bold text-gray-900">₹1 L</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-purple-600 h-2 rounded-full" style={{width: '20%'}}></div>
+                    </div>
+                    <p className="text-sm text-purple-600 font-semibold">20% budget utilization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Agency Charges */}
+            <div className="mb-16">
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Agency Investment</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                {/* Agency Charges */}
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">🏢</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Agency Charges</h5>
+                    <p className="text-gray-600">Strategic planning & execution</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-gray-900 mb-2">₹12 L</div>
+                    <p className="text-gray-600">4 months investment</p>
+                  </div>
+                </div>
+
+                {/* Photography Charges */}
+                <div className="p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl border border-pink-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">📷</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Photography</h5>
+                    <p className="text-gray-600">Creative asset production</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-gray-900 mb-2">₹2 L</div>
+                    <p className="text-gray-600">4 months investment</p>
+                  </div>
+                </div>
+
+                {/* Content Creation */}
+                <div className="p-8 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl border border-indigo-200">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">🎨</span>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-900">Content Creation</h5>
+                    <p className="text-gray-600">Banners, videos, static posts</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-gray-900 mb-2">₹4 L</div>
+                    <p className="text-gray-600">4 months investment</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
