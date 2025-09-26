@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Play, ExternalLink, Calendar, MapPin, Users, Target, TrendingUp, Heart, MessageCircle, Share, Bookmark } from 'lucide-react'
+import { ArrowRight, Play, ExternalLink, Calendar, MapPin, Users, Target, TrendingUp } from 'lucide-react'
 
 export const metadata = {
   title: 'Our Work | Truly Grit Case Studies & Portfolio',
@@ -96,7 +96,7 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Video Showcase - Clean Design */}
+          {/* Video Showcase - Unique Layout */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Work in Action</h3>
@@ -105,35 +105,22 @@ export default function WorkPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              
-              {/* YouTube Campus Tour */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">YT</span>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-1">
-                        <span className="font-semibold text-gray-900">Dhirubhai Ambani University</span>
-                        <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs">✓</span>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500">Campus Tour Video</p>
-                    </div>
+            {/* YouTube Video - Full Width */}
+            <div className="mb-16">
+              <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-3xl p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">YT</span>
                   </div>
-                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
-                    Embedded Video
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900">Campus Tour Video</h4>
+                    <p className="text-gray-600">Dhirubhai Ambani University • Professional campus showcase</p>
                   </div>
                 </div>
                 
-                {/* Embedded YouTube Video */}
-                <div className="relative aspect-video">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                   <iframe 
-                    className="w-full aspect-video rounded-xl shadow-lg" 
+                    className="w-full aspect-video rounded-2xl shadow-lg" 
                     src="https://www.youtube.com/embed/MnoudliA_oY?si=iTniRKkgEm0PaCoy" 
                     title="YouTube video" 
                     frameBorder="0" 
@@ -142,55 +129,48 @@ export default function WorkPage() {
                   ></iframe>
                 </div>
                 
-                {/* Footer */}
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-4">
-                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
-                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
-                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
+                <div className="mt-6 flex items-center justify-between">
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                        <span className="text-red-600 text-sm">👁</span>
+                      </div>
+                      <span className="text-gray-600 font-medium">259 views</span>
                     </div>
-                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                        <span className="text-red-600 text-sm">👍</span>
+                      </div>
+                      <span className="text-gray-600 font-medium">259 likes</span>
+                    </div>
                   </div>
-                  
-                  <div className="text-sm font-semibold text-gray-900 mb-2">259 likes</div>
-                  
-                  <div className="text-sm text-gray-600">
-                    <span className="font-semibold text-gray-900">daiictofficial</span> UG Admissions Open for 2025! 
-                    Explore our world-class campus and facilities. Apply now for undergraduate programs.
-                  </div>
-                  
-                  <div className="text-xs text-gray-500 mt-2">View all 15 comments</div>
+                  <Link 
+                    href="https://youtu.be/MnoudliA_oY"
+                    target="_blank"
+                    className="px-6 py-3 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 transition-colors"
+                  >
+                    Watch on YouTube
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              {/* Instagram Reel */}
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-                {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b border-gray-200">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">IG</span>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-1">
-                        <span className="font-semibold text-gray-900">daiictofficial</span>
-                        <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs">✓</span>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500">1,061 posts · 10K followers</p>
-                    </div>
+            {/* Instagram Reel - Full Width */}
+            <div className="mb-16">
+              <div className="bg-gradient-to-r from-purple-50 to-pink-100 rounded-3xl p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">IG</span>
                   </div>
-                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
-                    Embedded Reel
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900">Instagram Reel</h4>
+                    <p className="text-gray-600">daiictofficial • 1,061 posts • 10K followers</p>
                   </div>
                 </div>
                 
-                {/* Embedded Instagram Reel */}
-                <div className="flex-shrink-0 w-48 md:w-56">
+                <div className="flex-shrink-0 w-full max-w-md mx-auto">
                   <iframe 
-                    className="instagram-media instagram-media-rendered" 
+                    className="instagram-media instagram-media-rendered w-full" 
                     id="instagram-embed-9" 
                     src="https://www.instagram.com/reel/DIqxJpMhKki/embed/?cr=1&v=14&wp=448&rd=https%3A%2F%2Fwww.trulygrit.com&rp=%2Fcase-study%2Fdhirubhai-ambani-university#%7B%22ci%22%3A9%2C%22os%22%3A7172438%2C%22ls%22%3A2062517%2C%22le%22%3A2063487.700000003%7D" 
                     allowTransparency="true" 
@@ -213,31 +193,34 @@ export default function WorkPage() {
                   ></iframe>
                 </div>
                 
-                {/* Footer */}
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-4">
-                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
-                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
-                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
+                <div className="mt-6 flex items-center justify-between">
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 text-sm">👁</span>
+                      </div>
+                      <span className="text-gray-600 font-medium">1.2K views</span>
                     </div>
-                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span className="text-purple-600 text-sm">❤️</span>
+                      </div>
+                      <span className="text-gray-600 font-medium">1.2K likes</span>
+                    </div>
                   </div>
-                  
-                  <div className="text-sm font-semibold text-gray-900 mb-2">1.2K likes</div>
-                  
-                  <div className="text-sm text-gray-600">
-                    <span className="font-semibold text-gray-900">daiictofficial</span> Campus life at DAU! 
-                    From coding competitions to cultural events, experience the vibrant student community.
-                  </div>
-                  
-                  <div className="text-xs text-gray-500 mt-2">View all 23 comments</div>
+                  <Link 
+                    href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
+                    target="_blank"
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all"
+                  >
+                    Watch on Instagram
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Key Results - Clean Layout */}
+          {/* Key Results - Unique Layout */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Key Results</h3>
@@ -246,34 +229,34 @@ export default function WorkPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">42%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Increase</div>
-                <div className="text-gray-600 text-sm">Agency-based applications</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="text-center p-8 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl border border-primary/10">
+                <div className="text-5xl font-bold text-primary mb-3">42%</div>
+                <div className="text-xl font-semibold text-gray-900 mb-2">Increase</div>
+                <div className="text-gray-600">Agency-based applications</div>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">25%</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Lower Cost</div>
-                <div className="text-gray-600 text-sm">Reduced ad spend</div>
+              <div className="text-center p-8 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl border border-primary/10">
+                <div className="text-5xl font-bold text-primary mb-3">25%</div>
+                <div className="text-xl font-semibold text-gray-900 mb-2">Lower Cost</div>
+                <div className="text-gray-600">Reduced ad spend</div>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">2x</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">More Leads</div>
-                <div className="text-gray-600 text-sm">Generated vs. previous year</div>
+              <div className="text-center p-8 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl border border-primary/10">
+                <div className="text-5xl font-bold text-primary mb-3">2x</div>
+                <div className="text-xl font-semibold text-gray-900 mb-2">More Leads</div>
+                <div className="text-gray-600">Generated vs. previous year</div>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">24th</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Anniversary</div>
-                <div className="text-gray-600 text-sm">Years of excellence</div>
+              <div className="text-center p-8 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl border border-primary/10">
+                <div className="text-5xl font-bold text-primary mb-3">24th</div>
+                <div className="text-xl font-semibold text-gray-900 mb-2">Anniversary</div>
+                <div className="text-gray-600">Years of excellence</div>
               </div>
             </div>
           </div>
 
-          {/* Services - Simple List */}
+          {/* Services - Unique Layout */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Services Delivered</h3>
@@ -282,92 +265,100 @@ export default function WorkPage() {
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <Target className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Brand Transformation</h4>
-                    <p className="text-gray-600 text-sm">Complete institutional rebrand from DA-IICT to DAU</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Digital Strategy</h4>
-                    <p className="text-gray-600 text-sm">Comprehensive digital presence overhaul</p>
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Target className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Brand Transformation</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">Complete institutional rebrand from DA-IICT to DAU with strategic positioning for future growth</p>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">University Rebranding</h4>
-                    <p className="text-gray-600 text-sm">Strategic positioning for future growth</p>
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Digital Strategy</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">Comprehensive digital presence overhaul with performance optimization</p>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <Play className="h-6 w-6 text-white" />
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Users className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">University Rebranding</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">Strategic positioning for future growth with legacy preservation</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Content Creation</h4>
-                    <p className="text-gray-600 text-sm">Professional video and social content</p>
+                </div>
+                
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Play className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Content Creation</h4>
+                      <p className="text-gray-600 text-lg leading-relaxed">Professional video and social content for maximum engagement</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Why It Worked - Simple Section */}
+          {/* Why It Worked - Unique Layout */}
           <div className="mb-20">
-            <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-3xl p-8 lg:p-12">
               <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Why It Worked</h3>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <h3 className="text-4xl font-bold mb-4">Why It Worked</h3>
+                <p className="text-gray-300 text-xl max-w-3xl mx-auto">
                   A holistic, data-driven approach that delivered results
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="h-10 w-10 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Holistic Approach</h4>
-                  <p className="text-gray-600 text-sm">Balanced performance marketing, branding, content, outreach & tech</p>
+                  <h4 className="text-2xl font-bold mb-4">Holistic Approach</h4>
+                  <p className="text-gray-300 leading-relaxed">Balanced performance marketing, branding, content, outreach & tech</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="h-10 w-10 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Trust Building</h4>
-                  <p className="text-gray-600 text-sm">Showcased DAU's culture, placements, and faculty via extensive content</p>
+                  <h4 className="text-2xl font-bold mb-4">Trust Building</h4>
+                  <p className="text-gray-300 leading-relaxed">Showcased DAU's culture, placements, and faculty via extensive content</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="h-10 w-10 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Data-Driven</h4>
-                  <p className="text-gray-600 text-sm">Iterated campaigns, pages & messaging in real time based on data</p>
+                  <h4 className="text-2xl font-bold mb-4">Data-Driven</h4>
+                  <p className="text-gray-300 leading-relaxed">Iterated campaigns, pages & messaging in real time based on data</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <ArrowRight className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <ArrowRight className="h-10 w-10 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Conversion Focus</h4>
-                  <p className="text-gray-600 text-sm">Nurturing of leads ensured students complete the applications</p>
+                  <h4 className="text-2xl font-bold mb-4">Conversion Focus</h4>
+                  <p className="text-gray-300 leading-relaxed">Nurturing of leads ensured students complete the applications</p>
                 </div>
               </div>
             </div>
