@@ -11,83 +11,113 @@ import { getIcon } from '@/lib/icons'
 const services = [
   {
     iconName: 'target',
-    title: 'Brand Strategy',
-    description: 'Develop a comprehensive brand strategy that differentiates you from competitors and resonates with your target audience.',
+    title: 'Brand Strategy & Identity',
+    description: 'Complete brand development from positioning to visual identity that differentiates you from competitors and resonates with your target audience.',
   },
   {
     iconName: 'trending-up',
-    title: 'Digital Marketing',
-    description: 'Data-driven digital marketing campaigns across all channels to drive qualified leads and increase conversions.',
+    title: 'Performance Marketing',
+    description: 'Data-driven digital marketing campaigns across Google, Meta, LinkedIn, and other platforms to drive qualified leads and maximize ROI.',
   },
   {
     iconName: 'code',
-    title: 'Web Development',
-    description: 'Custom websites and web applications built for performance, conversion, and exceptional user experience.',
+    title: 'Web Development & SEO',
+    description: 'Custom websites and web applications built for performance, conversion, and exceptional user experience with technical SEO optimization.',
   },
   {
     iconName: 'camera',
-    title: 'Creative Services',
-    description: 'Professional photography, videography, and graphic design that brings your brand story to life.',
+    title: 'Content Creation',
+    description: 'Professional photography, videography, and graphic design that brings your brand story to life across all digital platforms.',
   },
   {
-    iconName: 'search',
-    title: 'SEO & Content',
-    description: 'Strategic content creation and SEO optimization to increase organic visibility and establish thought leadership.',
+    iconName: 'users',
+    title: 'Lead Nurturing',
+    description: 'Automated email and SMS sequences with personalized follow-ups to convert prospects into customers throughout the sales funnel.',
   },
   {
-    iconName: 'megaphone',
-    title: 'Paid Advertising',
-    description: 'Strategic paid advertising campaigns across Google, social media, and other platforms for maximum ROI.',
+    iconName: 'bar-chart-3',
+    title: 'Analytics & Optimization',
+    description: 'Comprehensive tracking, analysis, and continuous optimization of all marketing efforts to ensure maximum performance and growth.',
   },
 ]
 
 const detailedServices = [
   {
-    iconName: 'users',
+    iconName: 'target',
     title: 'Brand Strategy & Identity',
-    description: 'Complete brand development from strategy to visual identity.',
+    description: 'Complete brand development from positioning to visual identity that creates lasting impact.',
     details: [
-      'Brand positioning and messaging',
+      'Brand positioning and messaging strategy',
       'Logo and visual identity design',
       'Brand guidelines and style guides',
       'Brand voice and tone development',
       'Competitive analysis and market research',
+      'Brand architecture and naming strategy',
     ],
   },
   {
-    iconName: 'globe',
-    title: 'Website Design & Development',
-    description: 'Custom websites that drive conversions and deliver exceptional UX.',
+    iconName: 'trending-up',
+    title: 'Performance Marketing',
+    description: 'Data-driven campaigns across all digital platforms for maximum ROI and lead generation.',
+    details: [
+      'Google Ads and PPC campaign management',
+      'Meta (Facebook/Instagram) advertising',
+      'LinkedIn advertising for B2B',
+      'YouTube and video advertising',
+      'Retargeting and lookalike audiences',
+      'Campaign optimization and A/B testing',
+    ],
+  },
+  {
+    iconName: 'code',
+    title: 'Web Development & SEO',
+    description: 'Custom websites built for performance, conversion, and exceptional user experience.',
     details: [
       'Custom website design and development',
-      'E-commerce platform development',
-      'Mobile-responsive design',
+      'Technical SEO audits and optimization',
+      'Mobile-responsive and fast-loading sites',
       'Content management systems',
       'Website performance optimization',
+      'Conversion rate optimization',
+    ],
+  },
+  {
+    iconName: 'camera',
+    title: 'Content Creation',
+    description: 'Professional visual content that brings your brand story to life across all platforms.',
+    details: [
+      'Professional photography and videography',
+      'Social media content creation',
+      'Graphic design and visual assets',
+      'Video production and editing',
+      'Content calendar and strategy',
+      'Brand storytelling and messaging',
+    ],
+  },
+  {
+    iconName: 'users',
+    title: 'Lead Nurturing',
+    description: 'Automated sequences and personalized follow-ups to convert prospects into customers.',
+    details: [
+      'Email marketing automation',
+      'SMS marketing campaigns',
+      'Lead scoring and segmentation',
+      'Personalized follow-up sequences',
+      'CRM integration and management',
+      'Conversion funnel optimization',
     ],
   },
   {
     iconName: 'bar-chart-3',
-    title: 'Digital Marketing',
-    description: 'Comprehensive digital marketing strategies across all channels.',
+    title: 'Analytics & Optimization',
+    description: 'Comprehensive tracking and continuous optimization for maximum performance.',
     details: [
-      'Social media marketing and management',
-      'Google Ads and PPC campaigns',
-      'Email marketing automation',
-      'Content marketing strategy',
-      'Analytics and performance tracking',
-    ],
-  },
-  {
-    iconName: 'search',
-    title: 'SEO & Content Strategy',
-    description: 'Strategic content and SEO to increase organic visibility.',
-    details: [
-      'Technical SEO audits and optimization',
-      'Keyword research and strategy',
-      'Content creation and optimization',
-      'Link building and outreach',
-      'Local SEO optimization',
+      'Google Analytics and tracking setup',
+      'Performance monitoring and reporting',
+      'Data analysis and insights',
+      'Campaign optimization and testing',
+      'ROI tracking and measurement',
+      'Strategic recommendations and improvements',
     ],
   },
 ]
@@ -95,32 +125,32 @@ const detailedServices = [
 const processSteps = [
   {
     iconName: 'message-circle',
-    title: 'Initial Consultation',
-    description: 'We begin with a comprehensive consultation to understand your business goals, challenges, and target audience.',
-    duration: '1 week',
+    title: 'Discovery & Strategy',
+    description: 'We begin with a comprehensive consultation to understand your business goals, challenges, target audience, and competitive landscape.',
+    duration: '1-2 weeks',
   },
   {
     iconName: 'search',
     title: 'Research & Analysis',
-    description: 'We conduct thorough market research, competitor analysis, and audience insights to inform our strategic approach.',
-    duration: '2 weeks',
+    description: 'We conduct thorough market research, competitor analysis, audience insights, and technical audits to inform our strategic approach.',
+    duration: '2-3 weeks',
   },
   {
     iconName: 'target',
     title: 'Strategy Development',
-    description: 'Based on our research, we develop a custom marketing strategy tailored to your specific business objectives.',
-    duration: '1 week',
+    description: 'Based on our research, we develop a custom marketing strategy with clear objectives, KPIs, and implementation roadmap.',
+    duration: '1-2 weeks',
   },
   {
     iconName: 'palette',
-    title: 'Creative & Execution',
-    description: 'Our team brings the strategy to life through compelling creative work and meticulous execution.',
-    duration: '2-4 weeks',
+    title: 'Creative & Development',
+    description: 'Our team brings the strategy to life through compelling creative work, website development, and content creation.',
+    duration: '3-6 weeks',
   },
   {
     iconName: 'bar-chart-3',
     title: 'Launch & Optimization',
-    description: 'We launch your campaigns and continuously monitor, test, and optimize for maximum performance and results.',
+    description: 'We launch your campaigns and continuously monitor, test, and optimize for maximum performance and measurable results.',
     duration: 'Ongoing',
   },
 ]
@@ -143,35 +173,61 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="py-24 sm:py-32">
+      {/* Professional Hero Section */}
+      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-orange-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Breadcrumb items={[{ label: 'Services' }]} />
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Our Services
+          
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">Our Services</span>
+            </div>
+            
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight mb-8">
+              <span className="block text-gray-900/90">
+                Marketing
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+                Solutions
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              We offer comprehensive marketing services designed to help your business grow, 
-              from strategic planning to creative execution and performance optimization.
+            
+            <div className="mt-8 mb-6">
+              <div className="mx-auto h-1 w-32 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+            </div>
+            
+            <p className="text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium">
+              Comprehensive marketing services designed to help your business grow, from strategic planning to creative execution and performance optimization.
             </p>
           </div>
         </div>
       </section>
 
       <FeaturesGrid
-        title="What We Offer"
-        description="Full-service marketing solutions tailored to your business needs and growth objectives."
+        title="Our Core Services"
+        description="Comprehensive marketing solutions designed to drive growth, build brand awareness, and deliver measurable results for your business."
         features={services}
       />
 
-      <section className="py-24 sm:py-32 bg-muted/50">
+      <section className="py-24 sm:py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Service Details
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl leading-tight mb-6">
+              <span className="block text-gray-900/90">
+                Service
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+                Details
+              </span>
             </h2>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Learn more about each service and what's included in our comprehensive packages.
+            
+            <div className="mt-6 mb-4">
+              <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+            </div>
+            
+            <p className="text-xl leading-relaxed text-gray-600 font-medium">
+              Learn more about each service and what's included in our comprehensive marketing packages.
             </p>
           </div>
           
@@ -211,20 +267,20 @@ export default function ServicesPage() {
       </section>
 
       <ProcessTimeline
-        title="Our Service Process"
-        description="We follow a proven methodology that ensures every project delivers exceptional results from consultation to completion."
+        title="Our Proven Process"
+        description="We follow a systematic methodology that ensures every project delivers exceptional results from initial consultation to ongoing optimization."
         steps={processSteps}
       />
 
       <CTASection
-        title="Ready to Get Started?"
-        description="Let's discuss which services are right for your business and create a custom strategy for your success."
+        title="Ready to Transform Your Marketing?"
+        description="Let's discuss which services are right for your business and create a custom strategy that delivers measurable results and drives growth."
         primaryCta={{
-          text: 'Schedule Consultation',
+          text: 'Schedule Free Consultation',
           href: '/contact',
         }}
         secondaryCta={{
-          text: 'View Our Work',
+          text: 'View Our Case Studies',
           href: '/work',
         }}
         variant="gradient"
