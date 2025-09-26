@@ -6,8 +6,6 @@ import { CTASection } from '@/components/sections/cta-section'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { getIcon } from '@/lib/icons'
 
-
-
 const detailedServices = [
   {
     iconName: 'target',
@@ -89,8 +87,7 @@ const detailedServices = [
   },
 ]
 
-
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Services | Truly Grit Marketing Solutions',
   description: 'Discover our comprehensive marketing services: brand strategy, digital marketing, web design, SEO, content marketing, and social media management for business growth.',
   openGraph: {
@@ -110,9 +107,6 @@ export default function ServicesPage() {
     <>
       {/* Professional Hero Section */}
       <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f97316" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-        
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <Breadcrumb items={[{ label: 'Services' }]} />
           
@@ -138,12 +132,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-
       {/* Professional Service Details Section */}
       <section className="py-24 sm:py-32 bg-white relative">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23f3f4f6" fill-opacity="0.5"%3E%3Cpath d="M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z"/%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="mx-auto max-w-3xl text-center mb-20">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
