@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Target, TrendingUp, Code, Camera, Users, BarChart3 } from 'lucide-react'
 
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
@@ -463,7 +464,7 @@ export default function ServicesPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center">
                     <BarChart3 className="h-8 w-8 text-white" />
                   </div>
-                  <div>
+                        <div>
                     <h3 className="text-2xl font-bold text-gray-900">Analytics & Optimization</h3>
                     <p className="text-gray-600">Comprehensive tracking and continuous optimization</p>
                   </div>
@@ -494,9 +495,9 @@ export default function ServicesPage() {
                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-gray-700">Strategic recommendations and improvements</span>
                   </div>
-                </div>
-              </div>
-            </div>
+                        </div>
+                      </div>
+                      </div>
           </div>
         </div>
       </section>
