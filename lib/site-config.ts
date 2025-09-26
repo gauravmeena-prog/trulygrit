@@ -4,7 +4,7 @@ export const siteConfig = {
   url: 'https://truly-grit.com',
   ogImage: 'https://truly-grit.com/og.jpg',
   links: {
-    twitter: 'https://twitter.com/trulygrithq',
+    twitter: 'https://twitter.com/truly_grit',
     github: 'https://github.com/trulygrithq',
     linkedin: 'https://linkedin.com/company/truly-grit',
     instagram: 'https://instagram.com/trulygrithq',
