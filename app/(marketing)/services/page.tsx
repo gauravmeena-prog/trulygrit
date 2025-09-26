@@ -1,46 +1,11 @@
 import { Metadata } from 'next'
 import { Target, TrendingUp, Code, Camera, Users, BarChart3 } from 'lucide-react'
 
-import { FeaturesGrid } from '@/components/sections/features-grid'
-import { ProcessTimeline } from '@/components/sections/process-timeline'
-import { CTASection } from '@/components/sections/cta-section'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { getIcon } from '@/lib/icons'
 
 
-const services = [
-  {
-    iconName: 'target',
-    title: 'Brand Strategy & Identity',
-    description: 'Complete brand development from positioning to visual identity that differentiates you from competitors and resonates with your target audience.',
-  },
-  {
-    iconName: 'trending-up',
-    title: 'Performance Marketing',
-    description: 'Data-driven digital marketing campaigns across Google, Meta, LinkedIn, and other platforms to drive qualified leads and maximize ROI.',
-  },
-  {
-    iconName: 'code',
-    title: 'Web Development & SEO',
-    description: 'Custom websites and web applications built for performance, conversion, and exceptional user experience with technical SEO optimization.',
-  },
-  {
-    iconName: 'camera',
-    title: 'Content Creation',
-    description: 'Professional photography, videography, and graphic design that brings your brand story to life across all digital platforms.',
-  },
-  {
-    iconName: 'users',
-    title: 'Lead Nurturing',
-    description: 'Automated email and SMS sequences with personalized follow-ups to convert prospects into customers throughout the sales funnel.',
-  },
-  {
-    iconName: 'bar-chart-3',
-    title: 'Analytics & Optimization',
-    description: 'Comprehensive tracking, analysis, and continuous optimization of all marketing efforts to ensure maximum performance and growth.',
-  },
-]
 
 const detailedServices = [
   {
@@ -123,38 +88,6 @@ const detailedServices = [
   },
 ]
 
-const processSteps = [
-  {
-    iconName: 'message-circle',
-    title: 'Discovery & Strategy',
-    description: 'We begin with a comprehensive consultation to understand your business goals, challenges, target audience, and competitive landscape.',
-    duration: '1-2 weeks',
-  },
-  {
-    iconName: 'search',
-    title: 'Research & Analysis',
-    description: 'We conduct thorough market research, competitor analysis, audience insights, and technical audits to inform our strategic approach.',
-    duration: '2-3 weeks',
-  },
-  {
-    iconName: 'target',
-    title: 'Strategy Development',
-    description: 'Based on our research, we develop a custom marketing strategy with clear objectives, KPIs, and implementation roadmap.',
-    duration: '1-2 weeks',
-  },
-  {
-    iconName: 'palette',
-    title: 'Creative & Development',
-    description: 'Our team brings the strategy to life through compelling creative work, website development, and content creation.',
-    duration: '3-6 weeks',
-  },
-  {
-    iconName: 'bar-chart-3',
-    title: 'Launch & Optimization',
-    description: 'We launch your campaigns and continuously monitor, test, and optimize for maximum performance and measurable results.',
-    duration: 'Ongoing',
-  },
-]
 
 export const metadata = {
   title: 'Services | Truly Grit Marketing Solutions',
@@ -202,11 +135,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <FeaturesGrid
-        title="Our Core Services"
-        description="Comprehensive marketing solutions designed to drive growth, build brand awareness, and deliver measurable results for your business."
-        features={services}
-      />
 
       <section className="py-24 sm:py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -261,25 +189,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ProcessTimeline
-        title="Our Proven Process"
-        description="We follow a systematic methodology that ensures every project delivers exceptional results from initial consultation to ongoing optimization."
-        steps={processSteps}
-      />
-
-      <CTASection
-        title="Ready to Transform Your Marketing?"
-        description="Let's discuss which services are right for your business and create a custom strategy that delivers measurable results and drives growth."
-        primaryCta={{
-          text: 'Schedule Free Consultation',
-          href: '/contact',
-        }}
-        secondaryCta={{
-          text: 'View Our Case Studies',
-          href: '/work',
-        }}
-        variant="gradient"
-      />
     </>
   )
 }
