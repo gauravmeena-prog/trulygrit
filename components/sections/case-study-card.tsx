@@ -31,36 +31,15 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
       viewport={{ once: true }}
       className="relative"
     >
-      {/* Clean minimal layout - no cards */}
-      <div className="relative bg-white py-12">
+      {/* Symmetric layout */}
+      <div className="relative bg-white py-16">
         
-        {/* Header section */}
-        <div className="mb-8">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">{caseStudy.client}</span>
-            <span className="text-gray-300">•</span>
-            <span className="text-sm text-gray-400">{caseStudy.year}</span>
-          </div>
+        {/* Symmetric content grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          <div className="flex items-center gap-4 mb-6">
-            <div className="flex items-center gap-2 px-3 py-1 bg-orange-50 rounded-full">
-              <GraduationCap className="h-4 w-4 text-orange-600" />
-              <span className="text-xs font-medium text-orange-600">Admissions 2025</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
-              <Calendar className="h-4 w-4 text-primary" />
-              <span className="text-xs font-medium text-primary">24th Year</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Main content grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Image section */}
+          {/* Left side - Image */}
           <div className="order-2 lg:order-1">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={caseStudy.coverImage}
                 alt={`${caseStudy.title} case study`}
@@ -70,46 +49,55 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
             </div>
           </div>
           
-          {/* Content section */}
-          <div className="order-1 lg:order-2 space-y-6">
+          {/* Right side - Content */}
+          <div className="order-1 lg:order-2 space-y-8">
+            
+            {/* Client badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-orange-500/10 rounded-full border border-primary/20">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">{caseStudy.client}</span>
+              <span className="text-xs text-gray-500">•</span>
+              <span className="text-xs text-gray-500">{caseStudy.year}</span>
+            </div>
             
             {/* Title */}
-            <h3 className="text-3xl font-bold text-gray-900 leading-tight">
+            <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               {caseStudy.title}
             </h3>
             
             {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed font-medium">
               {caseStudy.summary}
             </p>
             
-            {/* Services */}
+            {/* Service tags */}
             <div className="flex flex-wrap gap-3">
               {caseStudy.services.map((service, index) => (
                 <span 
                   key={service}
-                  className="px-4 py-2 bg-gray-50 text-gray-700 text-sm font-medium rounded-lg"
+                  className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
                 >
                   {service}
                 </span>
               ))}
             </div>
             
-            {/* Metrics */}
+            {/* Key metrics */}
             {caseStudy.metrics && (
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
                 {Object.entries(caseStudy.metrics).map(([key, value]) => (
-                  <div 
+                  <motion.div
                     key={key}
-                    className="border-l-4 border-primary pl-4"
+                    className="bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl p-4 border border-primary/10 hover:border-primary/20 transition-all duration-300 hover:shadow-md"
+                    whileHover={{ scale: 1.05 }}
                   >
-                    <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">
+                    <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
                       {key}
                     </div>
-                    <div className="text-xl font-bold text-gray-900">
-                      {value}
+                    <div className="text-xl font-bold text-primary flex items-center gap-1">
+                      <TrendingUp className="h-4 w-4 text-orange-500" /> {value}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             )}
@@ -118,7 +106,7 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
         </div>
         
         {/* Bottom border */}
-        <div className="mt-12 border-b border-gray-200"></div>
+        <div className="mt-16 border-b border-gray-200"></div>
       </div>
     </motion.div>
   )
