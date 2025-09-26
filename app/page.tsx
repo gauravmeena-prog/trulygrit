@@ -121,7 +121,7 @@ export default function HomePage() {
         />
         
                <CaseStudiesGrid
-                 title="Client Success Stories"
+                 title="Real Results from Real Client"
                  description="Our partnership with Dhirubhai Ambani University demonstrates our expertise in comprehensive brand transformations and institutional positioning."
                  caseStudies={sampleCaseStudies}
                />
