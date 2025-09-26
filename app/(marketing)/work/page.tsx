@@ -182,33 +182,35 @@ export default function WorkPage() {
                       <p className="text-xs text-gray-500">1,061 posts · 10K followers</p>
                     </div>
                   </div>
-                  <Link 
-                    href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
-                    target="_blank"
-                    className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
-                  >
-                    Watch Reel
-                  </Link>
+                  <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg">
+                    Embedded Reel
+                  </div>
                 </div>
                 
-                {/* Reel Thumbnail */}
-                <div className="relative aspect-[9/16] bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
-                        <Play className="h-6 w-6 text-primary ml-1" />
-                      </div>
-                      <h4 className="text-lg font-bold text-white mb-2">Instagram Reel</h4>
-                      <p className="text-white/80 text-sm">Engaging social content for admissions</p>
-                    </div>
-                  </div>
-                  
-                  {/* Instagram Branding */}
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded text-sm font-bold">
-                      Instagram
-                    </div>
-                  </div>
+                {/* Embedded Instagram Reel */}
+                <div className="flex-shrink-0 w-48 md:w-56">
+                  <iframe 
+                    className="instagram-media instagram-media-rendered" 
+                    id="instagram-embed-9" 
+                    src="https://www.instagram.com/reel/DIqxJpMhKki/embed/?cr=1&v=14&wp=448&rd=https%3A%2F%2Fwww.trulygrit.com&rp=%2Fcase-study%2Fdhirubhai-ambani-university#%7B%22ci%22%3A9%2C%22os%22%3A7172438%2C%22ls%22%3A2062517%2C%22le%22%3A2063487.700000003%7D" 
+                    allowTransparency="true" 
+                    allowFullScreen="true" 
+                    frameBorder="0" 
+                    height="446" 
+                    data-instgrm-payload-id="instagram-media-payload-9" 
+                    scrolling="no" 
+                    style={{
+                      backgroundColor: 'white',
+                      borderRadius: '3px',
+                      border: '1px solid rgb(219, 219, 219)',
+                      boxShadow: 'none',
+                      display: 'block',
+                      margin: '0px 0px 12px',
+                      padding: '0px',
+                      minWidth: '0px !important',
+                      maxWidth: '100% !important'
+                    }}
+                  ></iframe>
                 </div>
                 
                 {/* Footer */}
