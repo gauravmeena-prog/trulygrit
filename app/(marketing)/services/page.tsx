@@ -174,6 +174,17 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <style jsx global>{`
+        [data-radix-accordion-trigger] {
+          text-decoration: none !important;
+        }
+        [data-radix-accordion-trigger]:hover {
+          text-decoration: none !important;
+        }
+        [data-radix-accordion-trigger]:focus {
+          text-decoration: none !important;
+        }
+      `}</style>
       {/* Professional Hero Section */}
       <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-orange-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -227,12 +238,12 @@ export default function ServicesPage() {
           </div>
           
           <div className="mx-auto mt-16 max-w-4xl">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full [&_[data-radix-accordion-trigger]]:no-underline [&_[data-radix-accordion-trigger]]:hover:no-underline">
               {detailedServices.map((service, index) => {
                 const IconComponent = getIcon(service.iconName)
                 return (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-left">
+                    <AccordionTrigger className="text-left hover:no-underline [&[data-state=open]]:no-underline">
                       <div className="flex items-center gap-3">
                         <IconComponent className="h-5 w-5 text-primary" />
                         <div>
