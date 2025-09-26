@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Play, ExternalLink, Calendar, MapPin, Users, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, Play, ExternalLink, Calendar, MapPin, Users, Target, TrendingUp, Heart, MessageCircle, Share, Bookmark } from 'lucide-react'
 
 export const metadata = {
   title: 'Our Work | Truly Grit Case Studies & Portfolio',
@@ -96,7 +96,7 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Video Showcase */}
+          {/* Instagram-Style Video Showcase */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Work in Action</h3>
@@ -107,19 +107,42 @@ export default function WorkPage() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
-              {/* YouTube Campus Tour */}
-              <div className="relative group">
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900 shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30"></div>
-                  
-                  {/* YouTube Thumbnail */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+              {/* YouTube Campus Tour - Instagram Style */}
+              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+                {/* Instagram Header */}
+                <div className="flex items-center justify-between p-4 border-b border-gray-200">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">YT</span>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-1">
+                        <span className="font-semibold text-gray-900">Dhirubhai Ambani University</span>
+                        <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs">✓</span>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-500">Original audio</p>
+                    </div>
+                  </div>
+                  <Link 
+                    href="https://youtu.be/MnoudliA_oY"
+                    target="_blank"
+                    className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    View Video
+                  </Link>
+                </div>
+                
+                {/* Video Content */}
+                <div className="relative aspect-video bg-gray-900">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
                         <Play className="h-8 w-8 text-primary ml-1" />
                       </div>
                       <h4 className="text-xl font-bold text-white mb-2">Campus Tour Video</h4>
-                      <p className="text-white/80 text-sm">Professional video showcasing DAU campus facilities and environment</p>
+                      <p className="text-white/80 text-sm">Professional video showcasing DAU campus facilities</p>
                     </div>
                   </div>
                   
@@ -129,34 +152,66 @@ export default function WorkPage() {
                       YouTube
                     </div>
                   </div>
-                  
-                  {/* External Link */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
-                      <ExternalLink className="h-4 w-4 text-white" />
-                    </div>
-                  </div>
                 </div>
-                <Link 
-                  href="https://youtu.be/MnoudliA_oY"
-                  target="_blank"
-                  className="absolute inset-0 rounded-xl"
-                />
+                
+                {/* Instagram Footer */}
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-4">
+                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
+                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
+                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
+                    </div>
+                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                  </div>
+                  
+                  <div className="text-sm font-semibold text-gray-900 mb-2">259 likes</div>
+                  
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-gray-900">daiictofficial</span> UG Admissions Open for 2025! 
+                    Explore our world-class campus and facilities. Apply now for undergraduate programs.
+                  </div>
+                  
+                  <div className="text-xs text-gray-500 mt-2">View all 15 comments</div>
+                </div>
               </div>
 
-              {/* Instagram Reel */}
-              <div className="relative group">
-                <div className="relative aspect-[9/16] rounded-xl overflow-hidden bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30"></div>
-                  
-                  {/* Instagram Thumbnail */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+              {/* Instagram Reel - Instagram Style */}
+              <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+                {/* Instagram Header */}
+                <div className="flex items-center justify-between p-4 border-b border-gray-200">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">IG</span>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-1">
+                        <span className="font-semibold text-gray-900">daiictofficial</span>
+                        <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs">✓</span>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-500">1,061 posts · 10K followers</p>
+                    </div>
+                  </div>
+                  <Link 
+                    href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
+                    target="_blank"
+                    className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
+                  >
+                    View Reel
+                  </Link>
+                </div>
+                
+                {/* Reel Content */}
+                <div className="relative aspect-[9/16] bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-orange-500/30 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
                         <Play className="h-6 w-6 text-primary ml-1" />
                       </div>
                       <h4 className="text-lg font-bold text-white mb-2">Instagram Reel</h4>
-                      <p className="text-white/80 text-sm">Engaging social content for admissions campaign</p>
+                      <p className="text-white/80 text-sm">Engaging social content for admissions</p>
                     </div>
                   </div>
                   
@@ -166,19 +221,28 @@ export default function WorkPage() {
                       Instagram
                     </div>
                   </div>
-                  
-                  {/* External Link */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
-                      <ExternalLink className="h-4 w-4 text-white" />
-                    </div>
-                  </div>
                 </div>
-                <Link 
-                  href="https://www.instagram.com/reel/DJQNHBkIQFQ/?utm_source=ig_embed&ig_rid=6c942f0d-4e4d-42c7-81a8-804e3c02d76f"
-                  target="_blank"
-                  className="absolute inset-0 rounded-xl"
-                />
+                
+                {/* Instagram Footer */}
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-4">
+                      <Heart className="h-6 w-6 text-gray-600 hover:text-red-500 cursor-pointer transition-colors" />
+                      <MessageCircle className="h-6 w-6 text-gray-600 hover:text-blue-500 cursor-pointer transition-colors" />
+                      <Share className="h-6 w-6 text-gray-600 hover:text-green-500 cursor-pointer transition-colors" />
+                    </div>
+                    <Bookmark className="h-6 w-6 text-gray-600 hover:text-yellow-500 cursor-pointer transition-colors" />
+                  </div>
+                  
+                  <div className="text-sm font-semibold text-gray-900 mb-2">1.2K likes</div>
+                  
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-gray-900">daiictofficial</span> Campus life at DAU! 
+                    From coding competitions to cultural events, experience the vibrant student community.
+                  </div>
+                  
+                  <div className="text-xs text-gray-500 mt-2">View all 23 comments</div>
+                </div>
               </div>
             </div>
           </div>
