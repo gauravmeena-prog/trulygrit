@@ -54,15 +54,6 @@ export function FeaturesGrid({ title, description, features }: FeaturesGridProps
             </span>
           </motion.h2>
           
-          <motion.div
-            className="mt-8 mb-4"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
-          </motion.div>
           
           <motion.p 
             className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto font-medium"

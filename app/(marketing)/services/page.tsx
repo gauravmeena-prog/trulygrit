@@ -194,9 +194,6 @@ export default function ServicesPage() {
               </span>
             </h1>
             
-            <div className="mt-8 mb-6">
-              <div className="mx-auto h-1 w-32 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
-            </div>
             
             <p className="text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium">
               Comprehensive marketing services designed to help your business grow, from strategic planning to creative execution and performance optimization.
@@ -223,9 +220,6 @@ export default function ServicesPage() {
               </span>
             </h2>
             
-            <div className="mt-6 mb-4">
-              <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
-            </div>
             
             <p className="text-xl leading-relaxed text-gray-600 font-medium">
               Learn more about each service and what's included in our comprehensive marketing packages.
