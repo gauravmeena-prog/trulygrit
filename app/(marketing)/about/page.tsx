@@ -147,14 +147,6 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="relative group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-orange-600 mb-4">2025</div>
-                  <div className="text-xl font-semibold text-orange-800">Founded</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
