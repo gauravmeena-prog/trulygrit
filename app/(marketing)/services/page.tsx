@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Target, TrendingUp, Code, Camera, Users, BarChart3 } from 'lucide-react'
 
 import { Breadcrumb } from '@/components/breadcrumb'
+import { CTASection } from '@/components/sections/cta-section'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { getIcon } from '@/lib/icons'
 
@@ -108,12 +109,15 @@ export default function ServicesPage() {
   return (
     <>
       {/* Professional Hero Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-orange-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-orange-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f97316" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <Breadcrumb items={[{ label: 'Services' }]} />
           
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-sm font-bold text-primary uppercase tracking-wider">Our Services</span>
             </div>
@@ -127,7 +131,6 @@ export default function ServicesPage() {
               </span>
             </h1>
             
-            
             <p className="text-xl leading-relaxed text-gray-600 max-w-4xl mx-auto font-medium">
               Comprehensive marketing services designed to help your business grow, from strategic planning to creative execution and performance optimization.
             </p>
@@ -136,49 +139,63 @@ export default function ServicesPage() {
       </section>
 
 
-      <section className="py-24 sm:py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl leading-tight mb-6">
+      {/* Professional Service Details Section */}
+      <section className="py-24 sm:py-32 bg-white relative">
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23f3f4f6" fill-opacity="0.5"%3E%3Cpath d="M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z"/%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+          <div className="mx-auto max-w-3xl text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20 mb-8 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">Service Details</span>
+            </div>
+            
+            <h2 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-tight mb-8">
               <span className="block text-gray-900/90">
-                Service
+                Comprehensive
               </span>
               <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
-                Details
+                Service Portfolio
               </span>
             </h2>
             
-            
             <p className="text-xl leading-relaxed text-gray-600 font-medium">
-              Learn more about each service and what's included in our comprehensive marketing packages.
+              Detailed breakdown of our marketing services with clear deliverables, timelines, and expected outcomes for maximum transparency and value.
             </p>
           </div>
           
-          <div className="mx-auto mt-16 max-w-4xl">
-            <Accordion type="single" collapsible className="w-full [&_[data-radix-accordion-trigger]]:no-underline [&_[data-radix-accordion-trigger]]:hover:no-underline">
+          <div className="mx-auto mt-16 max-w-5xl">
+            <Accordion type="single" collapsible className="w-full space-y-4 [&_[data-radix-accordion-trigger]]:no-underline [&_[data-radix-accordion-trigger]]:hover:no-underline">
               {detailedServices.map((service, index) => {
                 const IconComponent = getIcon(service.iconName)
                 return (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-left hover:no-underline [&[data-state=open]]:no-underline">
-                      <div className="flex items-center gap-3">
-                        <IconComponent className="h-5 w-5 text-primary" />
-                        <div>
-                          <div className="font-semibold">{service.title}</div>
-                          <div className="text-sm text-muted-foreground">{service.description}</div>
+                  <AccordionItem 
+                    key={index} 
+                    value={`item-${index}`}
+                    className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+                  >
+                    <AccordionTrigger className="text-left hover:no-underline [&[data-state=open]]:no-underline p-6 hover:bg-gray-50/50 transition-colors duration-200">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="h-6 w-6 text-white" />
+                        </div>
+                        <div className="text-left">
+                          <div className="text-xl font-bold text-gray-900 mb-1">{service.title}</div>
+                          <div className="text-sm text-gray-600 font-medium">{service.description}</div>
                         </div>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="pt-4 pl-8">
-                        <ul className="space-y-2">
+                    <AccordionContent className="px-6 pb-6">
+                      <div className="pt-4 pl-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {service.details.map((detail, detailIndex) => (
-                            <li key={detailIndex} className="flex items-center gap-2">
-                              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                              <span className="text-muted-foreground">{detail}</span>
-                            </li>
+                            <div key={detailIndex} className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                              <span className="text-gray-700 font-medium">{detail}</span>
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -189,6 +206,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Professional CTA Section */}
+      <CTASection
+        title="Ready to Transform Your Marketing?"
+        description="Let's discuss which services are right for your business and create a custom strategy that delivers measurable results and drives growth."
+        primaryCta={{
+          text: 'Schedule Free Consultation',
+          href: '/contact',
+        }}
+        secondaryCta={{
+          text: 'View Our Case Studies',
+          href: '/work',
+        }}
+        variant="gradient"
+      />
     </>
   )
 }
