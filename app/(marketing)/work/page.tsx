@@ -177,6 +177,112 @@ export default function WorkPage() {
             </div>
           </div>
 
+          {/* Content Creation Showcase */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Content Creation Portfolio</h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Beyond these samples, we've created extensive content across multiple platforms
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              
+              {/* YouTube Content */}
+              <div className="p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl border border-red-200">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">YT</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900">YouTube Channel</h4>
+                    <p className="text-gray-600">Multiple video series</p>
+                  </div>
+                </div>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Campus tour videos</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Student life documentaries</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Academic program showcases</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span>Event coverage videos</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Instagram Content */}
+              <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl border border-purple-200">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">IG</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900">Instagram Content</h4>
+                    <p className="text-gray-600">1,061 posts created</p>
+                  </div>
+                </div>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Daily campus stories</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Student achievement posts</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Event highlights reels</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span>Behind-the-scenes content</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Additional Content */}
+              <div className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border border-blue-200">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">+</span>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900">Additional Content</h4>
+                    <p className="text-gray-600">Multi-platform strategy</p>
+                  </div>
+                </div>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>LinkedIn professional content</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Facebook community posts</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Website content updates</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span>Email marketing campaigns</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* Key Results - Unique Layout */}
           <div className="mb-20">
             <div className="text-center mb-12">
