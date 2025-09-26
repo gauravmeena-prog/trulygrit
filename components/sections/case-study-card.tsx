@@ -1,12 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, Calendar, TrendingUp, GraduationCap } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
+import { Calendar, TrendingUp, GraduationCap } from 'lucide-react'
 
 interface CaseStudy {
   title: string
@@ -117,15 +114,6 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
               </div>
             )}
             
-            {/* CTA */}
-            <div className="pt-4">
-              <Button asChild variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-white transition-all duration-300">
-                <Link href={`/work/${caseStudy.slug}`}>
-                  View Full Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
         
