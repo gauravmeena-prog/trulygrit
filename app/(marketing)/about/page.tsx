@@ -61,10 +61,10 @@ export default function AboutPage() {
     <>
       {/* Clean Hero Section */}
       <section className="py-24 sm:py-32 bg-white relative">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <Breadcrumb items={[{ label: 'About' }]} />
           
-          <div className="text-center max-w-5xl mx-auto mt-20">
+          <div className="text-center max-w-4xl mx-auto mt-20">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl mb-8 leading-tight">
               <span className="block text-gray-900">
                 About
@@ -95,18 +95,18 @@ export default function AboutPage() {
 
       {/* Company Story Section */}
       <section className="py-24 sm:py-32 bg-gray-50 relative">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Building Revenue Engines
               <span className="block text-orange-600 mt-2">The Hard Way</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
               We believe great marketing should build genuine connections and drive meaningful results. Founded in 2025, we've built our reputation on delivering measurable outcomes.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <div className="group">
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 w-16 h-1 rounded-full mb-6 group-hover:w-24 transition-all duration-300"></div>
@@ -154,13 +154,13 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 sm:py-32 bg-white relative">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               The Principles
               <span className="block text-orange-600 mt-2">That Guide Us</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
               The core values that shape everything we do and how we work with our clients.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-24 sm:py-32 bg-gray-50 relative">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Meet The
@@ -204,12 +204,12 @@ export default function AboutPage() {
                 Truly Grit Team
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
               Strategic marketing professionals bringing personal attention and expertise to every project.
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-lg text-center">
               <div className="space-y-8">
                 <div>
