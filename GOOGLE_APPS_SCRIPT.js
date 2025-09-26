@@ -5,7 +5,7 @@
 function doPost(e) {
   try {
     // Get the spreadsheet
-    const sheet = SpreadsheetApp.openById('1OOGEAl0o_MY6KvFsPFaDutc3F0ZDSp5og-F5syLMlr4').getActiveSheet();
+    const sheet = SpreadsheetApp.openById('1pnszYgqVdK0REQG7f2ASzicFJRci1Mnzs1ZLT0K9-fQ').getActiveSheet();
     
     // Parse the incoming data
     const data = JSON.parse(e.postData.contents);
