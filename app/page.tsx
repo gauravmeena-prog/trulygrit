@@ -135,20 +135,20 @@ export default function HomePage() {
         />
         
                <CaseStudiesGrid
-                 title="Real Results from Real Clients"
+                 title="Client Success Stories"
                  description="Our partnership with Dhirubhai Ambani University demonstrates our expertise in comprehensive brand transformations and institutional positioning."
                  caseStudies={sampleCaseStudies}
                />
 
                <Testimonials
-                 title="What Our Clients Actually Say"
-                 description="Hear directly from our client about their experience with our brand transformation services. Real feedback from a real partnership that delivered complete organizational change."
+                 title="Client Testimonials"
+                 description="Hear directly from our client about their experience with our brand transformation services and the results achieved through our partnership."
                  testimonials={testimonials}
                />
         
         <CTASection
-          title="Ready to Transform Your Business Like These Success Stories?"
-          description="Stop leaving money on the table. Join the ranks of successful entrepreneurs who chose Truly Grit and achieved extraordinary growth. Your competitors are already ahead—don't let them get further."
+          title="Ready to Transform Your Business?"
+          description="Join successful organizations who have achieved extraordinary growth through our strategic approach. Let's discuss how we can help transform your business."
           primaryCta={{
             text: 'Get Your Free Strategy Call',
             href: '/contact',
