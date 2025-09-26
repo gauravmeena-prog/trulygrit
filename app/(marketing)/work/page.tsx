@@ -184,7 +184,7 @@ export default function WorkPage() {
                     
                     <div className="bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-xl p-6 border border-primary/10">
                       <div className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Admissions 2025</div>
-                      <div className="text-2xl font-bold text-primary">Fully Managed</div>
+                      <div className="text-2xl font-bold text-primary">Successfully Launched</div>
                       <div className="text-gray-600 mt-2">All courses and programs</div>
                     </div>
                     
