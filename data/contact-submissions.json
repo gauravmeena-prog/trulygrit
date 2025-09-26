@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sub_1758926626471_zuwg0jv11",
+    "timestamp": "2025-09-26T22:43:46.471Z",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "company": "Test Corp",
+    "phone": "+1234567890",
+    "service": "Digital Marketing",
+    "budget": "$10k - $25k",
+    "message": "This is a test submission using the new local storage system."
+  }
+]

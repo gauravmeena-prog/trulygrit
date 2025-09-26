@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { saveToGoogleSheetsSimple } from '@/lib/sheets-simple'
+import { sendEmailNotification } from '@/lib/email-notification'
+import { saveContactSubmission } from '@/lib/data-storage'
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -19,10 +20,13 @@ export async function POST(request: NextRequest) {
     // Validate the request body
     const validatedData = contactSchema.parse(body)
     
-    // Save to Google Sheets via webhook
-    await saveToGoogleSheetsSimple(validatedData)
+    // Save to local storage
+    const savedSubmission = await saveContactSubmission(validatedData)
     
-    console.log('Contact form submission saved to Google Sheets:', validatedData)
+    // Send email notification
+    await sendEmailNotification(validatedData)
+    
+    console.log('Contact form submission processed:', savedSubmission)
     
     return NextResponse.json(
       { message: 'Contact form submitted successfully' },
