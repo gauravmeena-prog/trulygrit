@@ -1,11 +1,13 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import Hero from '@/components/Hero'
 import { FeaturesGrid } from '@/components/sections/features-grid'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
-import { CaseStudiesGrid } from '@/components/sections/case-study-card'
 import { CTASection } from '@/components/sections/cta-section'
 
 
@@ -120,11 +122,83 @@ export default function HomePage() {
           steps={processSteps}
         />
         
-               <CaseStudiesGrid
-                 title="Real Results from Real Client"
-                 description="Our partnership with Dhirubhai Ambani University demonstrates our expertise in comprehensive brand transformations and institutional positioning."
-                 caseStudies={sampleCaseStudies}
-               />
+               {/* Work Overview Section */}
+               <section className="py-20 bg-white">
+                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                   
+                   {/* Header */}
+                   <div className="text-center mb-16">
+                     <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight">
+                       <span className="block text-gray-900/90">
+                         Proven Results
+                       </span>
+                       <span className="block bg-gradient-to-r from-primary via-orange-500 to-primary bg-clip-text text-transparent font-extrabold mt-2">
+                         Real Impact
+                       </span>
+                     </h2>
+                     
+                     <div className="mt-8 mb-4">
+                       <div className="mx-auto h-1 w-24 bg-gradient-to-r from-primary to-orange-500 rounded-full" />
+                     </div>
+                     
+                     <p className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto font-medium">
+                       We transform businesses through strategic marketing and brand development. See our latest work with Dhirubhai Ambani University's complete brand transformation.
+                     </p>
+                   </div>
+                   
+                   {/* Work Preview */}
+                   <div className="max-w-4xl mx-auto">
+                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                       
+                       {/* Image */}
+                       <div>
+                         <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                           <Image
+                             src="/dau_gate.jpg"
+                             alt="DAU Brand Transformation"
+                             fill
+                             className="object-cover"
+                           />
+                         </div>
+                       </div>
+                       
+                       {/* Content */}
+                       <div className="space-y-6">
+                         <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                           Dhirubhai Ambani University • 2024
+                         </div>
+                         
+                         <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                           DA-IICT to DAU: Complete Brand Transformation
+                         </h3>
+                         
+                         <p className="text-lg text-gray-600 leading-relaxed">
+                           Led comprehensive brand transformation for DA-IICT's transition to Dhirubhai Ambani University. Delivered strategic rebranding, digital presence overhaul, and admission campaign management for 2025.
+                         </p>
+                         
+                         <div className="flex flex-wrap gap-3">
+                           <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded">
+                             Brand Transformation
+                           </span>
+                           <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded">
+                             Digital Strategy
+                           </span>
+                           <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded">
+                             University Rebranding
+                           </span>
+                         </div>
+                         
+                         <div className="pt-4">
+                           <Link href="/work" className="inline-flex items-center gap-2 text-primary font-semibold hover:text-orange-600 transition-colors">
+                             View Full Case Study
+                             <ArrowRight className="h-4 w-4" />
+                           </Link>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </section>
 
         
         <CTASection
