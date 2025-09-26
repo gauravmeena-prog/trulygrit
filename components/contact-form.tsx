@@ -84,17 +84,18 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <Card className="w-full max-w-lg mx-auto">
-        <CardHeader className="text-center">
-          <CardTitle className="text-green-600">Thank You!</CardTitle>
-          <CardDescription>
+      <Card className="w-full max-w-2xl mx-auto bg-white shadow-xl border-0 rounded-2xl">
+        <CardHeader className="text-center pb-6">
+          <CardTitle className="text-2xl font-bold text-green-600">Thank You!</CardTitle>
+          <CardDescription className="text-lg text-gray-700">
             We've received your message and will get back to you within 24 hours.
           </CardDescription>
         </CardHeader>
-        <CardContent className="text-center">
+        <CardContent className="text-center pt-0">
           <Button
             onClick={() => setIsSubmitted(false)}
             variant="outline"
+            className="border-orange-300 text-orange-600 hover:bg-orange-50"
           >
             Send Another Message
           </Button>
@@ -104,14 +105,14 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="w-full max-w-lg mx-auto">
-      <CardHeader>
-        <CardTitle>Get In Touch</CardTitle>
-        <CardDescription>
+    <Card className="w-full max-w-2xl mx-auto bg-white shadow-xl border-0 rounded-2xl">
+      <CardHeader className="pb-6">
+        <CardTitle className="text-2xl font-bold text-gray-900">Get Started Today</CardTitle>
+        <CardDescription className="text-lg text-gray-700">
           Ready to start your project? Fill out the form below and we'll get back to you soon.
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pt-0">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-2">
@@ -120,7 +121,7 @@ export function ContactForm() {
                 id="name"
                 {...register('name')}
                 placeholder="Your full name"
-                className="h-12 text-base"
+                className="h-12 text-base border-gray-300 focus:border-orange-500 focus:ring-orange-500"
                 aria-invalid={errors.name ? 'true' : 'false'}
                 aria-describedby={errors.name ? 'name-error' : undefined}
               />
@@ -138,7 +139,7 @@ export function ContactForm() {
                 type="email"
                 {...register('email')}
                 placeholder="your@email.com"
-                className="h-12 text-base"
+                className="h-12 text-base border-gray-300 focus:border-orange-500 focus:ring-orange-500"
               />
               {errors.email && (
                 <p className="text-sm text-destructive">{errors.email.message}</p>
@@ -153,7 +154,7 @@ export function ContactForm() {
                 id="company"
                 {...register('company')}
                 placeholder="Your company"
-                className="h-12 text-base"
+                className="h-12 text-base border-gray-300 focus:border-orange-500 focus:ring-orange-500"
               />
             </div>
             
@@ -164,7 +165,7 @@ export function ContactForm() {
                 type="tel"
                 {...register('phone')}
                 placeholder="(555) 123-4567"
-                className="h-12 text-base"
+                className="h-12 text-base border-gray-300 focus:border-orange-500 focus:ring-orange-500"
               />
             </div>
           </div>
@@ -174,7 +175,7 @@ export function ContactForm() {
             <select
               id="service"
               {...register('service')}
-              className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base focus:border-orange-500 focus:ring-orange-500 focus:outline-none"
             >
               <option value="">Select a service</option>
               {services.map((service) => (
@@ -193,7 +194,7 @@ export function ContactForm() {
             <select
               id="budget"
               {...register('budget')}
-              className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="flex h-12 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-base focus:border-orange-500 focus:ring-orange-500 focus:outline-none"
             >
               <option value="">Select budget range</option>
               {budgets.map((budget) => (
@@ -214,14 +215,14 @@ export function ContactForm() {
                 {...register('message')}
                 placeholder="Tell us about your project, goals, and timeline..."
                 rows={4}
-                className="text-base min-h-[120px]"
+                className="text-base min-h-[120px] border-gray-300 focus:border-orange-500 focus:ring-orange-500"
               />
             {errors.message && (
               <p className="text-sm text-destructive">{errors.message.message}</p>
             )}
           </div>
 
-          <Button type="submit" className="w-full h-12 text-base" disabled={isSubmitting}>
+          <Button type="submit" className="w-full h-12 text-base bg-orange-600 hover:bg-orange-700 text-white font-semibold" disabled={isSubmitting}>
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />

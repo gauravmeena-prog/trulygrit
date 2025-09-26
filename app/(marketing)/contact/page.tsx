@@ -41,98 +41,112 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Contact Us
+      {/* Hero Section */}
+      <section className="py-24 sm:py-32 bg-white relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl mb-8 leading-tight">
+              <span className="block text-gray-900">
+                Let's Build
+              </span>
+              <span className="block text-orange-600 font-extrabold mt-2">
+                Something Great
+              </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Ready to transform your marketing? Let's discuss your project and 
-              create a strategy that drives real results for your business.
+            <p className="text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto mb-12">
+              Ready to transform your marketing? Let's discuss your project and create a strategy that drives real results for your business.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
+      {/* Main Contact Section */}
+      <section className="py-24 sm:py-32 bg-gray-50 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
             {/* Contact Form */}
             <div>
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Start Your Project
+                </h2>
+                <p className="text-lg text-gray-700">
+                  Tell us about your goals and we'll create a custom strategy to help you achieve them.
+                </p>
+              </div>
               <ContactForm />
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
+            {/* Contact Information & Process */}
+            <div className="space-y-12">
+              {/* Contact Info */}
               <div>
-                <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">
                   Get In Touch
                 </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  Have questions about our services or want to discuss your project? 
-                  We're here to help and would love to hear from you.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {contactInfo.map((item, index) => (
-                  <Card key={index} className="transition-all duration-300 hover:shadow-md">
-                    <CardHeader className="pb-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                          <item.icon className="h-5 w-5 text-primary-foreground" />
+                <div className="grid grid-cols-1 gap-6">
+                  {contactInfo.map((item, index) => (
+                    <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100">
+                          <item.icon className="h-6 w-6 text-orange-600" />
                         </div>
-                        <div>
-                          <CardTitle className="text-base">{item.title}</CardTitle>
-                          <CardDescription className="text-sm">
-                            {item.description}
-                          </CardDescription>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
+                          <p className="text-gray-600 mb-2">{item.description}</p>
+                          {item.link ? (
+                            <a
+                              href={item.link}
+                              className="text-orange-600 font-medium hover:text-orange-700 transition-colors"
+                              target={item.link.startsWith('http') ? '_blank' : undefined}
+                              rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            >
+                              {item.content}
+                            </a>
+                          ) : (
+                            <span className="text-gray-900 font-medium">
+                              {item.content}
+                            </span>
+                          )}
                         </div>
                       </div>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      {item.link ? (
-                        <a
-                          href={item.link}
-                          className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-                          target={item.link.startsWith('http') ? '_blank' : undefined}
-                          rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        >
-                          {item.content}
-                        </a>
-                      ) : (
-                        <span className="text-sm font-medium text-foreground">
-                          {item.content}
-                        </span>
-                      )}
-                    </CardContent>
-                  </Card>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="rounded-lg bg-muted p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-3">
+              {/* Process Steps */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   What Happens Next?
                 </h3>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-medium text-primary-foreground">
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       1
                     </div>
-                    <p>We'll review your submission and get back to you within 24 hours</p>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Quick Response</h4>
+                      <p className="text-gray-700">We'll review your submission and get back to you within 24 hours with initial thoughts and next steps.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-medium text-primary-foreground">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       2
                     </div>
-                    <p>Schedule a consultation call to discuss your project in detail</p>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Strategy Call</h4>
+                      <p className="text-gray-700">Schedule a consultation call to discuss your project in detail and understand your specific needs.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-medium text-primary-foreground">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       3
                     </div>
-                    <p>Receive a custom proposal with strategy and pricing</p>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Custom Proposal</h4>
+                      <p className="text-gray-700">Receive a detailed proposal with strategy, timeline, and transparent pricing tailored to your goals.</p>
+                    </div>
                   </div>
                 </div>
               </div>
