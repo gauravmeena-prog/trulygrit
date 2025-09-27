@@ -3,10 +3,10 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '@/components/breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Truly Grit',
+  title: 'Terms of Service - Truly Grit',
   description: 'Read our Terms of Service to understand the terms and conditions for using Truly Grit\'s website and services.',
   openGraph: {
-    title: 'Terms of Service | Truly Grit',
+    title: 'Terms of Service - Truly Grit',
     description: 'Read our Terms of Service to understand the terms and conditions for using Truly Grit\'s website and services.',
     type: 'website',
   },

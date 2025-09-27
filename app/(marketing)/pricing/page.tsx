@@ -7,10 +7,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { CTASection } from '@/components/sections/cta-section'
 
 export const metadata: Metadata = {
-  title: 'Pricing & Packages | Truly Grit',
+  title: 'Pricing - Truly Grit',
   description: 'Explore our transparent pricing plans and find the perfect marketing package to accelerate your business growth. Custom solutions available.',
   openGraph: {
-    title: 'Pricing & Packages | Truly Grit',
+    title: 'Pricing - Truly Grit',
     description: 'Explore our transparent pricing plans and find the perfect marketing package to accelerate your business growth. Custom solutions available.',
     type: 'website',
   },

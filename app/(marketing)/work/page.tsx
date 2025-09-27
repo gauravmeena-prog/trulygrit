@@ -4,16 +4,16 @@ import Link from 'next/link'
 import { ArrowRight, Play, ExternalLink, Calendar, MapPin, Users, Target, TrendingUp } from 'lucide-react'
 
 export const metadata = {
-  title: 'Our Work | Truly Grit Case Studies & Portfolio',
+  title: 'Our Work - Truly Grit',
   description: 'Explore our successful marketing campaigns and case studies. See how we transformed brands and delivered exceptional results through strategic marketing solutions.',
   openGraph: {
-    title: 'Our Work | Truly Grit Case Studies & Portfolio',
+    title: 'Our Work - Truly Grit',
     description: 'Explore our successful marketing campaigns and case studies. See how we transformed brands and delivered exceptional results through strategic marketing solutions.',
     url: 'https://truly-grit.vercel.app/work',
     type: 'website',
   },
   twitter: {
-    title: 'Our Work | Truly Grit Case Studies & Portfolio',
+    title: 'Our Work - Truly Grit',
     description: 'Explore our successful marketing campaigns and case studies. See how we transformed brands and delivered exceptional results through strategic marketing solutions.',
   },
 }

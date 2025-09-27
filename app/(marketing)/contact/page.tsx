@@ -24,16 +24,16 @@ const contactInfo = [
 ]
 
 export const metadata = {
-  title: 'Contact Us | Get Started with Truly Grit',
+  title: 'Contact Truly Grit',
   description: 'Ready to transform your marketing? Contact Truly Grit today. Let\'s discuss your project and create a strategic plan to achieve your business goals.',
   openGraph: {
-    title: 'Contact Us | Get Started with Truly Grit',
+    title: 'Contact Truly Grit',
     description: 'Ready to transform your marketing? Contact Truly Grit today. Let\'s discuss your project and create a strategic plan to achieve your business goals.',
     url: 'https://truly-grit.vercel.app/contact',
     type: 'website',
   },
   twitter: {
-    title: 'Contact Us | Get Started with Truly Grit',
+    title: 'Contact Truly Grit',
     description: 'Ready to transform your marketing? Contact Truly Grit today. Let\'s discuss your project and create a strategic plan to achieve your business goals.',
   },
 }
