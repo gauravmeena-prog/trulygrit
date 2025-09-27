@@ -17,7 +17,9 @@ import {
   Building,
   Phone,
   DollarSign,
-  Target
+  Target,
+  Lock,
+  AlertTriangle
 } from 'lucide-react'
 
 interface Submission {
@@ -70,15 +72,61 @@ export default function AdminDashboard() {
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('')
   const [selectedSubmission, setSelectedSubmission] = useState<Submission | null>(null)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [authKey, setAuthKey] = useState('')
+  const [authError, setAuthError] = useState('')
 
   useEffect(() => {
-    fetchSubmissions()
-    fetchStats()
+    // Check if already authenticated
+    const storedAuth = localStorage.getItem('admin_authenticated')
+    if (storedAuth === 'true') {
+      setIsAuthenticated(true)
+      fetchSubmissions()
+      fetchStats()
+    } else {
+      setLoading(false)
+    }
   }, [])
+
+  const handleAuthentication = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setAuthError('')
+    
+    try {
+      const response = await fetch('/api/submissions', {
+        headers: {
+          'Authorization': `Bearer ${authKey}`
+        }
+      })
+      
+      if (response.ok) {
+        setIsAuthenticated(true)
+        localStorage.setItem('admin_authenticated', 'true')
+        fetchSubmissions()
+        fetchStats()
+      } else {
+        setAuthError('Invalid authentication key')
+      }
+    } catch (error) {
+      setAuthError('Authentication failed')
+    }
+  }
+
+  const logout = () => {
+    setIsAuthenticated(false)
+    localStorage.removeItem('admin_authenticated')
+    setSubmissions([])
+    setStats(null)
+    setAuthKey('')
+  }
 
   const fetchSubmissions = async () => {
     try {
-      const response = await fetch('/api/submissions')
+      const response = await fetch('/api/submissions', {
+        headers: {
+          'Authorization': `Bearer ${authKey}`
+        }
+      })
       const data = await response.json()
       setSubmissions(data.submissions || [])
     } catch (error) {
@@ -90,7 +138,11 @@ export default function AdminDashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch('/api/submissions/stats')
+      const response = await fetch('/api/submissions/stats', {
+        headers: {
+          'Authorization': `Bearer ${authKey}`
+        }
+      })
       const data = await response.json()
       setStats(data.stats)
     } catch (error) {
@@ -102,7 +154,10 @@ export default function AdminDashboard() {
     try {
       const response = await fetch('/api/submissions', {
         method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authKey}`
+        },
         body: JSON.stringify({ id, status })
       })
       
@@ -141,8 +196,59 @@ export default function AdminDashboard() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading submissions...</p>
+          <p className="mt-4 text-gray-600">Loading...</p>
         </div>
+      </div>
+    )
+  }
+
+  // Authentication screen
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <Card className="w-full max-w-md p-8">
+          <div className="text-center mb-6">
+            <div className="mx-auto w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+              <Lock className="h-6 w-6 text-orange-600" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900">Admin Access</h1>
+            <p className="text-gray-600 mt-2">Enter your admin key to access submissions</p>
+          </div>
+          
+          <form onSubmit={handleAuthentication} className="space-y-4">
+            <div>
+              <Input
+                type="password"
+                placeholder="Enter admin key"
+                value={authKey}
+                onChange={(e) => setAuthKey(e.target.value)}
+                className="w-full"
+                required
+              />
+            </div>
+            
+            {authError && (
+              <div className="flex items-center gap-2 text-red-600 text-sm">
+                <AlertTriangle className="h-4 w-4" />
+                <span>{authError}</span>
+              </div>
+            )}
+            
+            <Button type="submit" className="w-full">
+              Access Dashboard
+            </Button>
+          </form>
+          
+          <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div className="flex items-start gap-2">
+              <AlertTriangle className="h-5 w-5 text-yellow-600 mt-0.5" />
+              <div className="text-sm text-yellow-800">
+                <p className="font-semibold">Security Notice:</p>
+                <p>This admin dashboard is protected. Only authorized personnel should access this area.</p>
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     )
   }
@@ -151,9 +257,19 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Contact Form Submissions</h1>
-          <p className="text-gray-600 mt-2">Manage and track all contact form submissions</p>
+        <div className="mb-8 flex justify-between items-start">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Contact Form Submissions</h1>
+            <p className="text-gray-600 mt-2">Manage and track all contact form submissions</p>
+          </div>
+          <Button 
+            onClick={logout}
+            variant="outline"
+            className="flex items-center gap-2"
+          >
+            <Lock className="h-4 w-4" />
+            Logout
+          </Button>
         </div>
 
         {/* Stats Cards */}

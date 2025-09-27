@@ -32,7 +32,6 @@ import {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Admin', href: '/admin' },
   ]
 
 export function SiteHeader() {

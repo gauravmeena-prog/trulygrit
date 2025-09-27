@@ -7,8 +7,28 @@ import {
   deleteSubmission 
 } from '@/lib/data-storage'
 
+// Simple authentication check
+function isAuthenticated(request: NextRequest): boolean {
+  const authHeader = request.headers.get('authorization')
+  const adminKey = process.env.ADMIN_SECRET_KEY
+  
+  if (!adminKey) {
+    console.error('ADMIN_SECRET_KEY not configured')
+    return false
+  }
+  
+  return authHeader === `Bearer ${adminKey}`
+}
+
 // GET /api/submissions - Get all submissions with optional filtering
 export async function GET(request: NextRequest) {
+  // Check authentication
+  if (!isAuthenticated(request)) {
+    return NextResponse.json(
+      { error: 'Unauthorized access' },
+      { status: 401 }
+    )
+  }
   try {
     const { searchParams } = new URL(request.url)
     const search = searchParams.get('search')
@@ -58,6 +78,14 @@ export async function GET(request: NextRequest) {
 
 // PATCH /api/submissions - Update submission status
 export async function PATCH(request: NextRequest) {
+  // Check authentication
+  if (!isAuthenticated(request)) {
+    return NextResponse.json(
+      { error: 'Unauthorized access' },
+      { status: 401 }
+    )
+  }
+  
   try {
     const body = await request.json()
     const { id, status, notes } = body
@@ -90,6 +118,14 @@ export async function PATCH(request: NextRequest) {
 
 // DELETE /api/submissions - Delete a submission
 export async function DELETE(request: NextRequest) {
+  // Check authentication
+  if (!isAuthenticated(request)) {
+    return NextResponse.json(
+      { error: 'Unauthorized access' },
+      { status: 401 }
+    )
+  }
+  
   try {
     const { searchParams } = new URL(request.url)
     const id = searchParams.get('id')
