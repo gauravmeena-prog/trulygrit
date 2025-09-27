@@ -89,17 +89,44 @@ const sampleCaseStudies = [
 
 
 export const metadata = {
-  title: 'Truly Grit | Strategic Marketing Agency',
-  description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
+  title: 'Strategic Marketing Agency | Truly Grit - Data-Driven Growth Solutions',
+  description: 'Leading strategic marketing agency specializing in brand transformation, digital marketing, and business growth. Expert marketing services for ambitious companies seeking extraordinary results.',
+  keywords: [
+    'strategic marketing agency',
+    'digital marketing services',
+    'brand strategy consulting',
+    'marketing transformation',
+    'business growth marketing',
+    'data-driven marketing',
+    'creative marketing solutions',
+    'marketing consulting',
+    'brand development',
+    'marketing strategy',
+    'marketing agency India',
+    'brand transformation',
+    'digital marketing consultant'
+  ],
   openGraph: {
-    title: 'Truly Grit | Strategic Marketing Agency',
-    description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
+    title: 'Strategic Marketing Agency | Truly Grit - Data-Driven Growth Solutions',
+    description: 'Leading strategic marketing agency specializing in brand transformation, digital marketing, and business growth. Expert marketing services for ambitious companies seeking extraordinary results.',
     url: 'https://truly-grit.vercel.app',
     type: 'website',
+    images: [
+      {
+        url: 'https://truly-grit.vercel.app/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Truly Grit - Strategic Marketing Agency',
+      },
+    ],
   },
   twitter: {
-    title: 'Truly Grit | Strategic Marketing Agency',
-    description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
+    title: 'Strategic Marketing Agency | Truly Grit - Data-Driven Growth Solutions',
+    description: 'Leading strategic marketing agency specializing in brand transformation, digital marketing, and business growth. Expert marketing services for ambitious companies seeking extraordinary results.',
+    images: ['https://truly-grit.vercel.app/og.jpg'],
+  },
+  alternates: {
+    canonical: 'https://truly-grit.vercel.app',
   },
 }
 

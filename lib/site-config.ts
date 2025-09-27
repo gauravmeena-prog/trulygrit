@@ -1,8 +1,20 @@
 export const siteConfig = {
-  name: 'Truly Grit',
-  description: 'A strategic marketing agency that helps ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence.',
-  url: 'https://truly-grit.com',
-  ogImage: 'https://truly-grit.com/og.jpg',
+  name: 'Truly Grit - Strategic Marketing Agency',
+  description: 'Leading strategic marketing agency helping businesses achieve extraordinary growth through data-driven strategies, brand transformation, and creative excellence. Expert marketing services for ambitious companies.',
+  url: 'https://truly-grit.vercel.app',
+  ogImage: 'https://truly-grit.vercel.app/og.jpg',
+  keywords: [
+    'strategic marketing agency',
+    'digital marketing services',
+    'brand strategy consulting',
+    'marketing transformation',
+    'business growth marketing',
+    'data-driven marketing',
+    'creative marketing solutions',
+    'marketing consulting',
+    'brand development',
+    'marketing strategy'
+  ],
   links: {
     twitter: 'https://x.com/truly_grit',
     linkedin: 'https://www.linkedin.com/company/trulygrit/posts/?feedView=all',
@@ -11,8 +23,13 @@ export const siteConfig = {
   contact: {
     email: 'hello@trulygrit.com',
     phone: '+91 7023281039',
-    address: '',
+    address: 'India',
   },
+  author: {
+    name: 'Gaurav Meena',
+    title: 'Founder & CEO',
+    bio: 'Strategic marketing professional with expertise in brand transformation and business growth'
+  }
 }
 
 export type SiteConfig = typeof siteConfig
