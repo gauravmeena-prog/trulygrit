@@ -63,24 +63,27 @@ export default function ContactPage() {
       {/* Main Contact Section */}
       <section className="py-24 sm:py-32 bg-white relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            {/* Contact Form */}
-            <div className="mb-16">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  Let's Start Your Project
-                </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                  Tell us about your goals and we'll create a custom strategy to help you achieve them.
-                </p>
-              </div>
-              
-              {/* Clean Form Container */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Let's Start Your Project
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Tell us about your goals and we'll create a custom strategy to help you achieve them.
+            </p>
+          </div>
+
+          {/* Side-by-Side Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form - Left Side */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Get Started
+              </h3>
               <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
                   width="100%"
-                  height={800}
+                  height={600}
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
@@ -97,14 +100,14 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information & Process - Right Side */}
+            <div className="space-y-8">
               {/* Contact Info */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Get In Touch
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100">
@@ -135,35 +138,35 @@ export default function ContactPage() {
 
               {/* Process Steps */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   What Happens Next?
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       1
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Quick Response</h4>
-                      <p className="text-gray-700">We'll review your submission and get back to you within 24 hours with initial thoughts and next steps.</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Quick Response</h4>
+                      <p className="text-gray-700 text-sm">We'll review your submission and get back to you within 24 hours.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       2
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Strategy Call</h4>
-                      <p className="text-gray-700">Schedule a consultation call to discuss your project in detail and understand your specific needs.</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Strategy Call</h4>
+                      <p className="text-gray-700 text-sm">Schedule a consultation call to discuss your project in detail.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white text-sm font-bold flex-shrink-0">
                       3
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Custom Proposal</h4>
-                      <p className="text-gray-700">Receive a detailed proposal with strategy, timeline, and transparent pricing tailored to your goals.</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Custom Proposal</h4>
+                      <p className="text-gray-700 text-sm">Receive a detailed proposal with strategy and transparent pricing.</p>
                     </div>
                   </div>
                 </div>
