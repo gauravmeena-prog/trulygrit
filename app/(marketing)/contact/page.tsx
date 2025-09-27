@@ -74,113 +74,78 @@ export default function ContactPage() {
                   Tell us about your goals and we'll create a custom strategy to help you achieve them.
                 </p>
               </div>
-              {/* Professional Custom-Style Form */}
-              <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                {/* Premium Header */}
-                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-8 py-12">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20"></div>
-                  <div className="relative text-center">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 shadow-2xl">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Compact Professional Form */}
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                {/* Compact Header */}
+                <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-6 py-6">
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-3">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                       </svg>
                     </div>
-                    <h3 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-                    <p className="text-slate-200 text-xl max-w-3xl mx-auto leading-relaxed">
-                      Join hundreds of successful businesses who've accelerated their growth with our proven strategies
+                    <h3 className="text-2xl font-bold text-white mb-2">Ready to Transform Your Business?</h3>
+                    <p className="text-slate-200 text-sm">
+                      Join hundreds of successful businesses who've accelerated their growth
                     </p>
                   </div>
                 </div>
                 
-                {/* Seamless Form Integration */}
+                {/* Optimized Form Container */}
                 <div className="relative bg-white">
-                  {/* Custom Form Styling Overlay */}
-                  <div className="absolute inset-0 pointer-events-none z-10">
-                    <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-white/50"></div>
-                  </div>
-                  
-                  {/* Form Container with Hidden Google Styling */}
-                  <div className="relative">
-                    <iframe
-                      src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
-                      width="100%"
-                      height="1400"
-                      frameBorder="0"
-                      marginHeight="0"
-                      marginWidth="0"
-                      className="w-full"
-                      title="Contact Form"
-                      style={{
-                        border: 'none',
-                        borderRadius: '0',
-                        background: 'transparent',
-                        filter: 'contrast(1.1) saturate(1.1)',
-                        transform: 'scale(1.02)',
-                        transformOrigin: 'top center'
-                      }}
-                    >
-                      Loading…
-                    </iframe>
-                  </div>
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
+                    width="100%"
+                    height="1000"
+                    frameBorder="0"
+                    marginHeight="0"
+                    marginWidth="0"
+                    className="w-full"
+                    title="Contact Form"
+                    style={{
+                      border: 'none',
+                      borderRadius: '0',
+                      background: 'transparent',
+                      filter: 'contrast(1.05) saturate(1.05)',
+                      transform: 'scale(1.01)',
+                      transformOrigin: 'top center'
+                    }}
+                  >
+                    Loading…
+                  </iframe>
                 </div>
                 
-                {/* Professional Footer */}
-                <div className="bg-gradient-to-r from-slate-50 to-gray-50 px-8 py-8 border-t border-gray-100">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Compact Footer */}
+                <div className="bg-gray-50 px-6 py-4 border-t border-gray-100">
+                  <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-3">
-                        <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-green-100 rounded-full mb-2">
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Enterprise Security</h4>
-                      <p className="text-sm text-gray-600">Bank-level encryption & GDPR compliant</p>
+                      <h4 className="font-semibold text-gray-900 text-sm mb-1">Enterprise</h4>
+                      <p className="text-xs text-gray-600">Secure & Private</p>
                     </div>
                     
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-3">
-                        <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full mb-2">
+                        <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900 mb-1">24-Hour Response</h4>
-                      <p className="text-sm text-gray-600">Guaranteed response within one business day</p>
+                      <h4 className="font-semibold text-gray-900 text-sm mb-1">24-Hour</h4>
+                      <p className="text-xs text-gray-600">Quick Response</p>
                     </div>
                     
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-3">
-                        <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-purple-100 rounded-full mb-2">
+                        <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                         </svg>
                       </div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Free Strategy Session</h4>
-                      <p className="text-sm text-gray-600">Complimentary consultation worth $500</p>
-                    </div>
-                  </div>
-                  
-                  {/* Trust Badge */}
-                  <div className="mt-8 pt-6 border-t border-gray-200">
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500">
-                      <div className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span>Trusted by 500+ businesses</span>
-                      </div>
-                      <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
-                      <div className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span>No spam, ever</span>
-                      </div>
-                      <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
-                      <div className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span>Cancel anytime</span>
-                      </div>
+                      <h4 className="font-semibold text-gray-900 text-sm mb-1">Free Strategy</h4>
+                      <p className="text-xs text-gray-600">Worth $500</p>
                     </div>
                   </div>
                 </div>
