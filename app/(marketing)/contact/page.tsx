@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Mail, Phone } from 'lucide-react'
 
 import { siteConfig } from '@/lib/site-config'
-import { ContactForm } from '@/components/contact-form'
+// Google Form embed - no import needed
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 
@@ -74,7 +74,32 @@ export default function ContactPage() {
                   Tell us about your goals and we'll create a custom strategy to help you achieve them.
                 </p>
               </div>
-              <ContactForm />
+              {/* Google Form Embed */}
+              <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-6">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2">Project Details</h3>
+                    <p className="text-orange-100">
+                      Fill out the form below and we'll get back to you within 24 hours
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    marginHeight="0"
+                    marginWidth="0"
+                    className="rounded-lg"
+                    title="Contact Form"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
+              </div>
             </div>
 
             {/* Contact Information & Process */}
