@@ -36,7 +36,7 @@ const team = [
     name: 'Gaurav Meena',
     role: 'Founder & CEO',
     bio: 'I founded this agency with a vision to help businesses achieve remarkable growth through strategic marketing. As a solo founder, I handle everything from strategy to execution, ensuring every client receives my personal attention and expertise.',
-    linkedin: 'https://linkedin.com/in/gauravmeena',
+    linkedin: 'https://www.linkedin.com/in/gauravmeena--/',
     instagram: 'https://www.instagram.com/gaurav.meena___/',
   },
 ]
