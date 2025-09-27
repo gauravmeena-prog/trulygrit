@@ -3,7 +3,6 @@ import { Analytics } from '@vercel/analytics/next'
 
 import { siteConfig } from '@/lib/site-config'
 import { StructuredData } from '@/components/structured-data'
-import { MissingToast } from '@/components/missing-toast'
 import { inter, sora } from './fonts'
 import '@/styles/globals.css'
 
@@ -109,7 +108,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         <StructuredData />
         {children}
-        <MissingToast />
         <Analytics />
       </body>
     </html>
