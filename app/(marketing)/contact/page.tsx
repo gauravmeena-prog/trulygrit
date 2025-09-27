@@ -74,30 +74,73 @@ export default function ContactPage() {
                   Tell us about your goals and we'll create a custom strategy to help you achieve them.
                 </p>
               </div>
-              {/* Google Form Embed */}
+              {/* Google Form Embed with Enhanced Design */}
               <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-6">
+                {/* Professional Header */}
+                <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 px-8 py-8">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-white mb-2">Project Details</h3>
-                    <p className="text-orange-100">
-                      Fill out the form below and we'll get back to you within 24 hours
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-3">Let's Start Your Project</h3>
+                    <p className="text-orange-100 text-lg max-w-2xl mx-auto">
+                      Tell us about your vision and we'll create a custom strategy to bring it to life
                     </p>
                   </div>
                 </div>
                 
-                <div className="p-6">
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
-                    width="100%"
-                    height="1171"
-                    frameBorder="0"
-                    marginHeight="0"
-                    marginWidth="0"
-                    className="rounded-lg"
-                    title="Contact Form"
-                  >
-                    Loading…
-                  </iframe>
+                {/* Form Container with Enhanced Styling */}
+                <div className="relative">
+                  {/* Decorative Elements */}
+                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 via-orange-500 to-red-500"></div>
+                  
+                  <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
+                        width="100%"
+                        height="1200"
+                        frameBorder="0"
+                        marginHeight="0"
+                        marginWidth="0"
+                        className="rounded-lg"
+                        title="Contact Form"
+                        style={{
+                          border: 'none',
+                          borderRadius: '12px',
+                          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                        }}
+                      >
+                        Loading…
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Trust Indicators */}
+                <div className="bg-gray-50 px-8 py-6 border-t border-gray-200">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                      </svg>
+                      <span>Secure & Private</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                      </svg>
+                      <span>24-Hour Response</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                      </svg>
+                      <span>Free Consultation</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
