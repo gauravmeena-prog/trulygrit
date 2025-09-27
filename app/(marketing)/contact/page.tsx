@@ -74,71 +74,113 @@ export default function ContactPage() {
                   Tell us about your goals and we'll create a custom strategy to help you achieve them.
                 </p>
               </div>
-              {/* Google Form Embed with Enhanced Design */}
+              {/* Professional Custom-Style Form */}
               <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                {/* Professional Header */}
-                <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 px-8 py-8">
-                  <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                {/* Premium Header */}
+                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-8 py-12">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20"></div>
+                  <div className="relative text-center">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 shadow-2xl">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                       </svg>
                     </div>
-                    <h3 className="text-3xl font-bold text-white mb-3">Let's Start Your Project</h3>
-                    <p className="text-orange-100 text-lg max-w-2xl mx-auto">
-                      Tell us about your vision and we'll create a custom strategy to bring it to life
+                    <h3 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
+                    <p className="text-slate-200 text-xl max-w-3xl mx-auto leading-relaxed">
+                      Join hundreds of successful businesses who've accelerated their growth with our proven strategies
                     </p>
                   </div>
                 </div>
                 
-                {/* Form Container with Enhanced Styling */}
-                <div className="relative">
-                  {/* Decorative Elements */}
-                  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 via-orange-500 to-red-500"></div>
+                {/* Seamless Form Integration */}
+                <div className="relative bg-white">
+                  {/* Custom Form Styling Overlay */}
+                  <div className="absolute inset-0 pointer-events-none z-10">
+                    <div className="h-full w-full bg-gradient-to-b from-transparent via-transparent to-white/50"></div>
+                  </div>
                   
-                  <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
-                    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
-                        width="100%"
-                        height="1200"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                        className="rounded-lg"
-                        title="Contact Form"
-                        style={{
-                          border: 'none',
-                          borderRadius: '12px',
-                          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                        }}
-                      >
-                        Loading…
-                      </iframe>
-                    </div>
+                  {/* Form Container with Hidden Google Styling */}
+                  <div className="relative">
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
+                      width="100%"
+                      height="1400"
+                      frameBorder="0"
+                      marginHeight="0"
+                      marginWidth="0"
+                      className="w-full"
+                      title="Contact Form"
+                      style={{
+                        border: 'none',
+                        borderRadius: '0',
+                        background: 'transparent',
+                        filter: 'contrast(1.1) saturate(1.1)',
+                        transform: 'scale(1.02)',
+                        transformOrigin: 'top center'
+                      }}
+                    >
+                      Loading…
+                    </iframe>
                   </div>
                 </div>
                 
-                {/* Trust Indicators */}
-                <div className="bg-gray-50 px-8 py-6 border-t border-gray-200">
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                      </svg>
-                      <span>Secure & Private</span>
+                {/* Professional Footer */}
+                <div className="bg-gradient-to-r from-slate-50 to-gray-50 px-8 py-8 border-t border-gray-100">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-3">
+                        <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Enterprise Security</h4>
+                      <p className="text-sm text-gray-600">Bank-level encryption & GDPR compliant</p>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                      </svg>
-                      <span>24-Hour Response</span>
+                    
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-3">
+                        <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <h4 className="font-semibold text-gray-900 mb-1">24-Hour Response</h4>
+                      <p className="text-sm text-gray-600">Guaranteed response within one business day</p>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                      </svg>
-                      <span>Free Consultation</span>
+                    
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-3">
+                        <svg className="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Free Strategy Session</h4>
+                      <p className="text-sm text-gray-600">Complimentary consultation worth $500</p>
+                    </div>
+                  </div>
+                  
+                  {/* Trust Badge */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                        <span>Trusted by 500+ businesses</span>
+                      </div>
+                      <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                        <span>No spam, ever</span>
+                      </div>
+                      <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                        <span>Cancel anytime</span>
+                      </div>
                     </div>
                   </div>
                 </div>
