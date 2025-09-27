@@ -68,3 +68,4 @@ export async function sendEmailNotification(data: ContactFormData) {
     throw new Error('Failed to send email notification')
   }
 }
+

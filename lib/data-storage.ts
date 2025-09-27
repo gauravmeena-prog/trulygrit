@@ -66,3 +66,4 @@ export async function getAllSubmissions(): Promise<StoredSubmission[]> {
     return []
   }
 }
+

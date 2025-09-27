@@ -29,3 +29,4 @@ export async function saveToGoogleSheetsSimple(data: ContactFormData) {
     throw new Error('Failed to save to Google Sheets')
   }
 }
+

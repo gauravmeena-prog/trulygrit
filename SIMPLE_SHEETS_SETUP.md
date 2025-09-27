@@ -51,3 +51,4 @@ Your Google Sheet will have these columns:
 - Check that the webhook URL is correct (Method 1)
 - Verify environment variables are loaded
 - Check the server console for error messages
+
