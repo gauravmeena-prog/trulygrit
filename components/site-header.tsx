@@ -25,14 +25,15 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Work', href: '/work' },
-  { name: 'Services', href: '/services' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
-]
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Work', href: '/work' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Admin', href: '/admin' },
+  ]
 
 export function SiteHeader() {
   const pathname = usePathname()
