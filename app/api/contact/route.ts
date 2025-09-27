@@ -13,30 +13,6 @@ const contactSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters'),
 })
 
-// Helper function to get client IP address
-function getClientIP(request: NextRequest): string {
-  const forwarded = request.headers.get('x-forwarded-for')
-  const realIP = request.headers.get('x-real-ip')
-  const cfConnectingIP = request.headers.get('cf-connecting-ip')
-  
-  if (forwarded) {
-    return forwarded.split(',')[0].trim()
-  }
-  if (realIP) {
-    return realIP
-  }
-  if (cfConnectingIP) {
-    return cfConnectingIP
-  }
-  
-  return 'unknown'
-}
-
-// Helper function to get user agent
-function getUserAgent(request: NextRequest): string {
-  return request.headers.get('user-agent') || 'unknown'
-}
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -44,15 +20,8 @@ export async function POST(request: NextRequest) {
     // Validate the request body
     const validatedData = contactSchema.parse(body)
     
-    // Extract metadata from request
-    const metadata = {
-      ipAddress: getClientIP(request),
-      userAgent: getUserAgent(request),
-      source: request.headers.get('referer') || 'direct'
-    }
-    
-    // Save to local storage with metadata
-    const savedSubmission = await saveContactSubmission(validatedData, metadata)
+    // Save to local storage
+    const savedSubmission = await saveContactSubmission(validatedData)
     
     // Send email notification
     await sendEmailNotification(validatedData)
@@ -63,9 +32,7 @@ export async function POST(request: NextRequest) {
       email: savedSubmission.email,
       service: savedSubmission.service,
       budget: savedSubmission.budget,
-      timestamp: savedSubmission.timestamp,
-      ipAddress: savedSubmission.ipAddress,
-      source: savedSubmission.source
+      timestamp: savedSubmission.timestamp
     })
     
     return NextResponse.json(
