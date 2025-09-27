@@ -119,16 +119,16 @@ export function ContactForm() {
 
         {/* Form Content */}
         <div className="px-8 py-8">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
             {/* Personal Information Section */}
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Personal Information</h3>
-                <p className="text-gray-600">Tell us about yourself and your business</p>
+            <div className="space-y-4">
+              <div className="text-center pb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">Personal Information</h3>
+                <p className="text-gray-600 text-sm">Tell us about yourself and your business</p>
               </div>
               
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <div className="space-y-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
                   <Label htmlFor="name" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                     Full Name <span className="text-orange-500">*</span>
                   </Label>
@@ -136,7 +136,7 @@ export function ContactForm() {
                     id="name"
                     {...register('name')}
                     placeholder="John Smith"
-                    className="h-14 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-xl transition-all duration-200"
+                    className="h-12 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-lg transition-all duration-200"
                     aria-invalid={errors.name ? 'true' : 'false'}
                     aria-describedby={errors.name ? 'name-error' : undefined}
                   />
@@ -147,7 +147,7 @@ export function ContactForm() {
                   )}
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <Label htmlFor="email" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                     Email Address <span className="text-orange-500">*</span>
                   </Label>
@@ -156,7 +156,7 @@ export function ContactForm() {
                     type="email"
                     {...register('email')}
                     placeholder="john@company.com"
-                    className="h-14 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-xl transition-all duration-200"
+                    className="h-12 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-lg transition-all duration-200"
                   />
                   {errors.email && (
                     <p className="text-sm text-red-600 font-medium">{errors.email.message}</p>
@@ -164,8 +164,8 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <div className="space-y-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
                   <Label htmlFor="company" className="text-sm font-semibold text-gray-700">
                     Company Name
                   </Label>
@@ -173,11 +173,11 @@ export function ContactForm() {
                     id="company"
                     {...register('company')}
                     placeholder="Your Company Inc."
-                    className="h-14 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-xl transition-all duration-200"
+                    className="h-12 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-lg transition-all duration-200"
                   />
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <Label htmlFor="phone" className="text-sm font-semibold text-gray-700">
                     Phone Number
                   </Label>
@@ -186,28 +186,28 @@ export function ContactForm() {
                     type="tel"
                     {...register('phone')}
                     placeholder="+1 (555) 123-4567"
-                    className="h-14 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-xl transition-all duration-200"
+                    className="h-12 text-base border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-lg transition-all duration-200"
                   />
                 </div>
               </div>
             </div>
 
             {/* Project Information Section */}
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Project Details</h3>
-                <p className="text-gray-600">Help us understand your project requirements</p>
+            <div className="space-y-4">
+              <div className="text-center pb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">Project Details</h3>
+                <p className="text-gray-600 text-sm">Help us understand your project requirements</p>
               </div>
 
-              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <div className="space-y-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
                   <Label htmlFor="service" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                     Service Needed <span className="text-orange-500">*</span>
                   </Label>
                   <select
                     id="service"
                     {...register('service')}
-                    className="flex h-14 w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-base focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none transition-all duration-200"
+                    className="flex h-12 w-full rounded-lg border-2 border-gray-200 bg-white px-3 py-2 text-base focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none transition-all duration-200"
                   >
                     <option value="">Choose a service</option>
                     {services.map((service) => (
@@ -221,14 +221,14 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <Label htmlFor="budget" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                     Budget Range <span className="text-orange-500">*</span>
                   </Label>
                   <select
                     id="budget"
                     {...register('budget')}
-                    className="flex h-14 w-full rounded-xl border-2 border-gray-200 bg-white px-4 py-3 text-base focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none transition-all duration-200"
+                    className="flex h-12 w-full rounded-lg border-2 border-gray-200 bg-white px-3 py-2 text-base focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none transition-all duration-200"
                   >
                     <option value="">Select your budget</option>
                     {budgets.map((budget) => (
@@ -243,7 +243,7 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <Label htmlFor="message" className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                   Project Description <span className="text-orange-500">*</span>
                 </Label>
@@ -251,8 +251,8 @@ export function ContactForm() {
                   id="message"
                   {...register('message')}
                   placeholder="Tell us about your project goals, target audience, timeline, and any specific requirements..."
-                  rows={5}
-                  className="text-base min-h-[140px] border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-xl transition-all duration-200 resize-none"
+                  rows={4}
+                  className="text-base min-h-[100px] border-2 border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 rounded-lg transition-all duration-200 resize-none"
                 />
                 {errors.message && (
                   <p className="text-sm text-red-600 font-medium">{errors.message.message}</p>
@@ -261,26 +261,26 @@ export function ContactForm() {
             </div>
 
             {/* Professional Submit Button */}
-            <div className="pt-6">
+            <div className="pt-4">
               <Button 
                 type="submit" 
-                className="w-full h-16 text-lg bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]" 
+                className="w-full h-14 text-base bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300" 
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  <div className="flex items-center justify-center gap-3">
-                    <Loader2 className="h-5 w-5 animate-spin" />
+                  <div className="flex items-center justify-center gap-2">
+                    <Loader2 className="h-4 w-4 animate-spin" />
                     <span>Sending Your Request...</span>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center gap-3">
-                    <Send className="h-5 w-5" />
+                  <div className="flex items-center justify-center gap-2">
+                    <Send className="h-4 w-4" />
                     <span>Get Free Consultation</span>
                   </div>
                 )}
               </Button>
               
-              <p className="text-center text-sm text-gray-500 mt-4">
+              <p className="text-center text-sm text-gray-500 mt-3">
                 We'll respond within 24 hours with a detailed proposal
               </p>
             </div>
