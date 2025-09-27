@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef, useState } from "react";
 
 function Toast({ show, onClose }: { show: boolean; onClose: () => void }) {
