@@ -89,16 +89,16 @@ const sampleCaseStudies = [
 
 
 export const metadata = {
-  title: 'Truly Grit | Strategic Marketing Agency',
+  title: '😔 Missing you already',
   description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
   openGraph: {
-    title: 'Truly Grit | Strategic Marketing Agency',
+    title: '😔 Missing you already',
     description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
     url: 'https://truly-grit.vercel.app',
     type: 'website',
   },
   twitter: {
-    title: 'Truly Grit | Strategic Marketing Agency',
+    title: '😔 Missing you already',
     description: 'We help ambitious businesses achieve extraordinary growth through strategic marketing that builds lasting connections and drives measurable results.',
   },
 }
