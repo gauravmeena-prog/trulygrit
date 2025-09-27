@@ -1,76 +1,84 @@
-'use client'
+import { useEffect, useRef, useState } from "react";
 
-import { useEffect, useState } from 'react'
+function Toast({ show, onClose }: { show: boolean; onClose: () => void }) {
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      style={{
+        position: "fixed",
+        bottom: 24,
+        left: "50%",
+        transform: "translateX(-50%)",
+        background: "#0b1220",
+        color: "#e6edf3",
+        padding: "12px 16px",
+        borderRadius: 12,
+        boxShadow: "0 10px 30px rgba(0,0,0,.25)",
+        display: show ? "inline-flex" : "none",
+        alignItems: "center",
+        gap: 10,
+        zIndex: 99999,
+        fontFamily:
+          'system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
+        fontWeight: 500,
+        fontSize: 14,
+        lineHeight: 1.2,
+      }}
+    >
+      <span>😞 Missing you already</span>
+      <button
+        aria-label="Dismiss"
+        onClick={onClose}
+        style={{
+          background: "transparent",
+          border: 0,
+          color: "#9fb0c3",
+          cursor: "pointer",
+          fontSize: 18,
+          lineHeight: 1,
+          padding: 4,
+          marginLeft: 4,
+        }}
+      >
+        &times;
+      </button>
+    </div>
+  );
+}
 
 export function MissingToast() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isLeaving, setIsLeaving] = useState(false)
+  const [show, setShow] = useState(false);
+  const originalTitle = useRef<string>("");
 
   useEffect(() => {
-    const handleVisibilityChange = () => {
+    if (typeof document !== "undefined") {
+      originalTitle.current = document.title;
+    }
+
+    const onVis = () => {
       if (document.hidden) {
-        // User switched tabs or minimized window
-        setIsLeaving(true)
-        setTimeout(() => {
-          setIsVisible(true)
-        }, 1000) // Show toast after 1 second
+        document.title = "😞 Missing you already — Truly Grit";
+        setShow(true);
       } else {
-        // User returned to tab
-        setIsVisible(false)
-        setIsLeaving(false)
+        document.title = originalTitle.current || document.title;
+        setShow(false);
       }
-    }
+    };
 
-    const handleBeforeUnload = () => {
-      // User is about to leave the page
-      setIsLeaving(true)
-      setTimeout(() => {
-        setIsVisible(true)
-      }, 500) // Show toast faster when leaving
-    }
+    const onMouseOut = (e: MouseEvent) => {
+      if ((e as any).relatedTarget === null && e.clientY <= 0) {
+        setShow(true);
+      }
+    };
 
-    const handleMouseLeave = () => {
-      // User moved mouse away from window
-      setIsLeaving(true)
-      setTimeout(() => {
-        setIsVisible(true)
-      }, 2000) // Show toast after 2 seconds of mouse being away
-    }
-
-    const handleMouseEnter = () => {
-      // User moved mouse back to window
-      setIsVisible(false)
-      setIsLeaving(false)
-    }
-
-    // Listen for tab visibility changes
-    document.addEventListener('visibilitychange', handleVisibilityChange)
-    
-    // Listen for page unload
-    window.addEventListener('beforeunload', handleBeforeUnload)
-    
-    // Listen for mouse leaving/entering the window
-    document.addEventListener('mouseleave', handleMouseLeave)
-    document.addEventListener('mouseenter', handleMouseEnter)
-
+    document.addEventListener("visibilitychange", onVis);
+    window.addEventListener("mouseout", onMouseOut);
     return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange)
-      window.removeEventListener('beforeunload', handleBeforeUnload)
-      document.removeEventListener('mouseleave', handleMouseLeave)
-      document.removeEventListener('mouseenter', handleMouseEnter)
-    }
-  }, [])
+      document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("mouseout", onMouseOut);
+    };
+  }, []);
 
-  if (!isVisible) return null
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
-      <div className="bg-gray-900 text-white px-6 py-4 rounded-2xl shadow-2xl transform transition-all duration-500 ease-out pointer-events-auto animate-bounce">
-        <div className="flex items-center space-x-3">
-          <span className="text-2xl">😞</span>
-          <span className="text-lg font-medium">Missing you already</span>
-        </div>
-      </div>
-    </div>
-  )
+  return <Toast show={show} onClose={() => setShow(false)} />;
 }
