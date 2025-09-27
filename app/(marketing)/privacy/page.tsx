@@ -3,10 +3,10 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '@/components/breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Truly Grit',
+  title: 'Privacy Policy | Truly Grit',
   description: 'Learn how Truly Grit collects, uses, and protects your personal information. Our commitment to your privacy and data security.',
   openGraph: {
-    title: 'Privacy Policy - Truly Grit',
+    title: 'Privacy Policy | Truly Grit',
     description: 'Learn how Truly Grit collects, uses, and protects your personal information. Our commitment to your privacy and data security.',
     type: 'website',
   },

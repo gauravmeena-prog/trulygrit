@@ -88,16 +88,16 @@ const detailedServices = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Services - Truly Grit',
+  title: 'Services | Truly Grit Marketing Solutions',
   description: 'Discover our comprehensive marketing services: brand strategy, digital marketing, web design, SEO, content marketing, and social media management for business growth.',
   openGraph: {
-    title: 'Services - Truly Grit',
+    title: 'Services | Truly Grit Marketing Solutions',
     description: 'Discover our comprehensive marketing services: brand strategy, digital marketing, web design, SEO, content marketing, and social media management for business growth.',
     url: 'https://truly-grit.vercel.app/services',
     type: 'website',
   },
   twitter: {
-    title: 'Services - Truly Grit',
+    title: 'Services | Truly Grit Marketing Solutions',
     description: 'Discover our comprehensive marketing services: brand strategy, digital marketing, web design, SEO, content marketing, and social media management for business growth.',
   },
 }

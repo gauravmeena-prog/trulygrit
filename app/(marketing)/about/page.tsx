@@ -42,16 +42,16 @@ const team = [
 ]
 
 export const metadata = {
-  title: 'About Truly Grit',
+  title: 'About Me | Truly Grit Marketing Agency',
   description: 'Meet Gaurav Meena, the solo founder behind Truly Grit. A strategic marketing professional dedicated to helping businesses achieve extraordinary growth through data-driven strategies and creative excellence.',
   openGraph: {
-    title: 'About Truly Grit',
+    title: 'About Me | Truly Grit Marketing Agency',
     description: 'Meet Gaurav Meena, the solo founder behind Truly Grit. A strategic marketing professional dedicated to helping businesses achieve extraordinary growth through data-driven strategies and creative excellence.',
     url: 'https://truly-grit.vercel.app/about',
     type: 'website',
   },
   twitter: {
-    title: 'About Truly Grit',
+    title: 'About Me | Truly Grit Marketing Agency',
     description: 'Meet Gaurav Meena, the solo founder behind Truly Grit. A strategic marketing professional dedicated to helping businesses achieve extraordinary growth through data-driven strategies and creative excellence.',
   },
 }
