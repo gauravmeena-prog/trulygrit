@@ -36,7 +36,7 @@ const team = [
     name: 'Gaurav Meena',
     role: 'Founder & CEO',
     bio: 'I founded Truly Grit with a vision to help businesses achieve remarkable growth through strategic marketing. As a passionate entrepreneur, I bring fresh perspectives and dedicated focus to every project. Being a solo founder means every client gets my personal attention and commitment to their success.',
-    linkedin: 'https://linkedin.com/in/gauravmeena',
+    linkedin: 'https://www.linkedin.com/in/gauravmeena--/',
     instagram: 'https://www.instagram.com/gaurav.meena___/',
   },
 ]
