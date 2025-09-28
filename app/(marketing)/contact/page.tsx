@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { Mail, Phone } from 'lucide-react'
 
 import { siteConfig } from '@/lib/site-config'
-import { ContactForm } from '@/components/contact-form'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 
@@ -60,7 +59,28 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             {/* Contact Form */}
             <div>
-              <ContactForm />
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Get Started
+              </h3>
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSemFMa-7r-F4MUG_aacWH-DVAyWUuwHIRTl_oWOXtzRWWlxjw/viewform?embedded=true"
+                  width="100%"
+                  height={600}
+                  frameBorder={0}
+                  marginHeight={0}
+                  marginWidth={0}
+                  className="w-full"
+                  title="Contact Form"
+                  style={{
+                    border: 'none',
+                    borderRadius: '0',
+                    background: 'transparent'
+                  }}
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
 
             {/* Contact Information */}
