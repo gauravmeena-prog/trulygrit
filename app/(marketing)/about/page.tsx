@@ -35,7 +35,7 @@ const team = [
   {
     name: 'Gaurav Meena',
     role: 'Founder & CEO',
-    bio: 'I founded this agency with a vision to help businesses achieve remarkable growth through strategic marketing. As a solo founder, I handle everything from strategy to execution, ensuring every client receives my personal attention and expertise.',
+    bio: 'I founded Truly Grit with a vision to help businesses achieve remarkable growth through strategic marketing. As a passionate entrepreneur, I bring fresh perspectives and dedicated focus to every project. Being a solo founder means every client gets my personal attention and commitment to their success.',
     linkedin: 'https://linkedin.com/in/gauravmeena',
     instagram: 'https://www.instagram.com/gaurav.meena___/',
   },
@@ -75,10 +75,10 @@ export default function AboutPage() {
             </h1>
             
             <p className="text-xl leading-relaxed text-gray-700 max-w-4xl mx-auto mb-12">
-              We are a strategic marketing agency dedicated to helping ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence. Founded in 2025, we bring personal attention and expertise to every project.
+              We are a strategic marketing agency dedicated to helping ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence. Founded with a vision to transform how businesses approach marketing, we bring personal attention, proven expertise, and measurable results to every project.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
               <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
                 <span className="text-gray-800 font-medium">Founded 2025</span>
               </div>
@@ -87,6 +87,22 @@ export default function AboutPage() {
               </div>
               <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
                 <span className="text-gray-800 font-medium">Data-Driven Results</span>
+              </div>
+            </div>
+
+            {/* Genuine Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
+                <div className="text-sm text-gray-600 font-medium">Client Focus</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">24h</div>
+                <div className="text-sm text-gray-600 font-medium">Response Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">2025</div>
+                <div className="text-sm text-gray-600 font-medium">Founded</div>
               </div>
             </div>
           </div>
@@ -102,7 +118,7 @@ export default function AboutPage() {
               <span className="block text-orange-600 mt-2">The Hard Way</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              We believe great marketing should build genuine connections and drive meaningful results. Founded in 2025, we've built our reputation on delivering measurable outcomes.
+              We believe great marketing should build genuine connections and drive meaningful results. Founded in 2025, we're building our reputation one client at a time, focusing on delivering real value through strategic thinking and creative execution.
             </p>
           </div>
           
@@ -112,7 +128,7 @@ export default function AboutPage() {
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 w-16 h-1 rounded-full mb-6 group-hover:w-24 transition-all duration-300"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-lg leading-relaxed text-gray-600">
-                  We build revenue engines that deliver results through speed, measurement, and proven strategies. Our approach combines data-driven insights with creative excellence to help businesses achieve extraordinary growth.
+                  We build revenue engines that deliver results through speed, measurement, and strategic thinking. Our approach combines data-driven insights with creative excellence to help businesses achieve growth. Every campaign is carefully planned and executed for maximum impact.
                 </p>
               </div>
               
@@ -151,6 +167,52 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Professional Approach Section */}
+      <section className="py-24 sm:py-32 bg-white relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Our Professional
+              <span className="block text-orange-600 mt-2">Approach</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+              How we work with clients to deliver results through our systematic approach.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Strategy & Planning</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We start with research and analysis to understand your market, competitors, and opportunities. Every strategy is built on data and tailored to your specific goals.
+              </p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Execution & Optimization</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We implement campaigns with care and continuously optimize based on performance data. Every element is tested and refined for better results.
+              </p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Results & Growth</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We measure everything and provide transparent reporting. Our focus is on delivering measurable growth that impacts your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-24 sm:py-32 bg-white relative">
@@ -260,7 +322,7 @@ export default function AboutPage() {
       {/* Company CTA Section */}
       <CTASection
         title="Ready to Transform Your Marketing?"
-        description="Let's discuss how we can help you achieve extraordinary growth through strategic marketing and proven results. Our team brings personal attention and expertise to every project."
+        description="Let's discuss how we can help you achieve extraordinary growth through strategic marketing and proven results. Our professional approach ensures every project receives the attention and expertise it deserves."
         primaryCta={{
           text: 'Get Free Consultation',
           href: '/contact',
