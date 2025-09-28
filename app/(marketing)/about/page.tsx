@@ -78,33 +78,6 @@ export default function AboutPage() {
               We are a strategic marketing agency dedicated to helping ambitious businesses achieve extraordinary growth through data-driven strategies and creative excellence. Founded with a vision to transform how businesses approach marketing, we bring personal attention, proven expertise, and measurable results to every project.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
-              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
-                <span className="text-gray-800 font-medium">Founded 2025</span>
-              </div>
-              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
-                <span className="text-gray-800 font-medium">Strategic Marketing</span>
-              </div>
-              <div className="bg-gray-100 rounded-full px-6 py-3 border border-gray-200">
-                <span className="text-gray-800 font-medium">Data-Driven Results</span>
-              </div>
-            </div>
-
-            {/* Genuine Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
-                <div className="text-sm text-gray-600 font-medium">Client Focus</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">24h</div>
-                <div className="text-sm text-gray-600 font-medium">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">2025</div>
-                <div className="text-sm text-gray-600 font-medium">Founded</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -167,52 +140,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Professional Approach Section */}
-      <section className="py-24 sm:py-32 bg-white relative">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Our Professional
-              <span className="block text-orange-600 mt-2">Approach</span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              How we work with clients to deliver results through our systematic approach.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-3xl font-bold text-white">1</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Strategy & Planning</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We start with research and analysis to understand your market, competitors, and opportunities. Every strategy is built on data and tailored to your specific goals.
-              </p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-3xl font-bold text-white">2</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Execution & Optimization</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We implement campaigns with care and continuously optimize based on performance data. Every element is tested and refined for better results.
-              </p>
-            </div>
-            
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-3xl font-bold text-white">3</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Results & Growth</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We measure everything and provide transparent reporting. Our focus is on delivering measurable growth that impacts your business.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Values Section */}
       <section className="py-24 sm:py-32 bg-white relative">
